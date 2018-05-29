@@ -18,6 +18,9 @@ injectGlobal`
   
   html{
   font-size: 10px;
+  @media(max-device-width: 400px){
+  font-size: 8px;
+  }
   }
   body {
     margin: 0;
