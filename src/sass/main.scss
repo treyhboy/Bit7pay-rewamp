@@ -1,0 +1,60 @@
+@import 'partials/variables'; // colors, fonts etc...
+@import 'partials/mixins'; // custom mixins
+@import 'partials/layout'; // responsive grid and media queries
+@import "reset";
+@import "header";
+@import "footer";
+@import "home";
+@import "about";
+@import "news";
+@import "verification";
+@import "terms";
+@import "charts";
+@import "support";
+@import "whatisBtc";
+@import "whatisEth";
+@import "fees";
+@import "kyc";
+@import "support-crypto";
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  @include font1;
+  font-size: 14px;
+}
+
+.ui-notification.success {
+  background-color: $color-green;
+}
+
+#loading-bar {
+  .bar {
+    background: $color-2;
+  }
+
+  .peg {
+    box-shadow: $color-4 1px 0 6px 1px;
+  }
+}
+
+.l-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 999;
+  justify-content: center;
+}
+
+.vertical-align {
+  @media screen and (min-width: 992px) {
+    display: flex;
+    align-items: center;
+  }
+}

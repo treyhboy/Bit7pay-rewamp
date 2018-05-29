@@ -1,0 +1,112 @@
+.kyc {
+  margin-top: 144px;
+  font-size: 14px;
+
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 300;
+  }
+
+  .tag2 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .tag {
+    font-size: 23px;
+    line-height: 32px;
+    margin-top: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 52px;
+    font-weight: 500;
+    color: $color-4;
+    margin: 0 0 23px;
+  }
+
+  .marginLeft {
+    margin-left: 10px;
+  }
+
+  .page-content {
+    p {
+      font-size: 16px;
+      margin: 8px 0 25px;
+      line-height: 28px;
+      color: $color-4;
+    }
+  }
+
+  .pe-wp-default {
+    color: $color-4;
+    line-height: 26px;
+    font-size: 16px;
+    margin-top: 20px;
+
+    .table-responsive {
+      border: 1px solid $color-3;
+      margin: 10px 0;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 1px solid $color-3;
+      }
+    }
+
+    table {
+      font-size: 14px;
+      line-height: 2;
+      width: 100%;
+      border-spacing: 0;
+    }
+
+    th {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 2.18182;
+      text-transform: uppercase;
+    }
+
+    td {
+      border: 1px solid;
+      padding: 6px 10px !important;
+      border-color: $color-3 !important;
+      font-size: 14px !important;
+    }
+
+    td,
+    th {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    ol,
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  .second-margin-contain {
+    margin-left: 20px;
+    margin-right: 7px;
+  }
+
+  .third-margin-contain {
+    margin-left: 30px;
+    margin-right: 7px;
+  }
+
+  .fourth-margin-contain {
+    margin-left: 40px;
+    margin-right: 7px;
+  }
+}

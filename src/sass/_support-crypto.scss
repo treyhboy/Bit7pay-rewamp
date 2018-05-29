@@ -1,0 +1,879 @@
+.poll-section {
+  margin-top: 140px;
+
+  .vote-count {
+    // position: absolute;
+    // top: 200px;
+    // right: 20px;
+    // width: 50px;
+    // height: 50px;
+    background-color: $color-4;
+
+    .blue {
+      color: $color-6;
+      font-weight: 500;
+      font-size: 22px;
+      padding-left: 5px;
+    }
+    color: $color-5;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .vote-area {
+    background: url("../img/support-crypto/bg-1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 720px;
+    // margin-top: 120px;
+    .center-bg {
+      position: absolute;
+      top: 120px;
+      left: 100px;
+      // left: 0;
+      // background: url("../img/support-crypto/bg-2.png") no-repeat center center;
+      // height: 400px;
+      width: 1200px;
+      // transform: translateX(-50%);
+      // left: 50%;
+      // top: 50%;
+      // background-size: auto;
+    }
+
+    h1 {
+      position: absolute;
+      top: 280px;
+      left: 350px;
+      font-size: 60px;
+      color: $color-4;
+      font-weight: 700;
+    }
+
+    .cryptocurrencies {
+      position: absolute;
+      top: 250px;
+      left: 880px;
+      width: 150px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 380px;
+      left: 350px;
+      font-size: 28px;
+      line-height: 34px;
+      color: $color-6;
+      font-weight: 700;
+    }
+
+    p {
+      position: absolute;
+      top: 480px;
+      left: 350px;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-4;
+      max-width: 580px;
+
+      .red {
+        color: $color-red;
+        font-weight: 700;
+      }
+    }
+
+    .vote-text {
+      position: absolute;
+      top: 570px;
+      left: 350px;
+      font-size: 16px;
+      color: #F6AE2D;
+    }
+
+    .vote {
+      position: absolute;
+      top: 570px;
+      left: 630px;
+      cursor: pointer;
+
+      &:hover {
+        h3 {
+          color: $color-1;
+        }
+      }
+
+      img {
+        width: 140px;
+      }
+
+      h3 {
+        position: relative;
+        left: -35px;
+        font-size: 26px;
+        color: $color-2;
+        font-weight: 700;
+        transition: color 0.3s linear;
+      }
+    }
+  }
+
+  .share-area {
+    background-color: $color-4;
+
+    #wrapper {
+      margin: auto;
+      padding: 20px 0;
+      // position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      // height: 100px;
+      #share {
+        // background: rgba(0, 0, 0, 0.5);
+        position: relative;
+        margin: 0 auto;
+        width: 520px;
+
+        span {
+          width: 100px;
+          height: 100px;
+          float: left;
+          line-height: 100px;
+          text-align: center;
+          color: $color-2;
+        }
+
+        .container {
+          position: relative;
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+          text-align: center;
+          margin: 0 auto;
+          padding-top: 14px;
+
+          .circle {
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 5px;
+            stroke-dasharray: 40;
+            transition: all 0.2s ease-in-out;
+            -webkit-animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+            animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+          }
+
+          .social {
+            color: $color-2;
+            font-size: 1.8em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease-in-out;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.twitter:hover {
+            .circle {
+              fill: #ffffff;
+              fill-opacity: 1;
+              -webkit-animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorTwitter 1s linear forwards;
+              animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorTwitter 1s linear forwards;
+            }
+
+            .social {
+              color: #3aaae1;
+            }
+          }
+
+          &.facebook:hover {
+            .circle {
+              fill: #ffffff;
+              fill-opacity: 1;
+              -webkit-animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorFacebook 1s linear forwards;
+              animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorFacebook 1s linear forwards;
+            }
+
+            .social {
+              color: #3b5998;
+            }
+          }
+
+          &.google:hover {
+            .circle {
+              fill: #ffffff;
+              fill-opacity: 1;
+              -webkit-animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorGoogle 1s linear forwards;
+              animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorGoogle 1s linear forwards;
+            }
+
+            .social {
+              color: #dd4b39;
+            }
+          }
+
+          &.whatsapp:hover {
+            .circle {
+              fill: #ffffff;
+              fill-opacity: 1;
+              -webkit-animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorLinkedin 1s linear forwards;
+              animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorLinkedin 1s linear forwards;
+            }
+
+            .social {
+              color: $color-whatsapp;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comments-area {
+    .info {
+      padding: 40px 240px 20px;
+      font-size: 28px;
+      line-height: 34px;
+      color: $color-4;
+      text-align: center;
+    }
+
+    .add-comment {
+      margin: 40px 10px;
+      text-align: center;
+
+      textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $color-3;
+        padding: 5px;
+        min-width: 200px;
+        width: 100%;
+        font-size: 22px;
+        margin: 0 20px 0 60px;
+        outline: none;
+        resize: none;
+      }
+
+      button {
+        padding: 10px 45px;
+        font-size: 22px;
+        background-color: $color-1;
+        color: $color-2;
+        // border-color: $color-2;
+        border: none;
+        transition: background-color 0.3s linear;
+
+        &:hover {
+          background-color: $color-4;
+        }
+      }
+    }
+
+    .all-comments {
+      margin: 40px 10px;
+
+      .heading {
+        text-align: center;
+        padding: 40px 0 20px;
+        font-size: 36px;
+        color: $color-4;
+        font-weight: 700;
+      }
+
+      .comment {
+        padding: 10px 20px;
+
+        .comment-by {
+          padding: 10px 0 5px;
+          font-weight: 500;
+          font-size: 18px;
+          color: $color-4;
+        }
+
+        .comment-on {
+          padding: 0 0 5px;
+          font-size: 16px;
+          color: $color-2;
+        }
+
+        .comment-body {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 20px 40px;
+          color: $black;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+@keyframes colorTwitter {
+  from {
+    stroke: #ffffff;
+  }
+
+  to {
+    stroke: #3aaae1;
+  }
+}
+@keyframes colorFacebook {
+  from {
+    stroke: #ffffff;
+  }
+
+  to {
+    stroke: #3b5998;
+  }
+}
+@keyframes colorGoogle {
+  from {
+    stroke: #ffffff;
+  }
+
+  to {
+    stroke: #dd4b39;
+  }
+}
+@keyframes colorLinkedin {
+  from {
+    stroke: #ffffff;
+  }
+
+  to {
+    stroke: #007bb6;
+  }
+}
+@keyframes outWaveIn {
+  to {
+    stroke-width: 10px;
+    stroke-dasharray: 400;
+  }
+}
+@keyframes outWaveOut {
+  from {
+    stroke-width: 10px;
+    stroke-dasharray: 400;
+  }
+
+  to {
+    stroke: #ffffff;
+    stroke-width: 5px;
+    stroke-dasharray: 40;
+  }
+}
+@media only screen and (min-width:320px) and(max-width: 550px) {
+  .poll-section .vote-area {
+    background: url("../img/support-crypto/bg-1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 340px;
+    // margin-top: 120px;
+    position: relative;
+
+    .center-bg {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 100%;
+      height: 80%;
+    }
+
+    h1 {
+      position: absolute;
+      top: 25%;
+      left: 20%;
+      font-size: 1.8em;
+      color: #3A4551;
+      font-weight: 700;
+    }
+
+    .cryptocurrencies {
+      position: absolute;
+      top: 33%;
+      left: 64%;
+      width: 20%;
+      max-width: 100px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 36%;
+      left: 20%;
+      font-size: 1.1em;
+      line-height: 20px;
+      color: #4cf;
+      font-weight: 700;
+    }
+
+    p {
+      position: absolute;
+      padding: 0 19px;
+      top: 80%;
+      left: 8px;
+      font-size: 14px;
+      line-height: 1;
+      color: #ffffff;
+
+      .red {
+        color: #FE4A49;
+        font-weight: 700;
+      }
+    }
+
+    .vote-text {
+      left: 20%;
+      font-size: 13px;
+      color: #F6AE2D;
+      position: absolute;
+      top: 55%;
+      max-width: 230px;
+    }
+
+    .vote {
+      position: absolute;
+      top: 55%;
+      left: 47%;
+      cursor: pointer;
+
+      &:hover h3 {
+        color: #4E5C6E;
+      }
+
+      img {
+        width: 24%;
+      }
+
+      h3 {
+        position: relative;
+        left: -35px;
+        font-size: 16px;
+        color: #F6AE2D;
+        font-weight: 700;
+        transition: color 0.3s linear;
+      }
+    }
+  }
+
+  .poll-section .share-area #wrapper #share {
+    width: 100%;
+    height: 80px;
+
+    span {
+      display: none;
+    }
+
+    .container {
+      width: 24%;
+      @media only screen and (max-width: 420px) {
+        .social {
+          font-size: 20px;
+          top: -5px;
+          left: 1px;
+        }
+      }
+    }
+  }
+
+  .poll-section .comments-area .info {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .poll-section .comments-area .add-comment textarea {
+    margin: 0 0 20px;
+  }
+
+  .suggestion {
+    height: 470px !important;
+  }
+
+  .suggestion .end-text {
+    margin: 12px !important;
+  }
+
+  .opinion {
+    height: 300px !important;
+  }
+
+  .poll-section .comments-area .all-comments .comment .comment-body {
+    padding: 0;
+  }
+}
+@media only screen and (min-width:551px) and(max-width: 1200px) {
+  .poll-section .comments-area .info {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .poll-section .comments-area .add-comment textarea {
+    margin: 0 0 20px;
+  }
+
+  .poll-section .vote-area {
+    background: url("../img/support-crypto/bg-1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 720px;
+    margin-top: 120px;
+    position: relative;
+
+    .center-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    h1 {
+      position: absolute;
+      top: 110px;
+      left: 20%;
+      font-size: 45px;
+      color: #3A4551;
+      font-weight: 700;
+    }
+
+    .cryptocurrencies {
+      position: absolute;
+      top: 180px;
+      right: 20%;
+      width: 100px;
+      left: auto;
+    }
+
+    h2 {
+      position: absolute;
+      top: 184px;
+      left: 20%;
+      font-size: 28px;
+      line-height: 34px;
+      color: #4cf;
+      font-weight: 700;
+    }
+
+    p {
+      position: absolute;
+      top: 290px;
+      left: 20%;
+      font-size: 20px;
+      line-height: 24px;
+      color: #3A4551;
+      max-width: 360px;
+      @media only screen and(min-width: 800px) {
+        max-width: 560px;
+      }
+
+      .red {
+        color: #FE4A49;
+        font-weight: 700;
+      }
+    }
+
+    .vote-text {
+      position: absolute;
+      top: 390px;
+      left: 20%;
+      font-size: 16px;
+      color: #F6AE2D;
+      max-width: 360px;
+      @media only screen and(min-width: 800px) {
+        max-width: 560px;
+      }
+    }
+
+    .vote {
+      position: absolute;
+      top: 390px;
+      left: 46%;
+      cursor: pointer;
+
+      &:hover h3 {
+        color: #4E5C6E;
+      }
+
+      img {
+        width: 140px;
+      }
+
+      h3 {
+        position: relative;
+        left: -35px;
+        font-size: 26px;
+        color: #F6AE2D;
+        font-weight: 700;
+        transition: color 0.3s linear;
+      }
+    }
+  }
+}
+
+.suggestion {
+  width: 80%;
+  height: 420px;
+  margin: 40px auto;
+  position: relative;
+  padding: 0;
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation: animatetop 0.5s;
+  animation: animatetop 0.5s;
+  background: #b3dced;
+  background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -webkit-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -o-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -ms-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  max-width: 400px;
+
+  .close-bt {
+    font-size: 32px;
+    text-align: end;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+
+  .salutation-text {
+    text-align: center;
+    margin-top: 0;
+
+    .t1 {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .t2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 8px;
+      font-size: 22px;
+      color: #f6ae2d;
+    }
+  }
+
+  .img-cont {
+    height: 200px;
+    margin: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .end-text {
+    margin: 30px;
+    font-weight: 700;
+
+    input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #9BA6B2;
+      padding: 5px;
+      min-width: 100px;
+      width: 100%;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 18px;
+      outline: none;
+      background: transparent;
+    }
+
+    button {
+      padding: 16px 20px;
+      margin-top: 10px;
+      font-size: 15px;
+      background-color: #4E5C6E;
+      color: #F6AE2D;
+      border: none;
+      transition: background-color 0.3s linear;
+      text-align: center;
+
+      &:hover {
+        background-color: $color-4;
+      }
+    }
+  }
+}
+
+.opinion {
+  width: 80%;
+  height: 260px;
+  margin: 40px auto;
+  position: relative;
+  padding: 0;
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation: animatetop 0.5s;
+  animation: animatetop 0.5s;
+  background: #b3dced;
+  background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -webkit-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -o-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: -ms-linear-gradient(top, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 0%, #d3dde4 0%, #d3dde4 100%);
+  max-width: 400px;
+
+  .close-bt {
+    font-size: 32px;
+    text-align: end;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+
+  .salutation-text {
+    margin: -10px 20px 20px;
+
+    .t1 {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+  .feedBack {
+    margin: 20px;
+
+    textarea {
+      width: 100%;
+      resize: none;
+      border: 0;
+      outline: 0;
+      padding: 8px;
+    }
+  }
+
+  .end-text {
+    margin: 30px 20px;
+    font-weight: 700;
+
+    input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #9BA6B2;
+      padding: 5px;
+      min-width: 100px;
+      width: 100%;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 18px;
+      outline: none;
+      background: transparent;
+    }
+
+    button {
+      padding: 16px 20px;
+      margin-top: 10px;
+      font-size: 15px;
+      background-color: #4E5C6E;
+      color: #F6AE2D;
+      border: none;
+      transition: background-color 0.3s linear;
+      text-align: center;
+
+      &:hover {
+        background-color: $color-4;
+      }
+    }
+  }
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.snackToast {
+  #snackbar {
+    visibility: hidden;
+    width: 300px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    bottom: 150px;
+    font-size: 17px;
+  }
+
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 150px;
+      opacity: 1;
+    }
+  }
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 150px;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 150px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      bottom: 150px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,535 @@
+.support-section {
+  .hero {
+    display: table;
+    width: 100%;
+    margin-top: 60px;
+    height: 500px;
+    background: url("../img/support/bg.jpg") no-repeat center center;
+    background-size: cover;
+
+    .hero-content {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      h1 {
+        font-size: 72px;
+        font-weight: 500;
+        color: $color-5;
+      }
+    }
+  }
+
+  .faqs-header-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .header-row {
+      text-align: center;
+
+      .faq-icon {
+        width: 200px;
+        @media only screen and (max-width: 769px) {
+          width: 150px;
+        }
+      }
+
+      .main-heading {
+        margin: 20px 0;
+        font-size: 48px;
+        font-weight: 700;
+        color: $color-4;
+        @media only screen and (max-width: 769px) {
+          font-size: 32px;
+          padding: 0 15px;
+        }
+      }
+
+      hr {
+        border-top: 1px solid $color-3;
+        max-width: 500px;
+      }
+    }
+
+    .desc {
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 300;
+      color: $color-3;
+      @media only screen and (max-width: 769px) {
+        font-size: 16px;
+      }
+
+      .dark {
+        color: $color-4;
+        font-weight: 500;
+      }
+    }
+
+    .faq-row {
+      margin: 30px 160px;
+      padding: 20px;
+      background-color: $color-5;
+      cursor: pointer;
+      @media only screen and (max-width: 769px) {
+        margin: 20px 10px;
+        padding: 10px;
+      }
+
+      .question {
+        font-size: 32px;
+        line-height: 36px;
+        padding: 10px 0 20px;
+        color: $color-4;
+        font-weight: 500;
+        transition: color ease-in-out 0.3s;
+        @media only screen and (max-width: 769px) {
+          font-size: 18px;
+          line-height: 20px;
+          padding: 10px 0;
+        }
+
+        &.closed {
+          color: $color-3;
+        }
+
+        img {
+          width: 28px;
+          margin: 0 5px;
+          top: 2px;
+          position: relative;
+          @media only screen and (max-width: 769px) {
+            width: 18px;
+          }
+
+          &.ng-enter {
+            transition: opacity ease-in-out 0.3s;
+          }
+
+          &.ng-enter,
+          &.ng-leave.ng-leave-active {
+            opacity: 0;
+          }
+
+          &.ng-enter.ng-enter-active,
+          &.ng-leave {
+            opacity: 1;
+          }
+        }
+      }
+
+      .answer {
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-1;
+        height: 100%;
+        @media only screen and (max-width: 769px) {
+          font-size: 14px;
+        }
+
+        &.ng-enter,
+        &.ng-leave {
+          transition: opacity ease-in-out 0.3s;
+        }
+
+        &.ng-enter,
+        &.ng-leave.ng-leave-active {
+          opacity: 0;
+        }
+
+        &.ng-enter.ng-enter-active,
+        &.ng-leave {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .new-ticket {
+    overflow: hidden;
+
+    hr {
+      border-bottom: 2px solid $color-green;
+    }
+
+    h2 {
+      font-size: 48px;
+      color: $color-4;
+      padding: 60px 60px 0;
+      @media only screen and (max-width: 638px) {
+        padding: 30px 20px 0;
+      }
+    }
+
+    p {
+      padding: 30px 70px 60px 60px;
+      color: $color-3;
+      font-size: 20px;
+      line-height: 26px;
+      @media only screen and (max-width: 1199px) {
+        padding: 30px 50px;
+      }
+      @media only screen and (max-width: 638px) {
+        padding: 30px 20px;
+      }
+    }
+
+    .ticket-form {
+      padding: 60px 20px 80px 30px;
+      min-height: 100%;
+      @media only screen and (max-width: 1230px) {
+        padding: 50px 20px 50px 0;
+      }
+      @media only screen and (max-width: 1199px) {
+        padding: 20px 20px 50px 120px;
+        margin-bottom: 200px;
+      }
+      @media only screen and (max-width: 910px) {
+        padding: 20px 20px 50px 50px;
+        margin-bottom: 200px;
+      }
+      @media only screen and (max-width: 910px) {
+        padding: 20px 20px 50px 40px;
+        margin-bottom: 200px;
+      }
+      @media only screen and (max-width: 638px) {
+        padding: 20px 20px 50px 15px;
+        margin-bottom: 200px;
+      }
+      @media only screen and (max-width: 450px) {
+        padding: 20px 20px 50px 10px;
+        margin-bottom: 190px;
+      }
+
+      .ticket-form-section {
+        position: absolute;
+        // top: 0;
+        // left: 0;
+        opacity: 1;
+        transition: 0.3s ease-in transform, 0.3s ease-in opacity;
+        overflow: visible !important;
+
+        .count {
+          margin: 0 10px 10px;
+          font-size: 18px;
+          @media only screen and (max-width: 910px) {
+            font-size: 16px;
+          }
+          color: $color-2;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: 500;
+        }
+
+        .heading {
+          margin: 0 10px;
+          font-size: 14px;
+          color: $color-3;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: 500;
+
+          &.green {
+            color: $color-green;
+            font-size: 18px;
+          }
+
+          &.red {
+            color: $color-red;
+            font-size: 18px;
+          }
+        }
+
+        .desc {
+          margin: 15px 10px 10px;
+          padding: 0 220px 0 0;
+          font-size: 22px;
+          line-height: 26px;
+          color: $color-1;
+          @media only screen and (max-width: 450px) {
+            padding: 0 10px 0 0;
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+
+        &.hidden {
+          transform: translateX(-80%);
+          opacity: 0;
+          // display: none;
+        }
+
+        &.visible {
+          transform: translateX(0);
+          opacity: 1;
+          // display: block;
+        }
+
+        &.next-in-line {
+          transform: translateX(80%);
+          opacity: 0;
+          // display: none;
+        }
+      }
+
+      .section-email {
+        z-index: 8;
+
+        .ticket-input {
+          color: $black;
+          min-width: 350px;
+          @media only screen and (max-width: 450px) {
+            min-width: 200px;
+            font-size: 20px;
+            margin: 10px;
+          }
+          box-sizing: border-box;
+          letter-spacing: 1px;
+          border: 0;
+          // padding: 7px 0;
+          border-bottom: 1px solid $color-3;
+          font-size: 26px;
+          font-weight: 400;
+          padding: 0 0 5px 5px;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+
+      .section-category {
+        z-index: 7;
+
+        .category-component {
+          display: inline-block;
+          position: relative;
+          top: -5px;
+          margin: 20px 5px 10px;
+
+          .category {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 2px solid $color-3;
+            color: $color-1;
+            font-size: 18px;
+            @media only screen and (max-width: 910px) {
+              padding: 6px 9px;
+              font-size: 16px;
+              border-radius: 8px;
+              margin: 5px;
+            }
+            margin: 0 3px;
+            cursor: pointer;
+            transition: 0.2s linear color, 0.2s linear border-color;
+            border-radius: 10px;
+
+            &.selected {
+              background-color: $color-4;
+              color: $color-2;
+              border-color: $color-4;
+
+              &:hover {
+                color: $color-2;
+                border-color: $color-4;
+              }
+            }
+
+            &:hover {
+              color: $color-4;
+              border-color: $color-1;
+            }
+          }
+        }
+      }
+
+      .section-problem {
+        z-index: 6;
+
+        .ticket-text-area {
+          color: $black;
+          font-size: 22px;
+          min-width: 320px;
+          min-height: 150px;
+          @media only screen and (max-width: 450px) {
+            font-size: 14px;
+            min-width: 290px;
+            min-height: 120px;
+          }
+          background-color: transparent;
+          border: 1px solid $color-3;
+          outline: none;
+          margin-top: 10px;
+          padding: 8px;
+        }
+      }
+
+      .section-attachment {
+        z-index: 5;
+
+        .file-upload-area {
+          display: inline-block;
+          margin: 20px 10px 0;
+          height: 130px;
+          min-width: 320px;
+          @media only screen and (max-width: 450px) {
+            margin: 20px 5px 0;
+            min-width: 280px;
+          }
+          border: 2px dashed $color-3;
+          cursor: pointer;
+          transition: 0.3s linear border-color, 0.3s linear background-color;
+          text-align: center;
+
+          &.dragover {
+            border-color: $color-4;
+          }
+
+          img {
+            margin: 20px 0 0;
+            width: 50px;
+          }
+
+          .text {
+            margin-top: 15px;
+            font-size: 12px;
+            color: $color-3;
+            font-weight: 300;
+
+            .dark {
+              font-weight: 400;
+              color: $color-1;
+            }
+          }
+
+          &:hover {
+            border-color: $color-4;
+            background-color: $color-5;
+          }
+        }
+
+        .final-img {
+          margin: 10px 10px 0;
+          max-height: 130px;
+          padding: 4px;
+          border: 1px solid $color-3;
+          display: inline-block;
+        }
+
+        .file-name {
+          padding: 5px 10px;
+          border: 1px solid $color-3;
+          font-size: 16px;
+          color: $color-1;
+          font-weight: 500;
+        }
+
+        .delete-btn {
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 50%;
+          border: 1px solid $color-4;
+          color: $color-red;
+          padding: 4px 9px;
+          margin: 10px;
+          cursor: pointer;
+
+          &.clear-img {
+            position: relative;
+            top: -60px;
+          }
+        }
+      }
+
+      .section-complete {
+        z-index: 4;
+      }
+
+      .section-error {
+        z-index: 3;
+      }
+
+      .next-btn,
+      .prev-btn {
+        position: relative;
+        top: 15px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: 0.2s linear top;
+
+        &.problem-section-btn {
+          top: -45px;
+
+          &:hover {
+            top: -50px;
+          }
+          @media only screen and (max-width: 400px) {
+            top: 10px;
+
+            &:hover {
+              top: 5px;
+            }
+          }
+        }
+
+        &.attachment-section-btn {
+          top: 20px;
+
+          &:hover {
+            top: 15px;
+          }
+          @media only screen and (max-width: 400px) {
+            top: 10px;
+
+            &:hover {
+              top: 5px;
+            }
+          }
+
+          &.clear-img {
+            top: -40px;
+
+            &:hover {
+              top: -45px;
+            }
+          }
+        }
+
+        &.complete-section-btn {
+          top: 20px;
+          left: 10px;
+
+          &:hover {
+            top: 15px;
+          }
+
+          img {
+            @media only screen and (max-width: 450px) {
+              width: 45px;
+            }
+          }
+        }
+
+        &:hover {
+          top: 10px;
+        }
+
+        img {
+          width: 60px;
+          @media only screen and (max-width: 910px) {
+            width: 50px;
+          }
+          @media only screen and (max-width: 450px) {
+            width: 35px;
+          }
+        }
+      }
+
+      .prev-btn {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.charts-section {
+  padding-top: 140px;
+  background: $color-4;
+
+  h1 {
+    text-align: center;
+    @media only screen and (max-width: 450px) {
+      font-size: 28px;
+      margin: 30px 0 20px;
+    }
+    font-size: 48px;
+    margin: 50px 0 30px;
+    color: $color-5;
+  }
+
+  .loader {
+    text-align: center;
+
+    img {
+      width: 200px;
+    }
+  }
+
+  .periods {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+
+    .period {
+      display: inline-block;
+      font-size: 24px;
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        margin: 0 15px;
+      }
+      @media only screen and (max-width: 450px) {
+        font-size: 14px;
+        margin: 0 12px;
+      }
+      font-weight: 500;
+      color: $color-3;
+      margin: 0 30px;
+      cursor: pointer;
+
+      &.active {
+        @media only screen and (max-width: 767px) {
+          font-size: 22px;
+        }
+        @media only screen and (max-width: 450px) {
+          font-size: 16px;
+        }
+        font-size: 28px;
+        color: $color-6;
+        border-bottom: 3px solid $color-6;
+        padding: 1px 1px 3px;
+        cursor: default;
+      }
+    }
+  }
+
+  .buy-rate-chart {
+    padding: 50px;
+    @media only screen and (max-width: 1023px) {
+      padding: 20px;
+    }
+    @media only screen and (max-width: 450px) {
+      padding: 0;
+    }
+    // max-width: 800px;
+    // max-height: 400px;
+    .ct-series-a {
+      .ct-line {
+        /* Set the colour of this series line */
+        stroke: $color-6;
+        /* Control the thikness of your lines */
+        stroke-width: 2px;
+        /* Create a dashed line with a pattern */
+        // stroke-dasharray: 10px 20px;
+      }
+
+      .ct-point {
+        stroke: $color-3;
+      }
+
+      .ct-area {
+        fill: $color-6;
+      }
+    }
+
+    .ct-label {
+      // fill: rgba($color-5,0.4);
+      // color: rgba($color-5,0.4);
+      fill: $color-3;
+      color: $color-3;
+      font-size: 0.9rem;
+      @media only screen and (max-width: 450px) {
+        font-size: 0.7rem;
+      }
+      font-weight: 300;
+      white-space: nowrap;
+    }
+  }
+
+  .no-data {
+    padding: 100px 20px 150px;
+    text-align: center;
+    color: $color-1;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  hr {
+    border-top: 1px solid $color-1;
+  }
+}
+
+.custom-tooltip {
+  background-color: $color-3;
+  color: $color-4;
+  font-weight: 300;
+  @include border-radius(8px);
+
+  .chartist-tooltip-value {
+    margin-top: 5px;
+  }
+
+  &:before {
+    border-top-color: $color-3;
+  }
+}

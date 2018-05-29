@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700,800');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+$color-bg: #DBE9EE;
+$color-border: #7D8491;
+$color-bg-2: #CED3DC;
+$color-bg-3: #F6F7F8;
+$color-text: #393D3F;
+$color-text-inverse: #FFFFFF;
+$color-1: #4E5C6E;
+$color-2: #F6AE2D;
+$color-3: #9BA6B2;
+$color-4: #3A4551;
+$color-5: #F9FBFC;
+$color-6: #44CCFF;
+$color-green: #5FAD56;
+$color-red: #FE4A49;
+$color-blue: #2B59C3;
+$color-facebook: #3b5998;
+$color-linkedin: #0077B5;
+$color-google: #dd4b39;
+$color-instagram: #e95950;
+$color-twitter: #55ACEE;
+$color-whatsapp: #128c7e;
+$black: #0F0F0F;
+$white: #FFFFFF;
+$color-shadow: transparentize(#303336, .9);
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin hcenterer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+@mixin vcenterer {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+@mixin font1 {
+  font-family: 'Kanit', sans-serif !important;
+}
+// @mixin font2 {
+//   font-family: 'Merriweather', serif;
+// }
+// @mixin font3 {
+//   font-family: 'Trirong', serif;
+// }
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin left-margin-project {
+  $margin-left-small: 10px;
+  $margin-left-large: 50px;
+  @media screen and (max-width: 769px) {
+    margin-left: $margin-left-small;
+  }
+  @media screen and (min-width: 769px) {
+    margin-left: $margin-left-large;
+  }
+}
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

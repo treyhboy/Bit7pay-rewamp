@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="objects" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-418.5 2031.9 748.9 756.8" enable-background="new -418.5 2031.9 748.9 756.8" xml:space="preserve">
+<line fill="none" stroke="#FFCDD2" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2054.6" x2="-279.4" y2="2161.6"/>
+<line fill="none" stroke="#CFD8DC" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2205.6" x2="-279.4" y2="2312.6"/>
+<line fill="none" stroke="#F0F4C3" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2356.6" x2="-279.4" y2="2463.6"/>
+<line fill="none" stroke="#B2EBF2" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2507.6" x2="-279.4" y2="2614.6"/>
+<g>
+	<g>
+		<path fill="#4E5C6E" d="M272.6,2108.1L272.6,2108.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4h614.9
+			C238.7,2183.8,272.6,2149.9,272.6,2108.1z"/>
+		<path fill="none" stroke="#3A4551" stroke-miterlimit="10" d="M272.6,2108.1L272.6,2108.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4
+			h614.9C238.7,2183.8,272.6,2149.9,272.6,2108.1z"/>
+	</g>
+	<g>
+		<path fill="#4E5C6E" d="M142,2259.1L142,2259.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4H66.3C108.1,2334.8,142,2300.9,142,2259.1z"
+			/>
+		<path fill="none" stroke="#3A4551" stroke-miterlimit="10" d="M142,2259.1L142,2259.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4H66.3
+			C108.1,2334.8,142,2300.9,142,2259.1z"/>
+	</g>
+	<g>
+		<path fill="#4E5C6E" d="M329.9,2410.1L329.9,2410.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4h672.2
+			C296,2485.8,329.9,2451.9,329.9,2410.1z"/>
+		<path fill="none" stroke="#3A4551" stroke-miterlimit="10" d="M329.9,2410.1L329.9,2410.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4
+			h672.2C296,2485.8,329.9,2451.9,329.9,2410.1z"/>
+	</g>
+	<g>
+		<path fill="#4E5C6E" d="M201.2,2561.1L201.2,2561.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4h543.5
+			C167.3,2636.8,201.2,2602.9,201.2,2561.1z"/>
+		<path fill="none" stroke="#3A4551" stroke-miterlimit="10" d="M201.2,2561.1L201.2,2561.1c0-41.8-33.9-75.7-75.7-75.7H-418v151.4
+			h543.5C167.3,2636.8,201.2,2602.9,201.2,2561.1z"/>
+	</g>
+	<g>
+		<path fill="#4E5C6E" d="M295.8,2712.5L295.8,2712.5c0-41.8-33.9-75.7-75.7-75.7H-418v151.4h638
+			C261.9,2788.2,295.8,2754.3,295.8,2712.5z"/>
+		<path fill="none" stroke="#3A4551" stroke-miterlimit="10" d="M295.8,2712.5L295.8,2712.5c0-41.8-33.9-75.7-75.7-75.7H-418v151.4
+			h638C261.9,2788.2,295.8,2754.3,295.8,2712.5z"/>
+	</g>
+</g>
+<g>
+	<circle fill="#FFFFFF" cx="195.9" cy="2108.1" r="59.8"/>
+	<circle fill="#FFFFFF" cx="65.3" cy="2259.1" r="59.8"/>
+	<circle fill="#FFFFFF" cx="253.2" cy="2410.1" r="59.8"/>
+	<circle fill="#FFFFFF" cx="124.5" cy="2561.1" r="59.8"/>
+	<circle fill="#FFFFFF" cx="220.9" cy="2712.5" r="59.8"/>
+</g>
+<text transform="matrix(1 0 0 1 155.1451 2133.5588)" fill="#44CCFF" font-family="'AvenirNext-Bold'" font-size="63.112px">01</text>
+<text transform="matrix(1 0 0 1 178.7733 2082.5583)" fill="#3A4551" font-family="'OpenSans-Bold'" font-size="14.7919px">STEP</text>
+<text transform="matrix(1 0 0 1 212.4368 2437.4641)" fill="#44CCFF" font-family="'AvenirNext-Bold'" font-size="63.112px">03</text>
+<text transform="matrix(1 0 0 1 236.0649 2386.4636)" fill="#3A4551" font-family="'OpenSans-Bold'" font-size="14.7919px">STEP</text>
+<text transform="matrix(1 0 0 1 83.6832 2588.4709)" fill="#44CCFF" font-family="'AvenirNext-Bold'" font-size="63.112px">04</text>
+<text transform="matrix(1 0 0 1 107.3115 2537.4705)" fill="#3A4551" font-family="'OpenSans-Bold'" font-size="14.7919px">STEP</text>
+<text transform="matrix(1 0 0 1 180.097 2744.2424)" fill="#44CCFF" font-family="'AvenirNext-Bold'" font-size="63.112px">05</text>
+<text transform="matrix(1 0 0 1 203.7252 2693.2419)" fill="#3A4551" font-family="'OpenSans-Bold'" font-size="14.7919px">STEP</text>
+<text transform="matrix(1 0 0 1 25.2853 2284.5657)" fill="#44CCFF" font-family="'AvenirNext-Bold'" font-size="63.112px">02</text>
+<text transform="matrix(1 0 0 1 48.9135 2233.5652)" fill="#3A4551" font-family="'OpenSans-Bold'" font-size="14.7919px">STEP</text>
+<line fill="none" stroke="#44CCFF" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2659" x2="-279.4" y2="2766"/>
+<line fill="none" stroke="#44CCFF" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2507.6" x2="-279.4" y2="2614.6"/>
+<line fill="none" stroke="#44CCFF" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2357.5" x2="-279.4" y2="2464.5"/>
+<line fill="none" stroke="#44CCFF" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2205.6" x2="-279.4" y2="2312.6"/>
+<line fill="none" stroke="#44CCFF" stroke-width="2.8369" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="-279.4" y1="2054.6" x2="-279.4" y2="2161.6"/>
+<g id="XMLID_4222_">
+	<g id="c13_monument_16_">
+		<path id="_x3C_Group_x3E__16_" fill="#3A4551" d="M-322.8,2130.6v-33.4H-334v33.4H-322.8z M-306.2,2130.6v-33.4h-11.3v33.4H-306.2
+			z M-300.5,2090.6l-36.1-21.4l-36.1,21.4c0,0-2.6,2.2,0,3.8h72.3C-300.5,2094.3-298.6,2092.6-300.5,2090.6z M-339.3,2130.6v-33.4
+			h-11.3v33.4H-339.3z M-356.2,2130.6v-33.4h-11.2v33.4H-356.2z M-302.8,2134.3l-66.4,0.1l-6.1,7.9v4.5h77.8v-4.5L-302.8,2134.3z"/>
+	</g>
+	<g id="Capa_1_16_">
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 -253.8271 2111.6736)" enable-background="new    "><tspan x="0" y="0" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Provide your bank account details like Account Number,</tspan><tspan x="0" y="15.6" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">IFSC Code, Bank Name, Beneficiary Name and image of a </tspan><tspan x="0" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Cancelled Cheque to enable withdrawals from Bit7Pay Wallet.</tspan></text>
+<text transform="matrix(1 0 0 1 -253.8271 2263.1013)" enable-background="new    "><tspan x="0" y="0" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Provide your Aadhar Number along with</tspan><tspan x="0" y="15.6" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">a front and back image to complete</tspan><tspan x="0" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Identification Verification Process.</tspan></text>
+<text transform="matrix(1 0 0 1 -253.8271 2418.0566)" enable-background="new    "><tspan x="0" y="0" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">To enable financial transactions to and from your Bit7Pay Wallet,</tspan><tspan x="0" y="15.6" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">provide your PAN along with a front image. In case you don’t have a</tspan><tspan x="0" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">PAN, apply online on </tspan><tspan x="129.6" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px" text-decoration=" underline">https://tin.tin.nsdl.com/pan/newpanforeign.html</tspan></text>
+<text transform="matrix(1 0 0 1 -253.8271 2562.9285)" enable-background="new    "><tspan x="0" y="0" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Provide your email address and get an email from</tspan><tspan x="0" y="15.6" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Bit7Pay containing a Verification Button. Click on</tspan><tspan x="0" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">that button to complete Email Verification.</tspan></text>
+<text transform="matrix(1 0 0 1 -253.8271 2714.8159)" enable-background="new    "><tspan x="0" y="0" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">Upload a recent photo containing your complete face in good</tspan><tspan x="0" y="15.6" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">lighting conditions or just snap a selfie to complete photo</tspan><tspan x="0" y="31.2" fill="#F9FBFC" font-family="'AvenirNext-Medium'" font-size="13px">verification. </tspan></text>
+<g>
+	<text transform="matrix(1 0 0 1 -253.8271 2089.7253)" fill="#5FAD56" font-family="'AvenirNext-Bold'" font-size="24px">BANK ACCOUNT</text>
+	<text transform="matrix(1 0 0 1 -253.8271 2541.0496)" fill="#5FAD56" font-family="'AvenirNext-Bold'" font-size="24px">EMAIL</text>
+	<text transform="matrix(1 0 0 1 -253.8271 2693.2419)" fill="#5FAD56" font-family="'AvenirNext-Bold'" font-size="24px">PHOTO</text>
+	<text transform="matrix(1 0 0 1 -253.8271 2241.1531)" fill="#5FAD56" font-family="'AvenirNext-Bold'" font-size="24px">AADHAR</text>
+	<text transform="matrix(1 0 0 1 -253.8271 2396.1077)" fill="#5FAD56" font-family="'AvenirNext-Bold'" font-size="24px">PAN</text>
+</g>
+<g id="XMLID_3240_">
+	<g id="XMLID_3876_">
+		<g id="XMLID_3877_">
+			<path id="XMLID_3878_" fill="#3A4551" d="M-310.2,2278.9c-4.8-3.8-17.6-14-19.4-20.4c-1.4-4.7-6.2-7.3-11-6.1
+				c-4.7,1.4-7.5,6.2-6.1,11c3.2,11.1,14.8,21,25.5,29.5c0.3,0.3,0.7,0.4,1.1,0.4c0.6,0,1-0.3,1.4-0.7c0.6-0.7,0.4-1.8-0.3-2.5
+				c-10.3-8-21.4-17.6-24.2-27.6c-0.8-2.8,0.8-5.8,3.7-6.6c2.8-0.8,5.8,0.8,6.6,3.7c2,6.8,11.6,15.1,20.7,22.3
+				c0.7,0.6,1.8,0.4,2.5-0.3C-309.4,2280.6-309.5,2279.5-310.2,2278.9z"/>
+		</g>
+	</g>
+	<g id="XMLID_3873_">
+		<g id="XMLID_3874_">
+			<path id="XMLID_3875_" fill="#3A4551" d="M-305.3,2263.2c-4.1-3.4-10.1-8.3-11-9.2c-3.8-11.7-16.3-18.5-28.2-15.1
+				c-5.9,1.7-10.9,5.6-13.8,11c-3,5.4-3.7,11.6-2,17.5c3,10.1-3.4,12.8-5.4,13.5c-1,0.3-1.4,1.3-1.1,2.3c0.3,0.7,1,1.3,1.7,1.3
+				c0.1,0,0.4,0,0.6-0.1c5.4-1.7,10.7-7.3,7.6-17.9c-1.4-4.9-0.8-10.3,1.7-14.8s6.6-7.9,11.7-9.3c10.1-3,20.9,3,24,13.1
+				c0,0.1,0.1,0.3,0.1,0.4c0.1,0.3,0.6,1,12,10.1c0.7,0.6,1.8,0.6,2.5-0.3C-304.4,2264.8-304.6,2263.7-305.3,2263.2z"/>
+		</g>
+	</g>
+	<g id="XMLID_3870_">
+		<g id="XMLID_3871_">
+			<path id="XMLID_3872_" fill="#3A4551" d="M-307.1,2271.9c-13.1-10.4-15.4-13.7-15.9-15.4c-2.4-8.5-11.3-13.2-19.7-10.9
+				c-8.2,2.4-12.8,10.7-11,19.6c3.5,16.2,0.8,20-6.5,22.3c-1,0.3-1.4,1.3-1.1,2.3c0.3,0.7,1,1.3,1.7,1.3c0.1,0,0.4,0,0.6-0.1
+				c10.3-3.2,12.4-9.9,8.9-26.5c-1.6-6.9,2.1-13.7,8.5-15.4c6.6-1.8,13.4,2,15.4,8.5c0.7,2.4,2.5,5.8,17.1,17.2
+				c0.7,0.6,1.8,0.4,2.5-0.3C-306.1,2273.6-306.3,2272.5-307.1,2271.9z"/>
+		</g>
+	</g>
+	<g id="XMLID_3867_">
+		<g id="XMLID_3868_">
+			<path id="XMLID_3869_" fill="#3A4551" d="M-314,2284.4c-0.8-0.8-2.3-2-4.1-3.2c-5.9-4.5-16.1-12.1-18.5-20.7
+				c-0.3-1-1.3-1.4-2.3-1.3c-1,0.3-1.4,1.3-1.3,2.3c2.8,9.7,13.4,17.8,19.7,22.5c1.7,1.3,3.1,2.4,3.7,3c0.3,0.3,0.8,0.6,1.3,0.6
+				c0.4,0,0.8-0.1,1.3-0.6C-313.3,2286.3-313.3,2285.1-314,2284.4z"/>
+		</g>
+	</g>
+	<g id="XMLID_3864_">
+		<g id="XMLID_3865_">
+			<path id="XMLID_3866_" fill="#3A4551" d="M-326.4,2295c-0.4-0.4-0.8-1-1.3-1.6c-1.7-2.4-4.4-6.1-8.9-6.1c-6.1,0-6.9,10.3-7,12.3
+				c0,1,0.7,1.8,1.7,1.8h0.1c1,0,1.7-0.7,1.8-1.7c0.3-3.7,1.7-9,3.5-9c2.7,0,4.5,2.5,5.9,4.5c0.6,0.8,1.1,1.6,1.6,2
+				c0.7,0.7,1.8,0.7,2.5,0C-325.7,2296.8-325.7,2295.7-326.4,2295z"/>
+		</g>
+	</g>
+	<g id="XMLID_3861_">
+		<g id="XMLID_3862_">
+			<path id="XMLID_3863_" fill="#3A4551" d="M-343.6,2278.1c-0.3-1-1.3-1.4-2.3-1.1c-1,0.3-1.4,1.3-1.1,2.3c1.6,4.8-1.4,14-5.9,15.5
+				c-1,0.3-1.4,1.3-1.1,2.3c0.3,0.7,1,1.3,1.7,1.3c0.1,0,0.4,0,0.6-0.1C-345,2295.7-341.8,2283.9-343.6,2278.1z"/>
+		</g>
+	</g>
+	<g id="XMLID_3858_">
+		<g id="XMLID_3859_">
+			<path id="XMLID_3860_" fill="#3A4551" d="M-305.8,2254c-2.3-0.7-3.9-3.5-5.9-6.8c-4.2-6.9-10.1-16.3-26.4-16.3
+				c-16.6,0-30,13.5-30,30c0,1,0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8c0-14.7,11.8-26.5,26.5-26.5c14.4,0,19.3,8.2,23.4,14.7
+				c2.4,3.8,4.4,7.2,7.9,8.3c1,0.3,2-0.1,2.3-1.1C-304.4,2255.3-305,2254.3-305.8,2254z"/>
+		</g>
+	</g>
+	<g id="XMLID_3854_">
+		<g id="XMLID_3855_">
+			<path id="XMLID_3857_" fill="#3A4551" d="M-363.2,2272.5c-0.7-1.3-1.6-3.5-1.6-4.5s-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8
+				c0,2.1,1.7,5.5,2,6.1s1,1,1.6,1c0.3,0,0.6,0,0.8-0.1C-363.1,2274.4-362.8,2273.4-363.2,2272.5z"/>
+		</g>
+	</g>
+	<g id="XMLID_3850_">
+		<g id="XMLID_3851_">
+			<path id="XMLID_3852_" fill="#3A4551" d="M-311.9,2235.2c-2.4-3.9-13.1-11.4-28-11.4c-15.8,0-24.4,8.3-26.2,11.4
+				c-0.6,0.8-0.3,2,0.6,2.4c0.8,0.6,2,0.3,2.4-0.6c1.6-2.5,9.2-9.7,23.3-9.7c13.5,0,23.3,6.9,24.9,9.7c0.3,0.6,0.8,0.8,1.6,0.8
+				c0.3,0,0.6-0.1,0.8-0.3C-311.8,2237.2-311.5,2236.1-311.9,2235.2z"/>
+		</g>
+	</g>
+	<g id="XMLID_3847_">
+		<g id="XMLID_3848_">
+			<path id="XMLID_3849_" fill="#3A4551" d="M-319.9,2220.3c-0.7-0.3-1.3-0.4-2-0.7c-3.8-1.4-7.9-3-18-3c-9.3,0-11.7,1.3-14.7,2.7
+				c-0.6,0.3-1.3,0.6-2,1c-0.8,0.4-1.3,1.4-0.8,2.4c0.4,0.8,1.4,1.3,2.4,0.8c0.8-0.4,1.6-0.7,2.1-1c2.7-1.4,4.5-2.4,13.1-2.4
+				c9.6,0,13.1,1.3,16.8,2.7c0.7,0.3,1.4,0.6,2.1,0.7c0.1,0,0.4,0.1,0.6,0.1c0.7,0,1.4-0.4,1.7-1.1
+				C-318.5,2221.7-319.1,2220.7-319.9,2220.3z"/>
+		</g>
+	</g>
+	<g id="XMLID_3722_">
+		<g id="XMLID_3725_">
+			<path id="XMLID_3846_" fill="#3A4551" d="M-304.7,2246.2c-1-3-3.7-7.3-3.7-7.5c-0.6-0.8-1.6-1.1-2.4-0.6
+				c-0.8,0.6-1.1,1.6-0.6,2.4c0,0,2.5,4.2,3.4,6.6c0.3,0.7,1,1.3,1.7,1.3c0.1,0,0.4,0,0.6-0.1
+				C-305,2248.2-304.4,2247.2-304.7,2246.2z"/>
+		</g>
+	</g>
+</g>
+<g id="XMLID_9133_">
+	<path id="XMLID_9174_" fill="#3A4551" d="M-302,2382.1h-67.5c-3.1,0-5.5,2.5-5.5,5.5v46.6c0,3.1,2.5,5.5,5.5,5.5h67.5
+		c3.1,0,5.5-2.5,5.5-5.5v-46.6C-296.4,2384.6-298.9,2382.1-302,2382.1z M-299,2434.3c0,1.6-1.3,2.9-2.9,2.9h-67.6
+		c-1.6,0-2.9-1.3-2.9-2.9v-46.6c0-1.6,1.3-2.9,2.9-2.9h67.5c1.6,0,2.9,1.3,2.9,2.9L-299,2434.3L-299,2434.3z"/>
+	<path id="XMLID_9154_" fill="#3A4551" d="M-345.4,2419.2l-4.8-2.5v-0.5c2.1-1.2,3.6-3.1,4.5-5.8c1.3-0.7,2.1-2,2.1-3.4v-1.3
+		c0-1.2-0.6-2.4-1.5-3.1c-0.8-4.9-4.2-7.4-10.2-7.4c-0.2,0-0.6,0-0.8,0c-1.5,0.1-3.1-0.2-4.2-0.9c-0.6-0.4-0.9-0.7-1.2-1.1
+		c-0.6-0.7-1.8-0.8-2.5-0.1c-0.4,0.4-0.5,0.8-0.4,1.2c0,0.5,0.1,1.1,0.2,1.6c0.2,1.3,0.2,1.3-0.1,2c-0.1,0.2-0.4,0.6-0.5,1.1
+		c-0.5,1.1-0.7,2.2-0.9,3.4c-0.9,0.7-1.5,1.9-1.5,3.1v1.3c0,1.4,0.8,2.8,2.1,3.4c0.8,2.6,2.4,4.6,4.5,5.8v0.5l-4.9,2.5
+		c-1.8,0.9-2.9,2.8-2.9,4.9v1.8c0,1.1,0,3.5,13.1,3.5s13.1-2.5,13.1-3.5v-1.7C-342.3,2422-343.5,2420.1-345.4,2419.2z"/>
+	<path id="XMLID_9153_" fill="#3A4551" d="M-335.7,2401.8h13.1c0.7,0,1.3-0.6,1.3-1.3s-0.6-1.3-1.3-1.3h-13.1
+		c-0.7,0-1.3,0.6-1.3,1.3S-336.4,2401.8-335.7,2401.8z"/>
+	<path id="XMLID_9152_" fill="#3A4551" d="M-317.4,2401.8h1.3c0.7,0,1.3-0.6,1.3-1.3s-0.6-1.3-1.3-1.3h-1.3c-0.7,0-1.3,0.6-1.3,1.3
+		S-318.1,2401.8-317.4,2401.8z"/>
+	<path id="XMLID_9151_" fill="#3A4551" d="M-334.4,2421.4h-1.3c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h1.3c0.7,0,1.3-0.6,1.3-1.3
+		S-333.7,2421.4-334.4,2421.4z"/>
+	<path id="XMLID_9150_" fill="#3A4551" d="M-326.5,2421.4h-2.6c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h2.6c0.7,0,1.3-0.6,1.3-1.3
+		S-325.8,2421.4-326.5,2421.4z"/>
+	<path id="XMLID_9149_" fill="#3A4551" d="M-320,2421.4h-1.3c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h1.3c0.7,0,1.3-0.6,1.3-1.3
+		S-319.3,2421.4-320,2421.4z"/>
+	<path id="XMLID_9148_" fill="#3A4551" d="M-312.2,2421.4h-2.6c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h2.6c0.7,0,1.3-0.6,1.3-1.3
+		C-310.8,2422-311.4,2421.4-312.2,2421.4z"/>
+	<path id="XMLID_9141_" fill="#3A4551" d="M-307.8,2421.9c-0.2,0.2-0.4,0.6-0.4,0.9c0,0.4,0.1,0.7,0.4,0.9c0.2,0.2,0.6,0.4,0.9,0.4
+		c0.4,0,0.7-0.1,0.9-0.4c0.2-0.2,0.4-0.6,0.4-0.9c0-0.4-0.1-0.7-0.4-0.9C-306.4,2421.3-307.4,2421.3-307.8,2421.9z"/>
+	<path id="XMLID_9140_" fill="#3A4551" d="M-306.9,2407.1h-28.8c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h28.8c0.7,0,1.3-0.6,1.3-1.3
+		S-306.2,2407.1-306.9,2407.1z"/>
+	<path id="XMLID_9134_" fill="#3A4551" d="M-306.9,2415h-28.8c-0.7,0-1.3,0.6-1.3,1.3s0.6,1.3,1.3,1.3h28.8c0.7,0,1.3-0.6,1.3-1.3
+		C-305.6,2415.6-306.2,2415-306.9,2415z"/>
+</g>
+<g id="XMLID_8819_">
+	<path id="XMLID_9034_" fill="#3A4551" d="M-340.1,2542.9h7.8c0.7,0,1.3-0.5,1.3-1.3s-0.5-1.3-1.3-1.3h-7.8c-0.7,0-1.3,0.5-1.3,1.3
+		S-340.8,2542.9-340.1,2542.9z"/>
+	<path id="XMLID_9027_" fill="#3A4551" d="M-320.7,2561h-7.8c-0.7,0-1.3,0.5-1.3,1.3s0.5,1.3,1.3,1.3h7.8c0.7,0,1.3-0.5,1.3-1.3
+		C-319.4,2561.5-319.9,2561-320.7,2561z"/>
+	<path id="XMLID_9024_" fill="#3A4551" d="M-351.7,2553.2h6.4c0.7,0,1.3-0.5,1.3-1.3s-0.5-1.3-1.3-1.3h-6.4c-0.7,0-1.3,0.5-1.3,1.3
+		S-352.5,2553.2-351.7,2553.2z"/>
+	<path id="XMLID_9023_" fill="#3A4551" d="M-336.2,2552c0,0.7,0.5,1.3,1.3,1.3h9.1c0.7,0,1.3-0.5,1.3-1.3s-0.5-1.3-1.3-1.3h-9.1
+		C-335.6,2550.7-336.2,2551.2-336.2,2552z"/>
+	<path id="XMLID_9021_" fill="#3A4551" d="M-340.1,2553.2c0.4,0,0.7-0.1,0.9-0.4c0.3-0.3,0.4-0.5,0.4-0.9s-0.1-0.7-0.4-0.9
+		c-0.5-0.5-1.3-0.5-1.9,0c-0.3,0.3-0.4,0.5-0.4,0.9s0.1,0.7,0.4,0.9C-340.8,2553.1-340.4,2553.2-340.1,2553.2z"/>
+	<path id="XMLID_9019_" fill="#3A4551" d="M-333.5,2561h-13c-0.7,0-1.3,0.5-1.3,1.3s0.5,1.3,1.3,1.3h13c0.7,0,1.3-0.5,1.3-1.3
+		S-332.9,2561-333.5,2561z"/>
+	<path id="XMLID_8914_" fill="#3A4551" d="M-351.7,2563.6c0.4,0,0.7-0.1,0.9-0.4c0.3-0.3,0.4-0.5,0.4-0.9s-0.1-0.7-0.4-0.9
+		c-0.5-0.5-1.3-0.5-1.9,0c-0.3,0.3-0.4,0.5-0.4,0.9s0.1,0.7,0.4,0.9C-352.5,2563.4-352.1,2563.6-351.7,2563.6z"/>
+	<path id="XMLID_8906_" fill="#3A4551" d="M-320.7,2553.2c0.4,0,0.7-0.1,0.9-0.4c0.3-0.3,0.4-0.5,0.4-0.9s-0.1-0.7-0.4-0.9
+		c-0.5-0.5-1.3-0.5-1.9,0c-0.3,0.3-0.4,0.5-0.4,0.9s0.1,0.7,0.4,0.9C-321.3,2553.1-320.9,2553.2-320.7,2553.2z"/>
+	<polygon id="XMLID_8904_" fill="#3A4551" points="-375,2557.8 -375,2598.2 -348.7,2577.9 	"/>
+	<polygon id="XMLID_8884_" fill="#3A4551" points="-346.2,2579.1 -373,2599.9 -299.3,2599.9 -326.3,2579.1 	"/>
+	<path id="XMLID_8823_" fill="#3A4551" d="M-364.8,2562.4l17.8,14.2h21.6l17.8-14.2l9-6.8l-6.6-6.2v-15.6h-16.5l-11.1-10.3
+		c-1.7-1.6-4.8-1.6-6.6,0l-11.1,10.3h-16.7v15.6l-6.6,6.2L-364.8,2562.4z M-364.7,2536.5h11.3h34.3h11.3v10.5v12.2l-18.5,14.8h-19.9
+		l-18.5-14.9v-12.2L-364.7,2536.5L-364.7,2536.5z"/>
+	<polygon id="XMLID_8820_" fill="#3A4551" points="-323.8,2577.9 -297.3,2598.2 -297.3,2557.8 	"/>
+</g>
+<g id="XMLID_4263_">
+	<path id="XMLID_9432_" fill="#3A4551" d="M-307.1,2712.6c0-16-13-29-29-29s-29,13-29,29c0,8.4,3.6,16.1,9.5,21.4l0,0l0.9,0.8
+		l0.1,0.1c0.5,0.4,1,0.8,1.6,1.2c0.1,0.1,0.4,0.3,0.5,0.4c0.5,0.4,1.2,0.8,1.7,1.2c0.1,0.1,0.3,0.1,0.4,0.3c0.6,0.4,1.3,0.8,1.9,1
+		c0,0,0.1,0,0.1,0.1c2.2,1,4.5,1.8,7,2.2h0.1c0.8,0.1,1.6,0.3,2.3,0.3c0.1,0,0.1,0,0.3,0c0.8,0,1.6,0.1,2.3,0.1c0.8,0,1.6,0,2.3-0.1
+		c0.1,0,0.3,0,0.3,0c0.8-0.1,1.6-0.1,2.3-0.3c0.1,0,0.1,0,0.3,0c2.5-0.4,4.8-1.2,6.9-2.2c0.1,0,0.1-0.1,0.3-0.1
+		c0.6-0.3,1.3-0.6,1.9-1c0.1-0.1,0.3-0.1,0.5-0.3c0.5-0.4,1.2-0.6,1.7-1c0.3-0.1,0.4-0.3,0.5-0.4c0.5-0.4,0.9-0.6,1.3-1
+		c0.1-0.1,0.3-0.1,0.3-0.3l0.9-0.8l0,0C-310.8,2728.7-307.1,2721-307.1,2712.6z M-363,2712.6c0-14.8,12.1-26.9,26.9-26.9
+		s26.9,12.1,26.9,26.9c0,8.1-3.5,15.2-9.1,20.1c-0.3-0.3-0.6-0.4-0.9-0.5l-9-4.4c-0.8-0.4-1.3-1.2-1.3-2.1v-3.1
+		c0.3-0.3,0.4-0.5,0.6-0.9c1.2-1.7,2.1-3.5,2.7-5.5c1.3-0.6,2.2-1.9,2.2-3.5v-3.8c0-0.9-0.4-1.8-0.9-2.5v-4.9c0-0.5,0.3-3.6-1.9-6.2
+		c-1.9-2.2-5.1-3.4-9.4-3.4s-7.4,1.2-9.4,3.4c-2.2,2.6-2.1,5.6-1.9,6.2v4.9c-0.6,0.6-0.9,1.6-0.9,2.5v3.8c0,1.2,0.5,2.2,1.4,3
+		c0.9,3.4,2.6,5.8,3.2,6.8v3.1c0,0.9-0.5,1.7-1.2,2.1l-8.3,4.5c-0.3,0.1-0.5,0.3-0.8,0.5C-359.6,2727.7-363,2720.5-363,2712.6z"/>
+	<g id="XMLID_9469_">
+		<polygon id="XMLID_9474_" fill="#3A4551" points="-314,2678 -301.7,2678 -301.7,2689.7 -298.5,2689.7 -298.5,2674.9 -314,2674.9 
+					"/>
+		<polygon id="XMLID_9473_" fill="#3A4551" points="-370.7,2689.7 -370.7,2678 -358.3,2678 -358.3,2674.9 -373.8,2674.9 
+			-373.8,2689.7 		"/>
+		<polygon id="XMLID_9472_" fill="#3A4551" points="-358.3,2747 -370.7,2747 -370.7,2734 -373.8,2734 -373.8,2750.2 -358.3,2750.2 
+					"/>
+		<polygon id="XMLID_9471_" fill="#3A4551" points="-301.7,2734 -301.7,2747 -314,2747 -314,2750.2 -298.5,2750.2 -298.5,2734 		"/>
+	</g>
+</g>
+</svg>

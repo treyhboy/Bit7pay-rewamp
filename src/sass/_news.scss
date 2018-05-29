@@ -1,0 +1,455 @@
+.news-section {
+  margin-top: 144px;
+
+  .news-hero {
+    background: url("../img/hero-news.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 160px;
+    @media only screen and (max-width: 991px) {
+      padding: 160px 80px;
+    }
+    @media only screen and (max-width: 550px) {
+      padding: 100px 20px;
+    }
+
+    h3 {
+      color: $color-5;
+      font-size: 30px;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      padding-bottom: 10px;
+      @media only screen and (max-width: 991px) {
+        font-size: 28px;
+      }
+      @media only screen and (max-width: 550px) {
+        font-size: 22px;
+      }
+    }
+
+    h1 {
+      color: $color-2;
+      font-size: 84px;
+      font-weight: 800;
+      @media only screen and (max-width: 991px) {
+        font-size: 72px;
+      }
+      @media only screen and (max-width: 550px) {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .featured-news {
+    padding: 40px 30px;
+
+    .blog-img-holder {
+      cursor: pointer;
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
+
+      .blog-img {
+        max-width: 100%;
+        border: 2px solid $color-3;
+      }
+
+      .read-more {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        color: $color-2;
+        padding: 10px 18px;
+        border-radius: 10px;
+        background-color: $color-4;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+      }
+
+      &:hover {
+        .read-more {
+          opacity: 1;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 800;
+      padding: 10px 20px;
+      color: $black;
+      cursor: pointer;
+      @media only screen and (max-width: 991px) {
+        font-size: 30px;
+        line-height: 34px;
+      }
+      @media only screen and (max-width: 550px) {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 10px 2px;
+      }
+    }
+
+    hr {
+      margin: 5px 0 15px !important;
+    }
+
+    p {
+      display: block;
+      padding: 0 20px 10px;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-3;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      overflow: hidden;
+      max-height: 88px;
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 10px;
+        max-height: 82px;
+      }
+
+      &.timestamp {
+        color: $color-3;
+        font-size: 16px;
+        font-weight: 600;
+        @media only screen and (max-width: 991px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .meta-info {
+      padding: 30px 20px 10px;
+      @media only screen and (max-width: 550px) {
+        padding: 30px 5px 10px;
+      }
+
+      .views {
+        color: $color-3;
+        letter-spacing: 0.15em;
+        font-size: 14px;
+        border-right: 3px solid $color-3;
+        padding: 5px 15px 5px 0;
+
+        .views-count {
+          padding-left: 5px;
+          letter-spacing: 0;
+          font-weight: 800;
+          font-size: 18px;
+          color: $color-6;
+        }
+      }
+
+      .featured {
+        padding-left: 15px;
+        color: $color-3;
+        letter-spacing: 0.15em;
+        font-size: 14px;
+
+        img {
+          width: 22px;
+          position: relative;
+          top: 3px;
+          margin-right: 8px;
+        }
+      }
+
+      .read-more {
+        float: right;
+        padding: 14px 28px;
+        border: 2px solid $color-2;
+        border-radius: 30px;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        color: $color-2;
+        text-align: center;
+        position: relative;
+        top: -7px;
+        cursor: pointer;
+        transition: background-color 0.2s linear, color 0.2s linear;
+
+        &:hover {
+          background-color: $color-2;
+          color: $color-5;
+        }
+        @media only screen and (max-width: 550px) {
+          display: block;
+          float: none;
+          margin-top: 40px;
+          max-width: 200px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .all-news {
+    padding: 20px 15px;
+    @media only screen and (max-width: 991px) {
+      padding: 20px 45px;
+    }
+    @media only screen and (max-width: 450px) {
+      padding: 20px 25px;
+    }
+
+    hr.news-item-hr {
+      margin: 10px 10px 5px !important;
+    }
+
+    .news-item {
+      margin: 20px 0;
+
+      .blog-img {
+        max-width: 100%;
+        height: 120px;
+        width: 200px;
+        object-fit: cover;
+        border: 2px solid $color-3;
+        margin: 10px 0 0;
+        @media only screen and (max-width: 991px) {
+          margin: 10px;
+        }
+      }
+
+      h2 {
+        font-size: 20px;
+        line-height: 24px;
+        max-height: 54px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        font-weight: 800;
+        padding: 5px 10px;
+        color: $black;
+        cursor: pointer;
+      }
+
+      p {
+        display: block;
+        padding: 0 10px;
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-3;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 88px;
+
+        &.timestamp {
+          color: $color-3;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      .meta-info {
+        padding: 10px 10px 0;
+
+        .views {
+          color: $color-3;
+          letter-spacing: 0.15em;
+          font-size: 14px;
+          // border-right: 3px solid $color-3;
+          padding: 5px 15px 5px 0;
+
+          .views-count {
+            padding-left: 5px;
+            letter-spacing: 0;
+            font-weight: 800;
+            font-size: 18px;
+            color: $color-6;
+          }
+          @media only screen and (max-width: 550px) {
+            font-size: 12px;
+          }
+        }
+
+        .read-more {
+          float: right;
+          padding: 6px 12px;
+          border: 2px solid $color-2;
+          border-radius: 20px;
+          font-size: 14px;
+          letter-spacing: 0.05em;
+          font-weight: 500;
+          color: $color-2;
+          text-align: center;
+          position: relative;
+          top: -6px;
+          cursor: pointer;
+          transition: background-color 0.2s linear, color 0.2s linear;
+
+          &:hover {
+            background-color: $color-2;
+            color: $color-5;
+          }
+          @media only screen and (max-width: 550px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-item-section {
+  margin-top: 133px;
+
+  .news-item {
+    padding: 40px 30px;
+
+    .blog-img-holder {
+      .blog-img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        border: 2px solid $color-3;
+      }
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 80px;
+      font-weight: 800;
+      padding: 10px 40px 10px 20px;
+      color: $color-4;
+      @media only screen and (max-width: 991px) {
+        font-size: 30px;
+        line-height: 34px;
+      }
+      @media only screen and (max-width: 550px) {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 15px 5px;
+      }
+    }
+
+    hr {
+      margin: 5px 0 15px !important;
+    }
+
+    p {
+      display: block;
+      padding: 10px 40px;
+      font-size: 18px;
+      line-height: 24px;
+      color: $black;
+      font-weight: 200;
+      // text-overflow: ellipsis;
+      // word-wrap: break-word;
+      // overflow: hidden;
+      // max-height: 88px;
+      white-space: pre-line;
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 10px;
+      }
+
+      &.timestamp {
+        color: $color-2;
+        font-size: 18px;
+        font-weight: 600;
+        @media only screen and (max-width: 991px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .meta-info {
+      padding: 30px 20px 10px;
+      @media only screen and (max-width: 550px) {
+        padding: 20px 5px 10px;
+        text-align: center;
+      }
+
+      .views {
+        color: $color-3;
+        letter-spacing: 0.15em;
+        font-size: 14px;
+        // border-right: 3px solid $color-3;
+        padding: 5px 15px 5px 0;
+
+        .views-count {
+          padding-left: 5px;
+          letter-spacing: 0;
+          font-weight: 800;
+          font-size: 18px;
+          color: $color-6;
+        }
+      }
+
+      .featured {
+        padding-left: 15px;
+        color: $color-3;
+        letter-spacing: 0.15em;
+        font-size: 14px;
+
+        img {
+          width: 22px;
+          position: relative;
+          top: 3px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .back-button {
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    min-height: 130px;
+    text-transform: uppercase;
+    @media only screen and (min-width: 992px) {
+      color: $color-3;
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 991px) {
+      color: $color-4;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 10px;
+    }
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+    @media only screen and (min-width: 992px) {
+      &:hover {
+        color: $color-4;
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      position: relative;
+      @media only screen and (max-width: 991px) {
+        opacity: 1;
+        width: 30px;
+        top: 10px;
+        margin-right: 10px;
+      }
+      @media only screen and (min-width: 992px) {
+        width: 50px;
+        transition: opacity 0.2s ease-in;
+        opacity: 0;
+        top: 18px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
