@@ -46,8 +46,11 @@ display: flex;
 justify-content: flex-end;
 height: 10vh;
 width:100%;
+z-index: 1000;
 @media(max-width:1000px){
+position: fixed;
 justify-content: center;
+background-color: white;
 }
 
 `
@@ -63,7 +66,7 @@ class Header extends Component {
     }
     handleclick(event)
     {
-        var path = window.location.pathname
+        var path = window.location.pathname;
         if(this.state.loc!=="")
         {this.state.loc.style.color = "grey";}
         else
