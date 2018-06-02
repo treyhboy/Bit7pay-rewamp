@@ -7,6 +7,7 @@ position: relative;
 background-color: #3a4550;
 height: 50vh;
 width: 100vw;
+z-index: 2;
 `
 class Footer extends Component
 {

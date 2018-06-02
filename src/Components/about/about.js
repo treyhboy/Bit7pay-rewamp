@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import "./style.css";
 
 const Sec = styled.div`
-position: relative;
+position:relative;
 height: 100vh;
 width: 100vw;
-`
-const Background = styled.img`
-height: 100vh;
-width: 100vw;
-`
-class about extends Component
+background-color: white;
+z-index: 10;
+`;
+
+class About extends Component
 {
     render(){
-        return(<div>
-
-            <Sec className={"background-img"}/>
-
-            </div>
-       );
+        return(<Sec />);
     }
 }
 
-export default about;
+export default About;

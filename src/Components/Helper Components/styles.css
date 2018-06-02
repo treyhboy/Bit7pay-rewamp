@@ -1,0 +1,24 @@
+.Image_Cropper{
+    position:fixed;
+    left:68vw;
+    width:60vw;
+    height: 95vh;
+    z-index:3;
+    border-radius: 15vh;
+    transform: rotate(-45deg) translateY(-60%);
+    background: blue;
+}
+.Image_Container{
+    position: absolute;
+    background-image: url("../../img/back__.jpg");
+    height: 90vh;
+    width: 60vw;
+    left:50vw;
+    z-index:2;
+
+}
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -20,7 +20,7 @@ class Menu extends Component{
                             <li className="navigation__item"><a href="#" className="navigation__link">Rate chart</a></li>
                             <li className="navigation__item"><a href="#" className="navigation__link">News</a></li>
                             <li className="navigation__item"><a href="#" className="navigation__link">Help</a></li>
-                            <li className="navigation__item"><a href="#" className="navigation__link">#support crypto</a></li>
+                            <li className="navigation__item"><a href="#" className="navigation__link">#SupportCrypto</a></li>
                         </ul>
                     </nav>
             </div>
