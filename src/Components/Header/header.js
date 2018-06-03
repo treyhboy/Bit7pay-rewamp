@@ -11,12 +11,11 @@ padding: 30px 15px ;
 @media(max-width:1000px){
 visibility: hidden;
 }
-
 `;
 const Logo = styled.img`
   position: relative;
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   padding: 5px;
   margin:2% 15%;
   transform: translateY(-30%);
@@ -58,17 +57,17 @@ class Header extends Component {
 
     }
 
-       render() {
+    render() {
         return (
             <Head>
                 <Logo src={require(`../../img/logo-1.svg`)}/>
                 <Space/>
                 <NavBox>
-                <Block><NavLink to="/about" activeClassName="selected" className={"notselect"} >About us</NavLink></Block>
-                <Block><NavLink to="/charts" activeClassName="selected" className={"notselect"}>Rate chart</NavLink></Block>
-                <Block><NavLink to="/news" activeClassName="selected" className={"notselect"}>News</NavLink></Block>
-                <Block><NavLink to="/help" activeClassName="selected"className={"notselect"} >Help</NavLink></Block>
-                <Block ><NavLink to="/support" activeClassName="selected"className={"notselect"} id={"support"} >#SupportCrypto</NavLink></Block>
+                    <Block><NavLink to="/about" activeClassName="selected" className={"notselect"} >About us</NavLink></Block>
+                    <Block><NavLink to="/charts" activeClassName="selected" className={"notselect"}>Rate chart</NavLink></Block>
+                    <Block><NavLink to="/news" activeClassName="selected" className={"notselect"}>News</NavLink></Block>
+                    <Block><NavLink to="/help" activeClassName="selected"className={"notselect"} >Help</NavLink></Block>
+                    <Block ><NavLink to="/support" activeClassName="selected"className={"notselect"} id={"support"} >#SupportCrypto</NavLink></Block>
                 </NavBox>
             </Head>
         );
