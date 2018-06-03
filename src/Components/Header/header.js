@@ -15,8 +15,8 @@ visibility: hidden;
 `;
 const Logo = styled.img`
   position: relative;
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   padding: 5px;
   margin:2% 15%;
   transform: translateY(-30%);
