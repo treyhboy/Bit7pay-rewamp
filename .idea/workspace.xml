@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65ff2ea2-cac6-4990-9fcf-54519bfce17e" name="Default" comment="" />
+    <list default="true" id="65ff2ea2-cac6-4990-9fcf-54519bfce17e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Layout/Layout.js" afterPath="$PROJECT_DIR$/src/Components/Layout/Layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/Menu/index.css" afterPath="$PROJECT_DIR$/src/Components/Menu/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/about/about.js" afterPath="$PROJECT_DIR$/src/Components/about/about.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,11 +21,11 @@
     <option name="myActivateViewOnRun" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
+            <state relative-caret-position="18">
               <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -37,31 +41,37 @@
       <file leaf-file-name="Layout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Layout/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="1439">
+              <caret line="91" column="23" lean-forward="false" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1528043169069" expanded="true" signature="141:237" ph="{...}" />
-                <marker date="1528043169069" expanded="true" signature="158:196" ph="{...}" />
-                <marker date="1528043169069" expanded="true" signature="292:323" ph="{...}" />
-                <marker date="1528043169069" expanded="true" signature="292:330" ph="{...}" />
-                <marker date="1528043169069" expanded="true" signature="1346:1350" ph="..." />
-                <marker date="1528043169069" expanded="true" signature="1346:1362" ph="..." />
-                <marker date="1528043169069" expanded="true" signature="1346:1363" ph="&lt;Container/&gt;" />
+                <marker date="1528044554950" expanded="true" signature="141:237" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="271:330" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="271:425" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="454:551" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="582:672" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="648:671" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="698:868" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="899:1068" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="1096:1129" ph="{...}" />
+                <marker date="1528044554950" expanded="true" signature="1165:1343" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/about/about.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="472">
+              <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1528043169071" expanded="true" signature="106:140" ph="{...}" />
-                <marker date="1528043169071" expanded="true" signature="106:193" ph="{...}" />
+                <marker date="1528044592646" expanded="true" signature="106:140" ph="{...}" />
+                <marker date="1528044592646" expanded="true" signature="106:214" ph="{...}" />
+                <marker date="1528044592646" expanded="true" signature="243:391" ph="{...}" />
+                <marker date="1528044592646" expanded="true" signature="422:504" ph="{...}" />
+                <marker date="1528044592646" expanded="true" signature="531:764" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -70,20 +80,10 @@
       <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Header/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
+            <state relative-caret-position="306">
               <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1528043169066" expanded="true" signature="177:314" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="289:312" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="341:575" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="363:429" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="363:575" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="487:574" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="603:618" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="647:877" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="806:876" ph="{...}" />
-                <marker date="1528043169066" expanded="true" signature="905:952" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -99,30 +99,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-              <folding>
-                <marker date="1528043169070" expanded="true" signature="1046:1071" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1093:1114" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1166:1479" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1540:1596" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1648:1735" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1793:1822" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1873:1909" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="1929:1980" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2052:2144" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2197:2279" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2306:2326" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2352:2371" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2425:2444" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2497:2515" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2587:2625" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2705:2751" ph="{...}" />
-                <marker date="1528043169070" expanded="true" signature="2830:2877" ph="{...}" />
-              </folding>
+            <state relative-caret-position="445">
+              <caret line="115" column="33" lean-forward="false" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -252,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/Components/Footer/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Components/Menu/index.css" />
         <option value="$PROJECT_DIR$/src/Components/about/style.css" />
         <option value="$PROJECT_DIR$/src/Components/Helper Components/styles.css" />
         <option value="$PROJECT_DIR$/src/Components/Menu/Menu.js" />
@@ -264,6 +245,7 @@
         <option value="$PROJECT_DIR$/src/Components/Home/Home.js" />
         <option value="$PROJECT_DIR$/src/Components/Layout/Layout.js" />
         <option value="$PROJECT_DIR$/src/Components/about/about.js" />
+        <option value="$PROJECT_DIR$/src/Components/Menu/index.css" />
       </list>
     </option>
   </component>
@@ -321,8 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,53 +326,14 @@
               <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="charts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bit7pay-rewamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bit7pay-rewamp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,43 +388,34 @@
       <option name="presentableId" value="Default" />
       <updated>1527150547426</updated>
       <workItem from="1527150548736" duration="81338000" />
+      <workItem from="1528044376706" duration="248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81602000" />
+    <option name="totallyTimeSpent" value="81850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,32 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <marker date="1528043169070" expanded="true" signature="1046:1071" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1093:1114" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1166:1479" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1540:1596" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1648:1735" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1793:1822" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1873:1909" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="1929:1980" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2052:2144" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2197:2279" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2306:2326" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2352:2371" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2425:2444" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2497:2515" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2587:2625" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2705:2751" ph="{...}" />
-            <marker date="1528043169070" expanded="true" signature="2830:2877" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/1.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -831,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,37 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Layout/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1528043169069" expanded="true" signature="141:237" ph="{...}" />
-            <marker date="1528043169069" expanded="true" signature="158:196" ph="{...}" />
-            <marker date="1528043169069" expanded="true" signature="292:323" ph="{...}" />
-            <marker date="1528043169069" expanded="true" signature="292:330" ph="{...}" />
-            <marker date="1528043169069" expanded="true" signature="1346:1350" ph="..." />
-            <marker date="1528043169069" expanded="true" signature="1346:1362" ph="..." />
-            <marker date="1528043169069" expanded="true" signature="1346:1363" ph="&lt;Container/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Home/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <marker date="1527952903304" expanded="true" signature="769:890" ph="{...}" />
-            <marker date="1527952903304" expanded="true" signature="862:886" ph="{...}" />
-            <marker date="1527952903304" expanded="true" signature="898:918" ph="{...}" />
-            <marker date="1527952903304" expanded="true" signature="947:975" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -902,35 +776,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/about/about.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Header/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1528043169071" expanded="true" signature="106:140" ph="{...}" />
-            <marker date="1528043169071" expanded="true" signature="106:193" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Header/header.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="18">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1528043169066" expanded="true" signature="177:314" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="289:312" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="341:575" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="363:429" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="363:575" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="487:574" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="603:618" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="647:877" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="806:876" ph="{...}" />
-            <marker date="1528043169066" expanded="true" signature="905:952" ph="{...}" />
+            <marker date="1527952903304" expanded="true" signature="769:890" ph="{...}" />
+            <marker date="1527952903304" expanded="true" signature="862:886" ph="{...}" />
+            <marker date="1527952903304" expanded="true" signature="898:918" ph="{...}" />
+            <marker date="1527952903304" expanded="true" signature="947:975" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Layout/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1439">
+          <caret line="91" column="23" lean-forward="false" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1528044554950" expanded="true" signature="141:237" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="271:330" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="271:425" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="454:551" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="582:672" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="648:671" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="698:868" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="899:1068" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="1096:1129" ph="{...}" />
+            <marker date="1528044554950" expanded="true" signature="1165:1343" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/about/about.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1528044592646" expanded="true" signature="106:140" ph="{...}" />
+            <marker date="1528044592646" expanded="true" signature="106:214" ph="{...}" />
+            <marker date="1528044592646" expanded="true" signature="243:391" ph="{...}" />
+            <marker date="1528044592646" expanded="true" signature="422:504" ph="{...}" />
+            <marker date="1528044592646" expanded="true" signature="531:764" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="115" column="33" lean-forward="false" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
