@@ -13,8 +13,9 @@ import {Route,Switch,} from 'react-router-dom';
 import styled from "styled-components";
 import { injectGlobal } from 'styled-components';
 import Menu from "../Menu/Menu";
-import Layouts from "../Layout/Layout";
+import Layout from "../Layout/Layout";
 import RateBar from "../Helper Components/Rate Bar";
+import "animate.css/animate.min.css";
 
 injectGlobal`
   
@@ -39,10 +40,10 @@ class Home extends Component
     render(){
         return(
             <Main>
-                <Header/>
+
                 <Menu/>
                 <Switch>
-                    <Route exact strict path="/" component={Layouts}/>
+                    <Route exact strict path="/" component={Layout}/>
                     <Route path="/about" component={About}/>
                     <Route path="/charts" component={charts}/>
                     <Route path='/help' component={support}/>
@@ -52,7 +53,6 @@ class Home extends Component
                     <Route path='/whatisbtc' component={whatIsBtc}/>
                     <Route path='/whatiseth' component={whatIsEth}/>
                 </Switch>
-                <About/>
                 <Footer/>
             </Main>);
     }

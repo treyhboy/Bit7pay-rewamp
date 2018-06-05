@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-const Sec = styled.div`
-width:100%;
+const Container = styled.div`
+width:100vw;
 height:100vh;
 background-color: white;
 `
@@ -9,7 +9,8 @@ background-color: white;
 class news extends Component
 {
     render(){
-        return(<Sec/>);
+        return(<Container>
+        </Container>);
     }
 }
 
