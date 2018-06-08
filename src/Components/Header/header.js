@@ -2,41 +2,45 @@ import React, { Component } from 'react';
 import {Link,NavLink} from 'react-router-dom';
 import styled ,{ keyframes } from 'styled-components';
 import "./style.css";
+import Zoom from 'react-reveal/Zoom';
 
 const IconEffect1 = keyframes`
   0% {
     transform: translateX(-100%);
+    opacity: 0;
   }
   100% {
      transform: translateX(0%);
+      opacity: 1;    
   }
 `;
 const IconEffect2 = keyframes`
   0% {
     transform: translateX(-200%);
+    opacity: 0;
   }
   100% {
      transform: translateX(0%);
+     opacity: 1;
   }
 `;
 const IconEffect3 = keyframes`
   0% {
     transform: translateX(-300%);
+    opacity: 0;
   }
   100% {
      transform: translateX(0%);
+     opacity: 1;
   }
 `;
 
 
-const Logo = styled.span`
+const Logo = styled.img`
   position: relative;
-  font-size: 4rem;
-  font-family: 'Quicksand', sans-serif;
-  
-  color: white;
   z-index: 2;
   padding: 15px;
+  height: 6vh;
   @media(max-width:1000px){
   position:fixed;
   transform: translateX(-10%) translateY(-30%);
@@ -52,10 +56,10 @@ width: 55vw;
 const Head = styled.header`
 display: flex;
 justify-content: flex-end;
-height: 50vh;
+height: 60vh;
 width:100%;   
 position: relative;
-background: linear-gradient(#000000,#154283);
+background: linear-gradient(#000000,#001C4C);
 @media(max-width:1000px){
 justify-content: center;
 background-color: white;
@@ -78,7 +82,7 @@ margin-top: 15px;
 color: white;
 `
 const ButtonIcon = styled.img`
-height: 3vw;
+height: 5vh;
 width: 4vw;
 padding: 6px;
 `
@@ -125,7 +129,7 @@ class Header extends Component {
             <Head>
                 <Col>
                 <Row>
-                    <Logo >bit7pay</Logo>
+                    <Logo src={require("../../img/Header/logo.svg")}/>
                 <Space/>
                     <Button>
                         <ButtonIcon src={require("../../img/Header/app-store.svg")}/>
@@ -142,10 +146,10 @@ class Header extends Component {
                     </Col>
                     <Col>
                         <Row>
-                        <NormalIcon src={require("../../img/Header/btc-full.svg")} time={"0s"} anima={IconEffect1}/>
-                        <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"2s"} anima={IconEffect1}/>
-                        <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"2s"} anima={IconEffect2}/>
-                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"2s"} anima={IconEffect3}/>
+                        <NormalIcon src={require("../../img/Header/btc-full.svg")} time={"0s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"1.5s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"1.5s"} anima={IconEffect2} />
+                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
                         </Row>
                     </Col>
                 </Row>
@@ -159,6 +163,7 @@ class Header extends Component {
                     </div>
                 </div>
             </Head>
+
         );
     }
 }
