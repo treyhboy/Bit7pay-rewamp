@@ -183,7 +183,7 @@ const Layout = (props) =>(
                 </Roll>
             </TextBoxContainer>
         </ContentContainer>
-            <Fade bottom duration={3000}>
+            <Fade bottom duration={2000}>
             <ContentContainer color={"lightgray"} opacity={".6"} height={"94vh"}/>
             </Fade>
     </Container>
