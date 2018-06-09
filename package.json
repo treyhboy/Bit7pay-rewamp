@@ -5,6 +5,7 @@
   "dependencies": {
     "ajv": "^6.5.0",
     "animate.css": "^3.6.1",
+    "antd": "^3.6.1",
     "autoprefixer": "7.1.6",
     "axios": "^0.17.1",
     "babel-core": "6.26.0",

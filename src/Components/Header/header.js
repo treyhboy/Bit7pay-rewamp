@@ -3,6 +3,8 @@ import {Link,NavLink} from 'react-router-dom';
 import styled ,{ keyframes } from 'styled-components';
 import "./style.css";
 import Zoom from 'react-reveal/Zoom';
+import googleimg from "../../img/Header/play-store.svg";
+import appleimg from "../../img/Header/app-store.svg";
 
 const IconEffect1 = keyframes`
   0% {
@@ -40,7 +42,7 @@ const Logo = styled.img`
   position: relative;
   z-index: 2;
   padding: 15px;
-  height: 6vh;
+  height: 10vh;
   @media(max-width:1000px){
   position:fixed;
   transform: translateX(-10%) translateY(-30%);
@@ -67,26 +69,40 @@ background-color: white;
 `
 const Button = styled.div`
 display: flex;
-justify-content: space-around;
-height: 7vh;
-width: 10vw;
+height: 6rem;
+width: 15rem;
 z-index: 2;
 margin: 1vw;
 background-color: #282D31;
 border-radius: 1.4rem;
 `
+const ButtonTextBox =styled.div`
+display: flex;
+flex-flow: column;
+height: 100%;
+width: 75%;
+justify-content: center;
+align-items: center;
+`
 const ButtonText = styled.span`
-font-size: 1.6rem;
+font-size: ${props=>props.size};
 font-family: 'Raleway', sans-serif; 
-margin-top: 15px;
 color: white;
+padding: 2px;
+`
+const ButtonIconBox = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 35%;
+
 `
 const ButtonIcon = styled.img`
-height: 5vh;
-width: 4vw;
-padding: 6px;
+position: relative;
+height: 60%;
+width: 60%;
 `
-
 const Row = styled.div`
 display: flex;
 flex-flow: row;
@@ -98,7 +114,6 @@ display: flex;
 flex-flow: column;
 flex-grow: 1;
 flex-shrink: 1;
-
 `
 const HeadText = styled.span`
   position: relative;
@@ -132,11 +147,22 @@ class Header extends Component {
                     <Logo src={require("../../img/Header/logo.svg")}/>
                 <Space/>
                     <Button>
-                        <ButtonIcon src={require("../../img/Header/app-store.svg")}/>
-                        <ButtonText>APP STORE</ButtonText>
+                        <ButtonIconBox>
+                            <ButtonIcon src={appleimg}/>
+                        </ButtonIconBox>
+                        <ButtonTextBox>
+                            <ButtonText size={"1rem"}>Available on</ButtonText>
+                            <ButtonText size={"1.4rem"}>APP STORE</ButtonText>
+                        </ButtonTextBox>
                     </Button>
-                    <Button><ButtonIcon src={require("../../img/Header/play-store.svg")}/>
-                        <ButtonText>PLAY STORE</ButtonText>
+                    <Button>
+                        <ButtonIconBox>
+                            <ButtonIcon src={googleimg}/>
+                        </ButtonIconBox>
+                        <ButtonTextBox>
+                            <ButtonText size={"1rem"}>Available on</ButtonText>
+                            <ButtonText size={"1.5rem"}>PLAY STORE</ButtonText>
+                        </ButtonTextBox>
                     </Button>
                 </Row>
                 <Row>
