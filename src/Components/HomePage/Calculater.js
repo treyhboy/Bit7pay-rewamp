@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Fade from 'react-reveal/Fade';
 import { Cascader } from 'antd';
 import { Input } from 'antd';
+import img from "../../img/Header/accounting-black-budget-53621.jpg";
 
 const options = [{
     value: 'Bitcoin',
@@ -19,21 +20,32 @@ const options = [{
 }];
 
 
-const ContentContainer = styled.div`
-display: flex;
-flex-flow: column;
-height:70vh;
-width: 100%;
-background: linear-gradient(to right,#00EFD0,#00ABE9);
-opacity: .8;
-`;
 const HeadingContainer = styled.div`
 display: flex;
 flex-flow: row;
 height: 15vh;
 width: 100%;
 padding-bottom: 10vh;
+z-index: 10;
 `
+const ContentContainer = styled.div`
+display: flex;
+flex-flow: column;
+height:80vh;
+width: 100%;
+background:url(${img});
+background-size: cover;
+  &:after {
+    content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-image: linear-gradient(to right,#00EFD1,#00ACEA);;
+	opacity: .6; 
+  }
+`;
 const Heading = styled.div`
 display: flex;
 flex-flow: column;
@@ -46,6 +58,7 @@ const HeadingText = styled.span`
 font-size: 5rem;
 text-align: center;
 font-family: 'Raleway', sans-serif; 
+font-weight: 600;
 color:white;
 letter-spacing: 2px; 
 padding: 3vh 2vw;
@@ -63,12 +76,12 @@ flex-flow: column;
 justify-content: center;
 align-items: center;
 height:15vh;
-width: 6vw;
+width: 10vw;
 padding: 1vh 2vh;
 opacity: 1;
 `;
 const Icon = styled.img`
-height: 60%;
+height: 50%;
 width: auto;
 `
 const MainBox = styled.div`
@@ -77,6 +90,7 @@ width: 100%;
 padding:10vh 0px;
 display: flex;
 flex-flow: row;
+z-index: 10;
 `
 const Col = styled.div`
 display: flex;
@@ -100,9 +114,20 @@ font-family: 'Raleway', sans-serif;
 color: white;
 padding: 1vh 0px;
 `
+const CardText = styled.span`
+font-size: 1.6rem;
+font-family: 'Raleway', sans-serif; 
+color:gray;
+opacity: .8;
+`
+const Card = styled.div`
+display: flex;
+padding: 2vh 2vw;
+border-radius: 5px;
+background-color: whitesmoke;
+`
 const Calculater = (props) =>(
-    <Fade delay={1000} bottom>
-    <ContentContainer color1={"#00EFD0"} color2={"#00ABE9"}  height={"94vh"}>
+    <ContentContainer >
         <HeadingContainer>
         <Heading>
             <HeadingText>
@@ -113,7 +138,7 @@ const Calculater = (props) =>(
             </NormalText>
         </Heading>
             <IconBox>
-                <Icon src={require("../../img/Header/play-store.svg")}/>
+                <Icon src={require("../../img/Header/emblem.svg")}/>
             </IconBox>
         </HeadingContainer>
         <MainBox>
@@ -131,15 +156,15 @@ const Calculater = (props) =>(
             <Col>
                 <Label> Subtotal</Label>
                 <Row1>
-                <Input size="large" placeholder="Rs 5,52,122.91" />
+                    <Card><CardText>Rs 5,52,122.91</CardText></Card>
                 </Row1>
-                <Label> Fees</Label>
+                <Label>Fees</Label>
                 <Row1>
-                <Input placeholder="Rs 1106.86" />
+                    <Card><CardText> Rs 1106.86</CardText></Card>
                 </Row1>
                 <Label> Gst</Label>
                 <Row1>
-                    <Input placeholder="Rs 199.23" />
+                    <Card><CardText> Rs 199.23</CardText></Card>
                 </Row1>
 
             </Col>
@@ -149,7 +174,6 @@ const Calculater = (props) =>(
             </Col>
         </MainBox>
     </ContentContainer>
-    </Fade>
 );
 
 export default Calculater;

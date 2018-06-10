@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import "./index.css";
 
 class Menu extends Component{
+    constructor(props) {
+        super(props);
+        this.uncheck = this.uncheck.bind(this);
+
+    }
+    uncheck()
+    {
+        console.log("in fun");
+        document.getElementById('navi-toggle').checked = false;
+    }
     render()
     {
         return(
@@ -16,11 +27,13 @@ class Menu extends Component{
 
                     <nav className="navigation__nav">
                         <ul className="navigation__list">
-                            <li className="navigation__item"><a href="#" className="navigation__link">About Us</a></li>
-                            <li className="navigation__item"><a href="#" className="navigation__link">Rate chart</a></li>
-                            <li className="navigation__item"><a href="#" className="navigation__link">News</a></li>
-                            <li className="navigation__item"><a href="#" className="navigation__link">Help</a></li>
-                            <li className="navigation__item"><a href="#" className="navigation__link">#SupportCrypto</a></li>
+                            <li className="navigation__item"><Link to='/' className="navigation__link" onClick={this.uncheck} >Home</Link></li>
+                            <li className="navigation__item"><Link to='/about' className="navigation__link" onClick={this.uncheck} >About Us</Link></li>
+                            <li className="navigation__item"><Link to='/charts' className="navigation__link" onClick={this.uncheck}>Rate chart</Link></li>
+                            <li className="navigation__item"><Link to='/news' className="navigation__link" onClick={this.uncheck}>News</Link></li>
+                            <li className="navigation__item"><Link to='/help' className="navigation__link" onClick={this.uncheck}>Help</Link></li>
+                            <li className="navigation__item"><Link to='/whatis' className="navigation__link" onClick={this.uncheck}>FAQs</Link></li>
+                            <li className="navigation__item"><Link to='/support' className="navigation__link" onClick={this.uncheck}>#SupportCrypto</Link></li>
                         </ul>
                     </nav>
             </div>

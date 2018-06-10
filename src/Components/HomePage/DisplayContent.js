@@ -9,7 +9,7 @@ display: flex;
 flex-flow: row;
 height: 120vh;
 width: 55%;
-background-image: url(${img1});
+background: url(${img1}) no-repeat;
 background-size:120%;
 margin-top: 100px;
 `;
@@ -34,14 +34,17 @@ padding: 3vh ${props=>props.left||"5vh"} 3vh  ${props=>props.right||"0px"} ;
 height: 30vh;
 width: 40vw;
 `;
-const ContentContainer = styled.div`
+const ContentContainer1 = styled.div`
 display: flex;
 height:120vh;
 width: 100%;
+background-color: white;  
+z-index: 2;
 `;
 const HeadingText = styled.span`
 font-size: 3rem;
 text-align: center;
+font-weight: 900;
 font-family: 'Raleway', sans-serif; 
 letter-spacing: 2px; 
 `;
@@ -67,13 +70,13 @@ const PhoneVer = styled.img`
 position: relative;
 left: ${props=>props.left};
 height: ${props=>props.height};
-width: ${props=>props.width};
+width: auto;
 top:${props=>props.top};
 `;
-const DisplayContent = (props) =>(<ContentContainer>
+const DisplayContent = (props) =>(<ContentContainer1>
     <ImageBox>
-        <PhoneVer src={require("../../img/Header/iphone_x_1.png")} height={"42vh"} width={"32vw"} top={"40%"} left={"10%"}/>
-        <PhoneVer src={require("../../img/Header/iphone_x_2.png")} height={"62vh"} width={"18vw"} top={"70px"}/>
+        <PhoneVer src={require("../../img/Header/iphone_x_1.png")} height={"45vh"}  top={"40%"} left={"10%"}/>
+        <PhoneVer src={require("../../img/Header/iphone_x_2.png")} height={"62vh"}  top={"70px"}/>
     </ImageBox>
     <TextBoxContainer>
         <TextBox>
@@ -87,7 +90,6 @@ const DisplayContent = (props) =>(<ContentContainer>
                 <NormalText>To ensure the safety of your crypto funds and confidential data, we have implemented the hightest standards of Security Protocol.
                 </NormalText>
             </TextBox>
-
             <TextBox >
                 <Heading><HeadingIcon src={require("../../img/Header/pt-03.svg")}/><HeadingText>Superior Support</HeadingText></Heading>
                 <NormalText>Got a problem? Stuck somewhere? Don't Worry! We are always listening and always happy to help at each step you take with Bit7Pay.
@@ -95,6 +97,6 @@ const DisplayContent = (props) =>(<ContentContainer>
             </TextBox>
         </Roll>
     </TextBoxContainer>
-</ContentContainer>);
+</ContentContainer1>);
 
 export default DisplayContent;

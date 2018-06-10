@@ -78,7 +78,7 @@ height: 10vh;
 width: 40%;
 justify-content: center;
 align-items: center;
-background: linear-gradient(to right,#26F69B,#00ABE9);
+background: linear-gradient(to right,#00EFD1,#00ACEA);
 border-radius: 10rem;
 `
 const ButtonText = styled.span`
@@ -89,41 +89,33 @@ padding: 2px;
 `
 
 
-const Verification = (props) =>(<VerificationContainer>
+const Verification = (props) =>(
+    <VerificationContainer>
         <Heading>
             <HeadingText>5 easy steps to get verified</HeadingText>
         </Heading>
         <IconBoxRow>
-            <Tada >
             <IconBox>
                 <Icon src={require("../../img/Header/verification-01.svg")}/>
                 <IconText>Bank Account</IconText>
             </IconBox>
-            </Tada>
-            <Tada delay={1000}>
             <IconBox time={"1s"}>
                 <Icon src={require("../../img/Header/verification-02.svg")}/>
                 <IconText>Aadhar</IconText>
             </IconBox>
-            </Tada>
-            <Tada delay={2000}>
             <IconBox time={"2s"}>
                 <Icon src={require("../../img/Header/verification-03.svg")}/>
                 <IconText>PAN</IconText>
             </IconBox>
-            </Tada>
-            <Tada delay={3000}>
+
             <IconBox time={"3s"}>
                 <Icon src={require("../../img/Header/verification-04.svg")}/>
                 <IconText>Email</IconText>
             </IconBox>
-            </Tada>
-                <Tada delay={4000}>
             <IconBox time={"4s"}>
                 <Icon src={require("../../img/Header/verification-05.svg")}/>
                 <IconText>Photo</IconText>
             </IconBox>
-            </Tada>
         </IconBoxRow>
         <NormalText>
             Provide your bank account details like Account Number,IFSC Code,Bank Name,Beneficiary Name and Image of cancelled cheque to enable withdrawals from Bit7Pay Wallet
@@ -136,7 +128,6 @@ const Verification = (props) =>(<VerificationContainer>
             </Button>
         </Row>
     </VerificationContainer>
-
 );
 
 export default Verification;

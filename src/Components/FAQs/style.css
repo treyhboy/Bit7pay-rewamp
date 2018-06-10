@@ -1,0 +1,7 @@
+.selected > div{
+opacity: 1;
+    padding: 0px;
+}
+.not{
+    opacity: .5;
+}

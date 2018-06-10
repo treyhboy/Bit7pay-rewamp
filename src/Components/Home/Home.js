@@ -7,7 +7,7 @@ import support from "../support/support"
 import news from '../news/news';
 import verification from '../verification/verification';
 import supportcrypto from "../support-crypto/support-crypto"
-import whatIsBtc from "../whatIsBtc/whatIsBtc"
+import whatIs from "../FAQs/WhatIs";
 import whatIsEth from '../whatIsEth/whatIsEth';
 import {Route,Switch,} from 'react-router-dom';
 import styled from "styled-components";
@@ -51,8 +51,8 @@ class Home extends Component
                     <Route path='/support' component={supportcrypto}/>
                     <Route path='/verification' component={verification}/>
                     <Route path='/news' component={news}/>
-                    <Route path='/whatisbtc' component={whatIsBtc}/>
-                    <Route path='/whatiseth' component={whatIsEth}/>
+                    <Route path='/whatis' component={whatIs}/>
+                    <Route path='/whatisEth' component={whatIsEth}/>
                 </Switch>
                 <Footer/>
             </Main>);

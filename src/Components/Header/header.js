@@ -82,7 +82,7 @@ flex-flow: column;
 height: 100%;
 width: 75%;
 justify-content: center;
-align-items: center;
+align-items: flex-start;
 `
 const ButtonText = styled.span`
 font-size: ${props=>props.size};
@@ -100,8 +100,8 @@ width: 35%;
 `
 const ButtonIcon = styled.img`
 position: relative;
-height: 60%;
-width: 60%;
+height: 50%;
+width: 50%;
 `
 const Row = styled.div`
 display: flex;
