@@ -105,7 +105,7 @@ const whatIs = ({match}) => (<Container>
                 Choose coin to Know about
             </HeadingText3>
             <IconRow>
-                <NavLink to={`${match.url}/Btc`} activeClassName="selected">
+                <NavLink exact strict to={`${match.url}`} activeClassName="selected">
                     <IconBox><Icon src={require("../../img/Header/btc-full.svg")} /></IconBox>
                 </NavLink>
                 <NavLink to={`${match.url}/Eth`} activeClassName="selected">
@@ -128,13 +128,13 @@ const whatIs = ({match}) => (<Container>
         <Heading>
             <HeadingText1>
                 <Light>What is</Light>
-                <Route path="/whatis/Btc" component={Bitcoin}/>
+                <Route exact strict path="/whatis" component={Bitcoin}/>
                 <Route path="/whatis/Eth" component={Ether}/>?
             </HeadingText1>
         </Heading>
     </HeadingContainer>
 
-        <Route path="/whatis/Btc" component={Btc}/>
+        <Route exact strict path="/whatis" component={Btc}/>
     <Route path="/whatis/Eth" component={Eth}/>
     <Verification/>
 
