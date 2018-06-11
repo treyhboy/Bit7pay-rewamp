@@ -40,7 +40,7 @@ font-family: 'Raleway', sans-serif;
 color: grey;
 
 `
-const Btc =  ()=>(<Container>
+const Eth =  ()=>(<Container>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
@@ -49,7 +49,7 @@ const Btc =  ()=>(<Container>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                Bitcoin is the world’s first digital currency which is completely decentralized i.e. the system works without a central bank or single administrator. It was created in 2009 by an unknown person using the alias Satoshi Nakamoto
+                Ethereum is a decentralized system, which means it is not controlled by any single governing entity. An absolute majority of online services, businesses and enterprises are built on a centralized system of governance. It is fully autonomous and is not controlled by anyone at all.
             </CardText>
         </CardTextContainer>
     </TextCard>
@@ -61,31 +61,31 @@ const Btc =  ()=>(<Container>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                All bitcoin transactions take place directly between bitcoin users, without an intermediary. These transactions are verified by network nodes using cryptography and are recorded in a public ledger called blockchain.
+                Ethereum is a decentralized system, which means it utilizes a peer-to-peer approach. Every single interaction happens between and is supported only by the users taking part in it, with no controlling authority being involved.
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Buy Bitcoins
+                Buy Ethereums
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                Bit7Pay provides an easy way for you to buy bitcoins. Just download Bit7Pay app on your mobile and get your account verified within hours to buy your first bitcoin. It’s never too late to invest!
+                Bit7Pay provides an easy way for you to buy Ethereum. Just download Bit7Pay app on your mobile and get your account verified within hours to buy your first ethereum. It’s never too late to invest!
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Store Bitcoins
+                Store Ethereums
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                After you purchase bitcoins, you can safely store them in your Bit7Pay digital wallet. Our cloud based servers are secured with double encryption mechanisms to prevent unauthorized access of your digital assets.
+                After you purchase Ethereum, you can safely store them in your Bit7Pay digital wallet. Our cloud based servers are secured with double encryption mechanisms to prevent unauthorized access of your digital assets.
             </CardText>
         </CardTextContainer>
     </TextCard>
@@ -97,22 +97,22 @@ const Btc =  ()=>(<Container>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                Bitcoin transactions are virtually tamper-proof because of hash linking between two blocks of a blockchain. Using private keys to sign a transaction also ensures authenticity of a transaction’s origin.
+                Ethereum transactions are virtually tamper-proof because of hash linking between two blocks of a blockchain. Using private keys to sign a transaction also ensures authenticity of a transaction’s origin.
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Bitcoin Mining
+                Ethereum Mining
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                With Bitcoin, miners use special software to solve math problems and are issued a certain number of bitcoins in exchange. This provides a smart way to issue the currency and also creates an incentive for more people to mine.
+                Ethereum Mining is the process of mining Ether which secures the network which in turn ensures verified computation. Ether is an absolute essential, as it serves as fuel for the smooth running of the Ethereum platform.
             </CardText>
         </CardTextContainer>
     </TextCard>
 </Container>)
 
-export default Btc;
+export default Eth;

@@ -79,9 +79,10 @@ height:15vh;
 width: 10vw;
 padding: 1vh 2vh;
 opacity: 1;
+margin-right: 10px;
 `;
 const Icon = styled.img`
-height: 50%;
+height: 40%;
 width: auto;
 `
 const MainBox = styled.div`
@@ -91,6 +92,9 @@ padding:10vh 0px;
 display: flex;
 flex-flow: row;
 z-index: 10;
+@media(max-width: 450px){
+flex-flow: column;
+}
 `
 const Col = styled.div`
 display: flex;

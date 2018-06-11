@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../Header/header";
+import HomeHeader from "./Head";
 import Calculater from "./Calculater";
 import DisplayContent from "./DisplayContent";
 import Verification from "./Verification";
@@ -17,11 +17,11 @@ z-index: 2;
 
 
 const HomePage = (props) =>(<div>
-        <Header/>
+        <HomeHeader/>
         <Container>
             <DisplayContent/>
-            <Verification/>
             <Calculater/>
+            <Verification/>
     </Container>
 </div>
     );

@@ -12,6 +12,9 @@ width: 55%;
 background: url(${img1}) no-repeat;
 background-size:120%;
 margin-top: 100px;
+@media(max-width: 1024px){
+display: none;
+}
 `;
 
 const TextBoxContainer = styled.div`
@@ -21,6 +24,9 @@ justify-content: center;
 align-items: center;
 height: 120vh;
 width: 45%;
+@media(max-width: 500px){
+width: 100%;
+}
 `;
 const TextBox = styled.div`
 display: flex;
@@ -33,6 +39,10 @@ align-content: space-between;
 padding: 3vh ${props=>props.left||"5vh"} 3vh  ${props=>props.right||"0px"} ;
 height: 30vh;
 width: 40vw;
+@media(max-width: 500px){
+width: 100%;
+padding: 0px;
+}
 `;
 const ContentContainer1 = styled.div`
 display: flex;

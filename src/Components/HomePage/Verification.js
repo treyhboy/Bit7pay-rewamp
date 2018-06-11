@@ -14,6 +14,7 @@ height: 70vh;
 width: 100vw;
 background-color: white;  
 z-index: 2;
+padding-top:10vh ;
 `;
 const HeadingText = styled.span`
 font-size: 4rem;
