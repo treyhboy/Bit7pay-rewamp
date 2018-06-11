@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
+
 const Container = styled.div`
 position: relative;
 width:100%;
@@ -41,6 +43,7 @@ color: grey;
 
 `
 const Eth =  ()=>(<Container>
+    <Fade cascade bottom>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
@@ -113,6 +116,7 @@ const Eth =  ()=>(<Container>
             </CardText>
         </CardTextContainer>
     </TextCard>
+    </Fade>
 </Container>)
 
 export default Eth;
