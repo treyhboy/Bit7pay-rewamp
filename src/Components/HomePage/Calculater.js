@@ -18,7 +18,7 @@ const ReciptBox = styled.div`
 display: flex;
 flex-flow: column;
 height:65rem;
-width: 34vw;
+width: 34vw;  
 border-radius: 10px;
 background-color: #FFFFFF;
 padding: 40px;
@@ -34,7 +34,7 @@ width: 34vw;
 background-color: #3682CE;
 margin: 3rem 16vw 3rem 0px ;
 border-radius: 0px 10px 10px 0px;
-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); 
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); 
 z-index: 8;
 `
 const Heading = styled.div`
