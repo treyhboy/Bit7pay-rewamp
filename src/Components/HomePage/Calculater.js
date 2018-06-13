@@ -189,6 +189,7 @@ const Calculater = (props) =>(<Container>
                 width={320}
                 interpolate={'cardinal'}
                 height={150}
+                lineColors={["#3682CE"]}
                 data={[
                     [
                         { x: 1, y: 13 },
