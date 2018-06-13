@@ -1,183 +1,271 @@
 import React from "react";
 import styled from "styled-components";
+import {LineChart} from "react-easy-chart";
 import Fade from 'react-reveal/Fade';
-import { Cascader } from 'antd';
-import { Input } from 'antd';
-import img from "../../img/Header/accounting-black-budget-53621.jpg";
-
-const options = [{
-    value: 'Bitcoin',
-    label: 'Bitcoin'
-}, {
-    value: 'Etherium',
-    label: 'Etherium'
-},{
-    value: 'XRP',
-    label: 'XRP'
-}, {
-    value: 'LiteCoin',
-    label: 'LiteCoin'
-}];
-
-
-const HeadingContainer = styled.div`
+const Container = styled.div`
+position: relative;
 display: flex;
 flex-flow: row;
-height: 15vh;
+height:100%;
 width: 100%;
-padding-bottom: 10vh;
-z-index: 10;
-`
-const ContentContainer = styled.div`
-display: flex;
-flex-flow: column;
-height:80vh;
-width: 100%;
-background:url(${img});
 background-size: cover;
-  &:after {
-    content: '';
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-image: linear-gradient(to right,#00EFD1,#00ACEA);;
-	opacity: .6; 
-  }
-`;
-const Heading = styled.div`
-display: flex;
-flex-flow: column;
-height: 15vh;
-width: 100%;
-justify-content: center;
-align-items: flex-start;
-`;
-const HeadingText = styled.span`
-font-size: 5rem;
-text-align: center;
-font-family: 'Raleway', sans-serif; 
-font-weight: 600;
-color:white;
-letter-spacing: 2px; 
-padding: 3vh 2vw;
-`;
-const NormalText = styled.span`
-font-size: 2rem;
-text-align: center;
-font-family: 'Raleway', sans-serif; 
-color: white;
-padding: 0px 2vw;
-`;
-const IconBox = styled.div`
-display: flex;
-flex-flow: column;
-justify-content: center;
-align-items: center;
-height:15vh;
-width: 10vw;
-padding: 1vh 2vh;
-opacity: 1;
-margin-right: 10px;
-`;
-const Icon = styled.img`
-height: 40%;
-width: auto;
-`
-const MainBox = styled.div`
-height: 100%;
-width: 100%;
-padding:10vh 0px;
-display: flex;
-flex-flow: row;
-z-index: 10;
-@media(max-width: 450px){
+@media(max-width: 500px){
 flex-flow: column;
 }
+
 `
-const Col = styled.div`
+const ReciptBox = styled.div`
+display: flex;
+flex-flow: column;
+height:65rem;
+width: 34vw;
+border-radius: 10px;
+background-color: #FFFFFF;
+padding: 40px;
+margin-left: 16vw;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+z-index: 10;
+`
+const CurrencyBox = styled.div`
+display: flex;
+flex-flow: column;
+height:60rem;
+width: 34vw;
+background-color: #3682CE;
+margin: 3rem 16vw 3rem 0px ;
+border-radius: 0px 10px 10px 0px;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); 
+z-index: 8;
+`
+const Heading = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
+const HeadingText = styled.span`
+font-size: 2.5em;
+text-align: center;
+font-family: 'Raleway', sans-serif; 
+color:#38393D;
+letter-spacing: 2px; 
+`;
+const ResultBox = styled.div`
 display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
-height: 100%;
-width: 100%;
-flex-grow: 1;
-flex-shrink: 1;
-padding: 0px ${props=>props.left||"2vh"};
+padding: 10em 0px;
 `
-const Row1 = styled.div`
-display: flex;
-flex-flow: row;
-padding: 1vh;
-`
-const Label = styled.span`
-font-size: 2rem;
+const ResultText = styled.span`
+font-size: 5em;
+text-align: center;
 font-family: 'Raleway', sans-serif; 
-color: white;
-padding: 1vh 0px;
-`
-const CardText = styled.span`
-font-size: 1.6rem;
+color:#BDCCDB;
+letter-spacing: 2px; 
+margin:  2.2rem  0px 3rem 0px;
+`;
+const NormalText = styled.span`
+font-size: 1em;
+text-align: center;
 font-family: 'Raleway', sans-serif; 
 color:gray;
-opacity: .8;
-`
-const Card = styled.div`
+letter-spacing: 2px; 
+
+`;
+
+
+const ChartBox = styled.div`
+position: relative;
 display: flex;
-padding: 2vh 2vw;
-border-radius: 5px;
-background-color: whitesmoke;
+justify-content: center;
+align-items: center;
+height:100%;
+width: 100%;
+padding-bottom: 8em;
 `
-const Calculater = (props) =>(
-    <ContentContainer >
-        <HeadingContainer>
+const CoinRateContainer = styled.div`
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+height:100%;
+width: 100%;
+z-index: 10;
+padding: 6rem 0px;
+`
+const CoinRate = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height:25%;
+width: 100%;
+background-color: ${props=>props.color};
+`
+const CoinNameBox = styled.div`
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+width: 30%;
+height: 100%;
+color: white;
+font-size: 2rem;
+padding: 1rem 2rem;
+font-family: 'Raleway', sans-serif; 
+letter-spacing: 2px;
+`
+const CoinRateBox = styled.div`
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100%;
+width: 70%;
+font-family: 'Raleway', sans-serif; 
+color: white;
+font-size: 2.5rem;
+letter-spacing: 2px;
+`
+const FormBox = styled.div`
+display: flex;
+flex-flow: column;
+justify-content: space-around;
+align-items: center;
+height: 80%;
+width: 100%;
+padding:0px 7rem;
+margin-bottom: 5rem;
+`
+const InputCurrency = styled.select`
+ 
+  color: grey;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif; 
+  border-radius: 10px;
+  height: 4rem;
+  width: 100%;
+`
+const InputAmount = styled.input`
+  padding: 0px 1rem ;
+  color: grey;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif; 
+  border-radius: 6px;
+  height: 4rem;
+  width: 100%;
+`
+const Button = styled.div`
+display: flex;
+justify-content: space-around;
+ align-items: center;
+height: 5rem;
+width: 15rem;
+z-index: 2;
+color: #3682CE;
+font-size: 2rem;
+font-family: 'Raleway', sans-serif; 
+background-color: white;
+border-radius: 1rem;
+`;
+const Calculater = (props) =>(<Container>
+    <Fade left>
+    <ReciptBox>
         <Heading>
             <HeadingText>
-                Crypto Calculator
+                Crypto Converter
             </HeadingText>
-            <NormalText>
-                Know how much you want to invest in your favorite cryptocurrency on Bit7Pay
-            </NormalText>
         </Heading>
-            <IconBox>
-                <Icon src={require("../../img/Header/emblem.svg")}/>
-            </IconBox>
-        </HeadingContainer>
-        <MainBox>
-            <Col>
-                <Label> Select Currency</Label>
-                <Cascader size="large" options={options} />
-            </Col>
-            <Col>
+        <ResultBox>
+            <NormalText>
+                you give
+            </NormalText>
+            <ResultText>
+                Rs 5,53,429
+            </ResultText>
+            <NormalText>
+                from your pocket
+            </NormalText>
+        </ResultBox>
+        <ChartBox>
+            <LineChart
+                width={320}
+                interpolate={'cardinal'}
+                height={150}
+                data={[
+                    [
+                        { x: 1, y: 13 },
+                        { x: 2, y: 12 },
+                        { x: 3, y: 15},
+                        { x: 4, y: 14 },
+                        { x: 5, y: 12 },
+                        { x: 6, y: 13 },
+                        { x: 7, y: 15},
+                        { x: 8, y: 14 },
+                        { x: 9, y: 16 },
+                        { x: 10, y: 14 },
+                        { x: 11, y: 13 },
+                        { x: 12, y: 12 },
+                        { x: 13, y: 15},
+                        { x: 14, y: 19 },
+                        { x: 15, y: 16 },
+                        { x: 16, y: 13 },
+                        { x: 17, y: 12},
+                        { x: 18, y: 14 },
+                        { x: 19, y: 16 },
+                        { x: 20, y: 13 },
+                    ]
+                ]}
+            />
+        </ChartBox>
+    </ReciptBox>
+    </Fade>
+    <Fade right>
+    <CurrencyBox>
+        <CoinRateContainer>
+            <CoinRate color={"#5F9BD9"}>
+                <CoinNameBox>
+                    BTC
+                </CoinNameBox>
+                <CoinRateBox>
+                    Rs 5,53,429
+                </CoinRateBox>
+            </CoinRate>
+            <CoinRate >
+                <CoinNameBox>
+                    ETC
+                </CoinNameBox>
+                <CoinRateBox>
+                    Rs 2,60,901
+                </CoinRateBox>
+            </CoinRate>
+            <CoinRate color={"#5F9BD9"}>
+                <CoinNameBox>
+                    Lite
+                </CoinNameBox>
+                <CoinRateBox>
+                    Rs 1,92,805
+                </CoinRateBox>
+            </CoinRate>
+            <CoinRate >
+                <CoinNameBox>
+                    DTC
+                </CoinNameBox>
+                <CoinRateBox>
+                    Rs 3,90,789
+                </CoinRateBox>
+            </CoinRate>
+        </CoinRateContainer>
+        <FormBox>
+            <InputAmount placeholder={"Enter Amount"}/>
+            <InputCurrency placeholder={"Select Currency"} >
+                <option value="volvo">BTC</option>
+                <option value="saab">ETC</option>
+                <option value="opel">Lite</option>
+                <option value="audi">DTC</option>
+            </InputCurrency>
+            <Button>Exchange</Button>
+        </FormBox>
+    </CurrencyBox>
+    </Fade>
+</Container>);
 
-                <Label> Enter Amount to Buy</Label>
-                <Row1>
-                <Input size="large" placeholder="1 BTC" />
-                </Row1>
-            </Col>
-            <Col>
-                <Label> Subtotal</Label>
-                <Row1>
-                    <Card><CardText>Rs 5,52,122.91</CardText></Card>
-                </Row1>
-                <Label>Fees</Label>
-                <Row1>
-                    <Card><CardText> Rs 1106.86</CardText></Card>
-                </Row1>
-                <Label> Gst</Label>
-                <Row1>
-                    <Card><CardText> Rs 199.23</CardText></Card>
-                </Row1>
-
-            </Col>
-            <Col left={"0px"}>
-                <NormalText>Total Cost</NormalText>
-                <HeadingText>Rs 5,53,429</HeadingText>
-            </Col>
-        </MainBox>
-    </ContentContainer>
-);
 
 export default Calculater;
