@@ -73,7 +73,7 @@ const NormalIcon = styled.img`
 height: 13vh;
 width: 10vw;
 `;
-{/*animation: ${props=>props.time} ${props=>props.anima} ease-out;*/}
+// animation: ${props=>props.time} ${props=>props.anima} ease-out;
 
 class HomeHeader extends Component {
 

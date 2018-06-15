@@ -41,7 +41,6 @@ class Home extends Component
     render(){
         return(
             <Main>
-
                 <Menu/>
                 <Switch>
                     <Route exact strict path="/" component={HomePage}/>
@@ -54,7 +53,7 @@ class Home extends Component
                     <Route path='/whatis' component={whatIs}/>
                     <Route path='/whatisEth' component={whatIsEth}/>
                 </Switch>
-                <Footer/>
+
             </Main>);
     }
 }

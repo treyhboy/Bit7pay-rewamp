@@ -6,6 +6,7 @@ import Eth from "./Coins/Eth";
 import "./style.css"
 import Header from "../Header/header";
 import Verification from "../HomePage/Verification";
+import Footer from '../Footer/footer';
 
 
 const Container = styled.div`
@@ -137,6 +138,7 @@ const whatIs = ({match}) => (<Container>
         <Route exact strict path="/whatis" component={Btc}/>
     <Route path="/whatis/Eth" component={Eth}/>
     <Verification/>
+    <Footer/>
 
 </Container>)
 

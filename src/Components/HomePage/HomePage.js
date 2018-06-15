@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HomeHeader from "./Head";
+import Footer from '../Footer/footer';
 import Calculater from "./Calculater";
 import DisplayContent from "./DisplayContent";
 import Verification from "./Verification";
@@ -22,6 +23,7 @@ const HomePage = (props) =>(<div>
             <DisplayContent/>
             <Calculater/>
             <Verification/>
+            <Footer/>
     </Container>
 </div>
     );
