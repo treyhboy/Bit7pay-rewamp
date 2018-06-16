@@ -23,7 +23,7 @@ width:100%;
 height:100%;
 flex-flow: column;
 justify-content: center;
-background:linear-gradient(#000000,#001C4C)
+background:linear-gradient(to right,#000428,#004e92)
 `;
 const CoinScrollContainer = styled.div`
 display: flex;

@@ -102,7 +102,6 @@ padding: 1em 4em;
 text-align: center;
 font-family: 'Lato', sans-serif;
 color:#009ffd;
-
 letter-spacing: 2px;
 `
 const CardHeading = styled.span`
