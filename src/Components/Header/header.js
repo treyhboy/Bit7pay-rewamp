@@ -66,14 +66,16 @@ width: 50%;
 const Row = styled.div`
 display: flex;
 flex-flow: row;
+position: ${props=>props.pos};
 justify-content: space-around;
-padding: 2vw;
+padding:${props=>props.pos||"2vw"};
 width: 100%;
-
+z-index: 10;
+background: ${props=>props.back};
 `;
 
-const Header=()=> (
-                <Row>
+const Header=(props)=> (
+                <Row back={props.back} pos={props.pos}>
                     <Logo src={require("../../img/Header/logo.svg")}/>
                 <Space/>
                     <Button>

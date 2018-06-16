@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled,{keyframes} from "styled-components";
-import axios from "axios";
 import SingleNews from "./SingleNews";
 import "./style.css";
+import Header from "../Header/header"
 import News from "./NewsCards";
-
+import {Route,Switch,Link} from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 const Container = styled.div`
 display: flex;
@@ -17,12 +18,13 @@ const FeaturedNewsContainer = styled.div`
 position:fixed;
 display: flex;
 flex-flow: column;
-height:100%;
+height:75rem;
+top: 8rem;
 width:50vw;  
 justify-content: flex-end;
 align-items: center;
 background: url(${props=>props.image}) no-repeat;
-background-size: 50vw 100%  ;
+background-size: 50vw 100%;
 `
 
 const DetailContainer = styled.div`
@@ -79,38 +81,18 @@ flex-flow: row;
 height:100%;
 left: 50vw;
 width:50vw;  
+top: 10vh;
 justify-content: center;
 align-items: center;
 font-weight:bolder;
 `
-const NewsRow = styled.div`
-position: relative;
-display: flex;
-flex-flow: column;
-height:100rem;
-width:25rem; 
-margin:0px 5rem ; 
-padding-top:${props=>props.top};
-align-items: center;
-background-color: green;
-`
-const NewsBox =styled.div`
-position: relative;
-display: flex;
-flex-flow: row;
-height:25rem;
-width:25rem; 
-margin: 5rem 0px;
-justify-content: center;
-align-items: center;
-background-color: red;
-`
+
 
 class news extends Component
 {
     constructor(props) {
         super(props);
-        this.state = {NormalNews:{} ,display:"none",FeaturedNews:{},isLoaded:false};
+        this.state = {NormalNews:{} ,id:"",FeaturedNews:{},isLoaded:false,CurrNews:{}};
         this.handleClick = this.handleClick.bind(this);
 
     }
@@ -119,7 +101,6 @@ class news extends Component
             .then(res => res.json())
             .then(
                 (result) => {
-                    console.log(result);
                     this.setState({
                         NormalNews: result.data.dataList,
                         isLoaded:true
@@ -135,9 +116,8 @@ class news extends Component
             .then(res => res.json())
             .then(
                 (result) => {
-                    console.log(result);
                     this.setState({
-                        FeaturedNews: result.data
+                        FeaturedNews: result.data,
                     });
                 },
                 (error) => {
@@ -150,34 +130,55 @@ class news extends Component
 
     }
 
-    handleClick()
+    handleClick(ev)
     {
-        this.setState((prev)=>{return {display:prev.display==="flex"?"none":"flex"}});
+        let i = ev.target.id;
+        this.setState(()=>{return {id:i,isLoaded:false}});
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/getBlogEntry?id=${i}`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        CurrNews: result.data,
+                        isLoaded: true,
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
 
     }
     render() {
     if(this.state.isLoaded)
-        return(<Container>
-            {/*<SingleNews display={this.state.display} click={this.handleClick}/>*/}
-            {/*<Button onClick={this.handleClick}>State Check</Button>*/}
-            <FeaturedNewsContainer image={this.state.FeaturedNews.coverImage}>
-                <DetailContainer>
-                    <Heading>
-                            {this.state.FeaturedNews.title}
-                    </Heading>
-                    <PostedOn>
-                        Posted {this.state.FeaturedNews.addedOn}
-                    </PostedOn>
-                    <Button>
-                        FEATURED
-                    </Button>
-                </DetailContainer>
-            </FeaturedNewsContainer>
-            <NormalNewsContainer>
-                <News data={this.state.NormalNews} />
-            </NormalNewsContainer>
-
-        </Container>
+        return(<div>
+                <Header back={"linear-gradient(to right,#000428,#004e92)"} pos={"fixed"}/>
+                <Container>
+                    <Route path="/news/0" render={() =>
+                        <SingleNews data={this.state.CurrNews} />}
+                    />
+                    <FeaturedNewsContainer image={this.state.FeaturedNews.coverImage}>
+                        <DetailContainer>
+                            <Heading>
+                                {this.state.FeaturedNews.title}
+                            </Heading>
+                            <PostedOn>
+                                Posted {this.state.FeaturedNews.addedOn}
+                            </PostedOn>
+                            <Button>
+                                FEATURED
+                            </Button>
+                        </DetailContainer>
+                    </FeaturedNewsContainer>
+                    <NormalNewsContainer>
+                        <News data={this.state.NormalNews.slice(3,5)} top={"8rem"} click={this.handleClick}/>
+                        <News data={this.state.NormalNews.slice(0,3)} click={this.handleClick}/>
+                    </NormalNewsContainer>
+                </Container>
+                 </div>
     )
         else {
         return(<Container>Loading......</Container>)
