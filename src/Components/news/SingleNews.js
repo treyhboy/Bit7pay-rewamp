@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled,{keyframes} from "styled-components";
 import {Route,Switch,Link} from 'react-router-dom';
 import { Redirect } from 'react-router';
+import Header from "../Header/header"
+import Fade from 'react-reveal/Fade';
 
 const SliderLeft = keyframes`
   0% {
@@ -9,6 +11,14 @@ const SliderLeft = keyframes`
   }
   100% {
     transform:translateX(0%);
+  }
+`;
+const SliderDown = keyframes`
+  0% {
+    transform:translateY(0px);
+  }
+  100% {
+    transform:translateY(8rem);
   }
 `;
 const SliderRight = keyframes`
@@ -25,6 +35,7 @@ flex-flow: row;
 height:100%;
 width:100%;  
 background-color: white;
+z-index: 12;
 `
 const ImageContainer = styled.div`
 position: fixed;
@@ -37,7 +48,7 @@ top: 10vh;
 font-weight:bolder;
 background: url(${props=>props.image}) no-repeat ;
 background-size: 50vw 100%;
-animation: .5s ${SliderLeft} ease-out;
+// animation: 1s ${SliderLeft} ease-out;
 z-index: 9;
 justify-content: center;
 align-items: center;
@@ -50,7 +61,7 @@ height:100%;
 right:0%;
 width: 50vw;
 top: 21rem;
-animation: .5s ${SliderRight} ease-out;
+// animation: 1s ${SliderRight} ease-out;
 z-index: 9;
 justify-content: center;
 align-items: center;
@@ -67,16 +78,15 @@ margin: 1rem;
 justify-content: center;
 align-items: center;
 font-size: 2.5em; 
+// animation: 1s ${SliderDown} ease-out;
+animation-fill-mode: forwards;
+animation-delay: 1s;
 color:gray; 
 `;
 const TextCard = styled.div`
 width: 100%;
 height: 108rem;
 padding:20px;
-
-//@media(max-width: 500px){
-//font-size: 5px;
-//}
 `
 const CardHeadingContainer =styled.div`
 display: flex;
@@ -120,34 +130,67 @@ font-family: 'Lato', sans-serif;
 color: #353538;
 
 `
+export default class SingleNews extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {id:props.match.params.newsid,isLoaded: false,News: {}};
+    }
 
-const SingleNews=(props)=> (!props.data.title?<Redirect to={"/news"}/>:
-    <Container>
-        <ImageContainer image={props.data.coverImage}>
-            {console.log(props.data)}
-        </ImageContainer>
-        <NewsContainer>
-            <Link to={"/news"}>
-                <CloseBox>
-                    <ion-icon name="close"/>
-                </CloseBox>
-            </Link>
-            <TextCard>
-                <CardHeadingContainer>
-                    <CardHeading>
-                        {props.data.title}
-                    </CardHeading>
-                </CardHeadingContainer>
-                <PostedOn>
-                    Posted {props.data.addedOn}
-                </PostedOn>
-                <CardTextContainer>
-                    <CardText>
-                        {props.data.body}
-                    </CardText>
-                </CardTextContainer>
-            </TextCard>
-        </NewsContainer>
-    </Container>
-);
-export default SingleNews;
+    componentDidMount() {
+        console.log(this.state.id);
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/getBlogEntry?id=${this.state.id}`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        News: result.data,
+                        isLoaded: true,
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+        console.log(this.state);
+    }
+
+    render() {
+        if(this.state.isLoaded)
+        {return (<Container>
+
+                <ImageContainer image={this.state.News.coverImage}>
+                    {/*{console.log(props.data)}*/}
+                </ImageContainer>
+                <NewsContainer>
+                    <Link to={"/news"} >
+                        <CloseBox>
+                            <ion-icon name="close"/>
+                        </CloseBox>
+                    </Link>
+                    <TextCard>
+                        <Fade bottom cascade duration={1500}>
+                        <CardHeadingContainer>
+                            <CardHeading>
+                                {this.state.News.title}
+                            </CardHeading>
+                        </CardHeadingContainer>
+                        <PostedOn>
+                            Posted {this.state.News.addedOn}
+                        </PostedOn>
+                        <CardTextContainer>
+                            <CardText>
+                                {this.state.News.body}
+                            </CardText>
+                        </CardTextContainer>
+                        </Fade>
+                    </TextCard>
+                </NewsContainer>
+            </Container>);}
+        else {
+            return (<Container><div class="loader"></div></Container>)
+        }
+    }
+}

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styled ,{ keyframes } from "styled-components";
-import Pulse from 'react-reveal/Pulse';
-import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
-import Tada from 'react-reveal/Tada';
+
 
 const VerificationContainer = styled.div`
 display: flex;
@@ -45,10 +42,6 @@ justify-content: center;
 align-items: center;
 height:12vh;
 width: 4vw;
-
-&:hover{
-opacity: 1;
-}
 `;
 const IconText = styled.span`
 font-size: 2rem;
@@ -61,6 +54,9 @@ const Icon = styled.img`
 height: 70%;
 width: auto;
 opacity: .3;
+&:hover{
+opacity: 1;
+}
 `
 const NormalText = styled.span`
 font-size: 1.6rem;
