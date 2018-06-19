@@ -41,7 +41,6 @@ color:gray;
 const NewsCard = styled.img`
 height: 12rem;
 width: 20rem;
-border-radius: .5rem;
 box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
 `
 const ImageDiv = styled.div` 
