@@ -70,7 +70,7 @@ const ReadMore = styled.div`
 display: flex;
 height: 3.5rem;
 width: 12rem;
-border: solid #009ffd;
+border: solid gray;
 border-radius: 2rem;
 justify-content: center;
 align-items: center;
@@ -79,18 +79,19 @@ margin: 1rem;
 text-align: center;
 font-family: 'Raleway', sans-serif; 
 color:#009ffd;
-letter-spacing: 3px; 
+letter-spacing: 1px; 
 transition: .5s;
 &:hover{
 background-color: #009ffd;
 color: white;
+border: solid #009ffd;
 }
 `;
 const Views = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1.5rem;
+font-size: 1.2rem;
 text-align: left;
 padding: 2rem 0px;
 font-family: 'Lato', sans-serif;
@@ -98,7 +99,7 @@ color:gray;
 
 `
 const Num = styled.span`
-font-size: 1.6rem;
+font-size: 1.3rem;
 text-align: left;
 padding: 0px .5rem;
 font-family: 'Lato', sans-serif;
