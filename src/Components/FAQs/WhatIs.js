@@ -5,7 +5,7 @@ import Btc from "./Coins/Btc";
 import Eth from "./Coins/Eth";
 import "./style.css"
 import Header from "../Header/header";
-import Verification from "../HomePage/Verification";
+import Verification from "../verification/Verification";
 import Footer from '../Footer/footer';
 
 

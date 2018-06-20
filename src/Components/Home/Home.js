@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Footer from '../Footer/footer';
 import Header from '../Header/header';
+import Features from "../Features/Features";
 import About from "../about/about";
 import charts from "../charts/chart";
 import support from "../support/support"
 import news from '../news/news';
-import verification from '../verification/verification';
-import supportcrypto from "../support-crypto/support-crypto"
 import whatIs from "../FAQs/WhatIs";
 import whatIsEth from '../whatIsEth/whatIsEth';
 import {Route,Switch,} from 'react-router-dom';
@@ -47,8 +46,7 @@ class Home extends Component
                     <Route path="/about" component={About}/>
                     <Route path="/charts" component={charts}/>
                     <Route path='/help' component={support}/>
-                    <Route path='/support' component={supportcrypto}/>
-                    <Route path='/verification' component={verification}/>
+                    <Route path='/features' component={Features}/>
                     <Route path='/news' component={news}/>
                     <Route path='/whatis' component={whatIs}/>
                     <Route path='/whatisEth' component={whatIsEth}/>

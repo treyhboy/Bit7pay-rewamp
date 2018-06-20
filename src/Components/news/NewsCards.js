@@ -69,7 +69,7 @@ const ReadMore = styled.div`
 display: flex;
 height: 3.5rem;
 width: 12rem;
-border: solid gray;
+border: solid #009ffd;
 border-radius: 2rem;
 justify-content: center;
 align-items: center;

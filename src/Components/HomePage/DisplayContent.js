@@ -72,9 +72,9 @@ justify-content: center;
 align-items: center;
 `;
 const HeadingIcon = styled.img`
-height: 5vh;
-width: 4vw;
-padding: 1px;
+height: 4.8rem;
+width: 3.8rem;
+padding:3px;
 `;
 const PhoneVer = styled.img`
 position: relative;

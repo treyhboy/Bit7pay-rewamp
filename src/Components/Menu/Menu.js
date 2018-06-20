@@ -31,8 +31,9 @@ class Menu extends Component{
                             <li className="navigation__item"><Link to='/about' className="navigation__link" onClick={this.uncheck} >About Us</Link></li>
                             <li className="navigation__item"><Link to='/charts' className="navigation__link" onClick={this.uncheck}>Rate chart</Link></li>
                             <li className="navigation__item"><Link to='/news' className="navigation__link" onClick={this.uncheck}>News</Link></li>
+                            <li className="navigation__item"><Link to='/features' className="navigation__link" onClick={this.uncheck}>Features</Link></li>
                             <li className="navigation__item"><Link to='/help' className="navigation__link" onClick={this.uncheck}>Help</Link></li>
-                            <li className="navigation__item"><Link to='/whatis' className="navigation__link" onClick={this.uncheck}>FAQs</Link></li>
+                            <li className="navigation__item"><Link to='/whatis' className="navigation__link" onClick={this.uncheck}>Coins</Link></li>
                         </ul>
                     </nav>
             </div>

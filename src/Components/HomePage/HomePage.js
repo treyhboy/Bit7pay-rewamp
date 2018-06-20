@@ -4,7 +4,7 @@ import HomeHeader from "./Head";
 import Footer from '../Footer/footer';
 import Calculater from "./Calculater";
 import DisplayContent from "./DisplayContent";
-import Verification from "./Verification";
+import Verification from "../verification/Verification";
 
 const Container = styled.div`
 display: flex;
