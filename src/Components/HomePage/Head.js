@@ -65,6 +65,11 @@ display: flex;
 flex-flow: row;
 justify-content: space-around;
 padding: 2vw;
+width: 50%;
+@media(max-width: 600px)
+{
+width: 100%;
+}
 `;
 const TextCol = styled.div`
 display: flex;
