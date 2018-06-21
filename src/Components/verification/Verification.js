@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import styled ,{ keyframes } from "styled-components";
+import styled from "styled-components";
 
 
 const VerificationContainer = styled.div`
 display: flex;
 flex-flow: column;
 position: relative;
-height: 70vh;
+height: 100%;
 width: 100vw;
 background-color: white;  
 z-index: 2;
@@ -18,6 +18,10 @@ text-align: center;
 font-family: 'Raleway', sans-serif; 
 color:grey;
 letter-spacing: 2px; 
+@media(max-width: 800px){
+font-size: 3.5rem;
+}
+
 `;
 const Heading = styled.div`
 display: flex;
@@ -30,10 +34,15 @@ const IconBoxRow = styled.div`
  display: flex;
  flex-flow: row;
  justify-content: space-around;
-  align-items: center;
-  height: 25vh;
-  width: 100%;
-  padding: 10px 18vw;
+ align-items: center;
+ height: 25vh;
+ width: 100%;
+ padding: 10px 18vw;
+ @media(max-width: 800px){
+flex-flow: wrap;
+height: 100%;
+padding: 10px;
+}
 `;
 const IconBox = styled.div`
 display: flex;
@@ -41,7 +50,12 @@ flex-flow: column;
 justify-content: center;
 align-items: center;
 height:12vh;
-width: 4vw;
+width: auto;
+ @media(max-width: 800px){
+flex-flow: wrap;
+padding: 10px;
+height:12vh;
+}
 `;
 const IconText = styled.span`
 font-size: 2rem;
@@ -49,6 +63,9 @@ text-align: center;
 font-family: 'Raleway', sans-serif; 
 color: grey;
 padding: 2rem;
+@media(max-width: 800px){
+padding: 1rem;
+}
 `;
 const Icon = styled.img`
 height: 70%;
@@ -63,13 +80,19 @@ font-size: 1.6rem;
 text-align: center;
 font-family: 'Raleway', sans-serif; 
 color: grey;
-padding: 0px 25vw;
+padding: 0px 10rem;
+@media(max-width: 800px){
+padding: 3rem;
+}
 `;
 const Row = styled.div`
 display: flex;
 flex-flow: row;
 justify-content: center;
 padding: 8vh;
+@media(max-width: 800px){
+padding: 4vh;
+}
 
 `;
 const Button =styled.div`
@@ -80,12 +103,19 @@ justify-content: center;
 align-items: center;
 background: linear-gradient(to right,#00EFD1,#00ACEA);
 border-radius: 10rem;
+@media(max-width: 800px){
+height: 8rem;
+width: 25rem;
+}
 `
 const ButtonText = styled.span`
 font-size: 2.5rem;
 font-family: 'Raleway', sans-serif; 
 color: white;
 padding: 2px;
+@media(max-width: 800px){
+font-size: 2rem;
+}
 `
 let Account = "Provide your bank account details like Account Number,IFSC Code,Bank Name,Beneficiary Name and Image of cancelled cheque to enable withdrawals from Bit7Pay Wallet";
 let Aadhar = "Provide your Aadhar No. along with a front and back image to complete identification Verification process"

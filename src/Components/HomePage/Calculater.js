@@ -5,12 +5,16 @@ import Fade from 'react-reveal/Fade';
 const Container = styled.div`
 position: relative;
 display: flex;
+justify-content: center;
+align-content: center;
 flex-flow: row;
 height:100%;
 width: 100%;
+z-index: 10;
 background-size: cover;
-@media(max-width: 500px){
+@media(max-width: 800px){
 flex-flow: column;
+transform: translateY(-30%);
 }
 
 `
@@ -25,6 +29,17 @@ padding: 40px;
 margin-left: 16vw;
 box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 z-index: 10;
+@media(max-width: 800px){
+width: 100vw;
+padding: 0px;
+height:100%;
+margin: 0px;
+z-index: 10;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
+border-radius:10px 10px 0px 0px;
+background-color: #3682CE;
+transform: translateY(1%);
+}
 `
 const CurrencyBox = styled.div`
 display: flex;
@@ -36,6 +51,15 @@ margin: 3rem 16vw 3rem 0px ;
 border-radius: 0px 10px 10px 0px;
 box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); 
 z-index: 8;
+@media(max-width: 800px){
+width: 100vw;
+padding: 0px;
+height:100%;
+margin: 0px;
+z-index: 10;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
+border-radius:0px 0px 10px 10px;
+}
 `
 const Heading = styled.div`
 display: flex;
@@ -48,6 +72,10 @@ text-align: center;
 font-family: 'Raleway', sans-serif; 
 color:#38393D;
 letter-spacing: 2px; 
+padding-top: 2rem;
+@media(max-width: 800px){
+color:white;
+}
 `;
 const ResultBox = styled.div`
 display: flex;
@@ -55,6 +83,9 @@ flex-flow: column;
 justify-content: center;
 align-items: center;
 padding: 10em 0px;
+@media(max-width: 800px){
+padding:0px;
+}
 `
 const ResultText = styled.span`
 font-size: 5em;
@@ -63,6 +94,9 @@ font-family: 'Raleway', sans-serif;
 color:#BDCCDB;
 letter-spacing: 2px; 
 margin:  2.2rem  0px 3rem 0px;
+@media(max-width: 800px){
+color:white;
+}
 `;
 const NormalText = styled.span`
 font-size: 1em;
@@ -70,7 +104,9 @@ text-align: center;
 font-family: 'Raleway', sans-serif; 
 color:gray;
 letter-spacing: 2px; 
-
+@media(max-width: 800px){
+display: none;
+}
 `;
 
 
@@ -82,6 +118,9 @@ align-items: center;
 height:100%;
 width: 100%;
 padding-bottom: 8em;
+@media(max-width: 800px){
+display: none;
+}
 `
 const CoinRateContainer = styled.div`
 display: flex;
@@ -92,6 +131,9 @@ height:100%;
 width: 100%;
 z-index: 10;
 padding: 6rem 0px;
+@media(max-width: 800px){
+display: none;
+}
 `
 const CoinRate = styled.div`
 display: flex;
@@ -133,6 +175,10 @@ height: 80%;
 width: 100%;
 padding:0px 7rem;
 margin-bottom: 5rem;
+@media(max-width: 800px){
+padding:5rem;
+margin: 0px;
+}
 `
 const InputCurrency = styled.select`
  
@@ -142,6 +188,9 @@ const InputCurrency = styled.select`
   border-radius: 10px;
   height: 4rem;
   width: 100%;
+  @media(max-width: 800px){
+margin:1rem 0px;
+}
 `
 const InputAmount = styled.input`
   padding: 0px 1rem ;
@@ -151,6 +200,9 @@ const InputAmount = styled.input`
   border-radius: 6px;
   height: 4rem;
   width: 100%;
+   @media(max-width: 800px){
+margin:1rem 0px;
+}
 `
 const Button = styled.div`
 display: flex;
@@ -164,9 +216,12 @@ font-size: 2rem;
 font-family: 'Raleway', sans-serif; 
 background-color: white;
 border-radius: 1rem;
+ @media(max-width: 800px){
+margin:1rem 0px;
+}
 `;
 const Calculater = (props) =>(<Container>
-    <Fade left>
+    <Fade left style={{justifyContent: "space-around",alignItems: "center"}}>
     <ReciptBox>
         <Heading>
             <HeadingText>

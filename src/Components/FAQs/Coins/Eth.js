@@ -9,6 +9,9 @@ height:100%;
 background-color: white;
 z-index: 2;
 padding: 50px;
+@media(max-width: 800px){
+padding: 5px;
+}
 `
 const TextCard = styled.div`
 width: 100%;
@@ -17,28 +20,37 @@ padding: 20px;
 @media(max-width: 500px){
 font-size: 5px;
 }
+@media(max-width: 800px){
+padding: 10px;
+}
 `
 const CardHeadingContainer =styled.div`
 width: 100%;
 height: 100%;
 padding: 5px 20px ;
+@media(max-width: 800px){
+padding: 5px;
+}
 `
 const CardTextContainer = styled.div`
 width: 100%;
 height: 100%;
 padding: 2em 6em ;
+@media(max-width: 800px){
+padding: 5px;
+}
 `
 const CardHeading = styled.span`
 font-size: 3rem;
 text-align: center;
-font-weight: 800;
-font-family: 'Raleway', sans-serif; 
+font-weight: 500;
+font-family: 'Lato', sans-serif;
 color:#4A4D50;
 `
 const CardText = styled.span`
 font-size: 2rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif;
 color: grey;
 
 `

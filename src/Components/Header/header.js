@@ -9,7 +9,7 @@ const Logo = styled.img`
   z-index: 2;
   padding: 15px;
   height: 8em;
-  @media(max-width: 500px)
+  @media(max-width: 600px)
   {
   height: 5em;
   padding: 0px;
@@ -19,7 +19,7 @@ const Logo = styled.img`
 const Space = styled.div`
 flex-grow: 1;
 min-width: 1px;
-@media(max-width: 500px)
+@media(max-width: 600px)
   {
   display: none;
   }
@@ -32,7 +32,7 @@ z-index: 2;
 margin: 1vw;
 background-color: #282D31;
 border-radius: 1.4rem;
-@media(max-width: 500px)
+@media(max-width: 600px)
   {
   display: none;
   }

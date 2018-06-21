@@ -22,10 +22,11 @@ display: flex;
 flex-flow: column ;
 justify-content: center;
 align-items: center;
-height: 120vh;
+height: 100%;
 width: 45%;
-@media(max-width: 500px){
+@media(max-width: 800px){
 width: 100%;
+height: 100vh;
 }
 `;
 const TextBox = styled.div`
@@ -39,7 +40,7 @@ align-content: space-between;
 padding: 3vh ${props=>props.left||"5vh"} 3vh  ${props=>props.right||"0px"} ;
 height: 30vh;
 width: 40vw;
-@media(max-width: 500px){
+@media(max-width: 800px){
 width: 100%;
 padding: 0px;
 }

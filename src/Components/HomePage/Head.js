@@ -40,13 +40,14 @@ const IconEffect3 = keyframes`
 const Head = styled.header`
 display: flex;
 justify-content: flex-end;
-height: 60vh;
+height: 50rem;
 width:100%;   
 position: relative;
 background: linear-gradient(#000000,#001C4C);
 @media(max-width:1000px){
 justify-content: center;
 background-color: white;
+height: 40rem;
 }
 `;
 const Row = styled.div`
@@ -54,8 +55,28 @@ display: flex;
 flex-flow: row;
 justify-content: space-around;
 padding: 2vw;
+@media(max-width: 600px)
+{
+flex-flow: column;
+}
 `;
-const Col = styled.div`
+const IconRow = styled.div`
+display: flex;
+flex-flow: row;
+justify-content: space-around;
+padding: 2vw;
+`;
+const TextCol = styled.div`
+display: flex;
+flex-flow: column;
+flex-grow: 1;
+flex-shrink: 1;
+@media(max-width: 900px)
+{
+padding: 3rem 0px;
+}
+`;
+const Container = styled.div`
 display: flex;
 flex-flow: column;
 flex-grow: 1;
@@ -68,10 +89,20 @@ const HeadText = styled.span`
   font-size: 4rem;
   font-family: 'Raleway', sans-serif; 
   color: white;
+  @media(max-width: 900px)
+  {
+  font-size: 3rem;
+  padding: 5px;
+  text-align: center;
+  }
 `;
 const NormalIcon = styled.img`
-height: 13vh;
-width: 10vw;
+height: 13rem;
+width: auto;
+@media(max-width: 900px)
+{
+height: 8rem;
+}
 `;
 // animation: ${props=>props.time} ${props=>props.anima} ease-out;
 
@@ -87,23 +118,21 @@ class HomeHeader extends Component {
     render() {
         return (
             <Head>
-                <Col>
+                <Container>
                 <Header/>
                 <Row>
-                        <Col>
+                    <TextCol>
                             <HeadText><b>Safest</b> and Most <b>Reliable</b></HeadText>
                             <HeadText>Cryptocurrency Wallet in India</HeadText>
-                        </Col>
-                        <Col>
-                            <Row>
-                                <NormalIcon src={require("../../img/Header/btc-full.svg")} time={"0s"} anima={IconEffect1} />
-                                <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"1.5s"} anima={IconEffect1} />
-                                <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"1.5s"} anima={IconEffect2} />
-                                <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
-                            </Row>
-                        </Col>
-                    </Row>
-                </Col>
+                    </TextCol>
+                    <IconRow>
+                        <NormalIcon src={require("../../img/Header/btc-full.svg")} time={"0s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"1.5s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"1.5s"} anima={IconEffect2} />
+                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
+                    </IconRow>
+                </Row>
+                </Container>
                 <div className="container">
                     <div className="sky">
                         <div className="stars"></div>
