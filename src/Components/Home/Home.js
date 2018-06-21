@@ -7,7 +7,7 @@ import charts from "../charts/chart";
 import support from "../support/support"
 import news from '../news/news';
 import whatIs from "../FAQs/WhatIs";
-import whatIsEth from '../whatIsEth/whatIsEth';
+import Faqs from "../FAQs/Faqs";
 import {Route,Switch,} from 'react-router-dom';
 import styled from "styled-components";
 import { injectGlobal } from 'styled-components';
@@ -49,7 +49,7 @@ class Home extends Component
                     <Route path='/features' component={Features}/>
                     <Route path='/news' component={news}/>
                     <Route path='/whatis' component={whatIs}/>
-                    <Route path='/whatisEth' component={whatIsEth}/>
+                    <Route path='/Faqs' component={Faqs}/>
                 </Switch>
 
             </Main>);
