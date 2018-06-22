@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HomeHeader from "./Head";
 import Footer from '../Footer/footer';
-import Calculater from "./Calculater";
+import Calculater from "./Calculator/Calculater";
 import DisplayContent from "./DisplayContent";
 import Verification from "../verification/Verification";
 
