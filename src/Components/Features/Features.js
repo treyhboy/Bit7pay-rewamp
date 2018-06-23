@@ -23,6 +23,10 @@ width:100%;
 padding: 3rem 10rem;
 background-color: white;
 z-index: 12;
+@media(max-width: 800px){
+padding:0px;
+height:30rem;
+}
 `
 const Section2 = styled.div`
 display: flex;
@@ -31,6 +35,9 @@ height:120rem;
 width:100%;  
 background-color: #ECECF4;
 z-index: 12;
+@media(max-width: 800px){
+height:90rem;
+}
 `
 const Section3 = styled.div`
 display: flex;
@@ -41,6 +48,10 @@ width:100%;
 background:url(${img}) no-repeat center;
 background-size: cover;
 z-index: 12;
+@media(max-width: 800px){
+height:110rem;
+justify-content: space-between;
+}
 `
 const Section4 = styled.div`
 display: flex;
@@ -48,6 +59,10 @@ height:90rem;
 width:100%;  
 background-color: #ECECF4;
 z-index: 12;
+@media(max-width: 800px){
+height: 45rem;
+
+}
 `
 const TextContainer = styled.div`
 display: flex;
@@ -59,8 +74,10 @@ width: 56rem;
 margin-left: ${props=>props.left};
 margin-right: ${props=>props.right};
 margin-top: ${props=>props.top};
-@media(max-width: 500px){
+@media(max-width: 800px){
 width: 100%;
+margin: 0px;
+padding: 2rem;
 }
 `;
 const IconBox = styled.div`
@@ -70,6 +87,10 @@ align-items: center;
 height: 30rem;
 width: 22%;
 padding: 2rem;
+@media(max-width: 600px)
+  {
+width: 30%;  
+  }
 `
 const Icon = styled.img`
 height: 100%;
@@ -87,8 +108,8 @@ height: 30rem;
 width: 78%;
 padding-left:3rem;
 @media(max-width: 500px){
-width: 100%;
-padding: 0px;
+width: 70%;
+padding-left:1rem;
 }
 `;
 const Text = styled.div`
@@ -113,70 +134,125 @@ text-align: left;
 font-weight:300;
 font-family: 'Lato', sans-serif;
 letter-spacing: 3px; 
+@media(max-width: 800px){
+font-size: 4rem;
+}
 `;
 const ImageRow = styled.div`
 display: flex;
 flex-flow: row;
 width: 100%;
 height: 80rem;
+@media(max-width: 800px){
+height: 60rem;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
 `;
 const IphoneSection2 = styled.img`
 height: 100rem;
 width: auto;
 transform:translateY(-25%);
+@media(max-width: 800px){
+display: none;
+}
 `
 const PhonesSection2 = styled.img`
 height: 80rem;
 width: auto;
 padding: 5rem 0px;
 transform:translateX(10%);
+@media(max-width: 800px){
+height: 55rem;
+transform:translateY(0);
+padding: 0px;
+}
 `
 const ImageRowSec3 = styled.div`
 display: flex;
 flex-flow: row;
 width: 100%;
 height: 110rem;
+@media(max-width: 800px){
+height: 60rem;
+justify-content: center;
+align-items: center;
+}
 `;
 const IphoneSection3 = styled.img`
 height: 115rem;
 width: auto;
-transform:translateY(-40%) translateX(17%) ;
+transform:translateY(-40%) translateX(17%);
+@media(max-width: 800px){
+height: 58rem;
+transform:translateY(0%) translateX(-10%);
+}
 `
 const Iphone2Section3 = styled.img`
 height: 100rem;
 width: auto;
+@media(max-width: 800px){
+display: none;
+}
 `
 const ImageRowSec4 = styled.div`
 display: flex;
 flex-flow: row;
 width: 100%;
 height: 110rem;
+@media(max-width: 800px){
+height: 45rem;
+justify-content: center;
+align-content: center;
+}
 `;
 const IphoneSection4 = styled.img`
 height: 100rem;
 width: auto;
 transform:translateY(-25%) translateX(-10%);
 z-index: 10;
+@media(max-width: 800px){
+height: 40rem;
+transform:translateY(0%) translateX(0%) ;
+}
 `
 const Iphone2Section4 = styled.img`
 height: 80rem;
 width: auto;
 transform:translateY(-8%) translateX(-65%) ;
 z-index: 10;
+@media(max-width: 800px){
+height: 35rem;
+transform:translateY(15%) translateX(-50%) ;
+}
 `
 const PlaneSection4 = styled.img`
 height: 95rem;
 width: auto;
 transform:translateY(-10%) translateX(-85%) ;
 z-index: 1;
+@media(max-width: 800px){
+display: none;
+}
 `
 const BitcoinSec4 = styled.img`
 height: 28rem;
 width: auto;
 transform:translateY(-40%) translateX(-102rem) ;
 z-index: 4;
+@media(max-width: 800px){
+display: none;
+}
 `
-
+const Secend =styled.div`
+height: 100%;
+width: 100%;
+display: flex;
+@media(max-width: 800px){
+display: none;
+}
+`
 
 
 const Features = (props)=>(<Container>
@@ -255,7 +331,9 @@ const Features = (props)=>(<Container>
             <BitcoinSec4 src={require("../../img/features/bitcoins.svg")}/>
         </ImageRowSec4>
     </Section4>
+    <Secend>
     <Verification/>
+    </Secend>
     <Footer/>
     </Container>)
 export default Features;

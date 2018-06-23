@@ -72,6 +72,13 @@ padding:${props=>props.pos||"2vw"};
 width: 100%;
 z-index: 10;
 background: ${props=>props.back};
+@media(max-width: 600px)
+  {
+  height: 7rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  }
 `;
 
 const Header=(props)=> (

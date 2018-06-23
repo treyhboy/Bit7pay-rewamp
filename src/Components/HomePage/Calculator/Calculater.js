@@ -82,7 +82,7 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
-overflow: scroll;
+
 padding: 10rem 0px;
 @media(max-width: 800px){
 padding:0px;
@@ -301,7 +301,7 @@ class Calculater extends Component {
         var id = ev.target.id;
         var k = this.state.Rates.find((data)=>
         {return ((data.currency===id)&&(data.type===this.state.toggle))}).rate;
-        this.setState(()=>{return {coin:id,CurrRate:k,Result:k}});
+        this.setState(()=>{return {coin:id,CurrRate:k,Result:k.toLocaleString('en-IN')}});
         fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${this.state.time}&currency=${id}`)
             .then(res => res.json())
             .then(

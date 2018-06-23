@@ -8,13 +8,13 @@ display: flex;
 justify-content: center;
 flex-flow: column;
 align-items:center ;
-height: 50rem;
+height: 35rem;
 width:100%;   
 position: relative;
 //background-color: #F6F6F6;
 background: linear-gradient(to right,#141E30,#243B55);
 @media(max-width:600px){
-height: 45rem;
+height: 27rem;
 }
 
 `
@@ -22,8 +22,9 @@ const HeadContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items:center ;
-height: 6rem;
+height: 10rem;
 width:100%;   
+padding: 2rem 0px;
 `
 const MainContent =styled.div`
 display: flex;
@@ -39,38 +40,48 @@ const IconRow = styled.div`
 display: flex;
 justify-content: center;
 align-items:center ;
-height: 12rem;
+height: 8rem;
 width:100%;   
 @media(max-width:600px){
-height: 6rem;
+height: 8rem;
+padding: 2rem;
 }
 `
 const Logo = styled.img`
 display: flex;
 justify-content: center;
 align-items:center ;
-height: 7rem;
+height: 6rem;
 width:auto; 
-padding: 0px 3rem;
 @media(max-width:600px){
 height: 5rem;
 padding: 0px;
-transform: translateY(-30%);
 }
 `
 const Icon = styled.img`
 display: flex;
 justify-content: center;
 align-items:center ;
-height: 6rem;
+height: 4.5rem;
 width:auto; 
 padding: 0px 2rem;
-opacity: .6;
+transition: .3s;
 &:hover{
-opacity: 1;
+height: 5.5rem;
 }
 @media(max-width:600px){
 height: 4rem;
+padding: 0px 1rem;
+}
+`
+const LinkRow = styled.div`
+display: flex;
+flex-flow: row;
+height: 100%;
+width:100%;   
+padding: 0px 8rem;
+@media(max-width:800px){
+padding: 0px;
 }
 `
 const LinkCol = styled.div`
@@ -78,12 +89,17 @@ display: flex;
 flex-flow: column;
 justify-content: space-around;
 align-items:center ;
-height: 25rem;
-width:50%;   
+height: 100%;
+width:35%;   
 padding: 2rem;
 @media(max-width:600px){
 padding: 0px;
-height: 30rem;
+width:100%;  
+height: 10rem; 
+}
+@media(max-width:800px){
+padding: 0px;
+ 
 }
 `
 const ContactText = styled.div`
@@ -102,7 +118,7 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items:center ;
-height: 25rem;
+height:100%;
 width:50%;   
 padding: 2rem;
 @media(max-width: 800px){
@@ -120,7 +136,7 @@ color:white;
 color:#009ffd;
 }
 @media(max-width: 800px){
-padding: 1rem;
+padding: 2rem;
 }
 `
 const InputEmail = styled.input`
@@ -150,9 +166,8 @@ display: flex;
 flex-flow: row;
 justify-content: center;
 align-items:center ;
-padding-left: 13rem;
-@media(max-width: 800px){
-padding: 0px;
+@media(max-width: 600px){
+display: none;
 }
 `
 const SubscribeButton = styled.div`
@@ -174,6 +189,9 @@ transition: .5s;
 background-color: #009ffd;
 color: white;
 border: solid #009ffd;
+}
+@media(max-width: 600px){
+padding: 0px;
 }
 
 `
@@ -197,23 +215,25 @@ class Footer extends Component
                 <Logo src={require("../../img/footer/logo-gradient.svg")}/>
             </HeadContainer>
             <MainContent>
+                <LinkRow>
                 <LinkCol>
                     <Link to='/'  ><LinkText>Home</LinkText></Link>
                     <Link to='/news' ><LinkText>News</LinkText></Link>
                     <Link to='/features' ><LinkText>Features</LinkText></Link>
+                </LinkCol>
+                <LinkCol>
                     <Link to='/Faqs' ><LinkText>FAQs</LinkText></Link>
                     <Link to='/whatis' ><LinkText>Coins</LinkText></Link>
                     <Link to='/contact' ><LinkText>Contact Us</LinkText></Link>
                 </LinkCol>
+                </LinkRow>
                 <ContactCol>
                     <SubscribeBox>
                     <InputEmail/>
                         <SubscribeButton>Subscribe Now</SubscribeButton>
                     </SubscribeBox>
                     <ContactText>
-                        <LinkText>Contact Us</LinkText>
                         <LinkText>Email - contact@bit7pay.com</LinkText>
-                        <LinkText>Customer Care - 01243239449</LinkText>
                     </ContactText>
                 </ContactCol>
             </MainContent>
