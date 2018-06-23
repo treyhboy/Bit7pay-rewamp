@@ -55,14 +55,15 @@ z-index: 2;
 const HeadingText = styled.span`
 font-size: 3rem;
 text-align: center;
-font-weight: 900;
-font-family: 'Raleway', sans-serif; 
+font-weight: 500;
+font-family: 'Lato', sans-serif; 
 letter-spacing: 2px; 
 `;
 const NormalText = styled.span`
 font-size: 2rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-weight: lighter;
+font-family: 'Lato', sans-serif; 
 color: grey;
 padding: 2vh 5vw;
 `;

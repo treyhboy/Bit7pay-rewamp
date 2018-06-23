@@ -114,7 +114,7 @@ display: none;
 const ChartBox = styled.div`
 position: relative;
 display: flex;
-justify-content: center;
+flex-flow: column;  
 align-items: center;
 height:100%;
 width: 100%;
@@ -131,21 +131,42 @@ justify-content: space-around;
 align-items: center;
 height: 30rem;
 width: 100%;
-padding:0px 7rem;
 margin-bottom: 6rem;
 @media(max-width: 800px){
 padding:5rem;
 margin: 0px;
 }
 `;
+const Input = styled.div`
+display: flex;
+flex-flow: row;
+justify-content:center;
+align-items: center;
+height: 5rem;
+width: 100%;
+padding:2rem 7rem;
+`
+const InputCard = styled.div`
+display: flex;
+justify-content:center;
+align-items: center;
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+height: 5rem;
+width: 8rem;
+border: solid #BDCCDB;
+background-color: #BDCCDB;
+color: white;
+border-radius: 0px 6px 6px 0px;
+`
 const InputAmount = styled.input`
 padding: 0px 1rem ;
 color: #BDCCDB;
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
-border-radius: 6px;
+border-radius: 6px 0px 0px 6px;
 height: 5rem;
-width: 100%;
+width: 15rem;
 box-shadow: none;
   border: solid #BDCCDB;
   outline: none;
@@ -179,7 +200,8 @@ color: ${props=>{return props.color?"white":"#3682CE"}};
 background-color:${props=>props.color};
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
-transition: .3s;
+transition: .5s;
+cursor: pointer;
  `;
 const Sell = styled.div`
 display: flex;
@@ -191,15 +213,46 @@ background-color:${props=>props.color};
 color: ${props=>{return props.color?"white":"#3682CE"}};
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
-transition: .3s;
+transition: .5s;
+cursor: pointer;
+ `;
+const PeriodRow =styled.div` 
+display: flex;
+flex-flow: row;
+justify-content: center;
+align-items: center;
+height: 10rem;
+width: 100%;
+z-index: 2;
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+border-radius: 1rem;
+margin-bottom: 3rem;
+`
+const PeriodMode = styled.div`
+display: flex;
+justify-content: center;
+ align-items: center;
+height: 5rem;
+width: 5rem;
+background-color:${props=>props.color};
+color: ${props=>{return props.color?"#3682CE":"white"}};
+border: solid white;
+font-size: 1.5rem;
+font-family: 'Lato', sans-serif;
+border-radius: 9px;
+margin: 0px 1.5rem;
+transition: .5s;
+cursor: pointer;
  `;
 class Calculater extends Component {
     constructor(props) {
         super(props);
-        this.state = {Rates:{},coin: "",toggle:"BUY_RATE",isLoaded: false,Result:"",input:1,CurrRate:"",graphData:{},calLoaded:false};
+        this.state = {Rates:{},coin: "",toggle:"BUY_RATE",noData:false,isLoaded: false,Result:"",input:1,CurrRate:"",graphData:{},graphLoaded:false,time:"1W"};
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.toggle = this.toggle.bind(this);
+        this.toggleTime = this.toggleTime.bind(this);
 
     }
 
@@ -216,9 +269,10 @@ class Calculater extends Component {
                     this.setState({
                         coin:"BTC",
                         CurrRate:k,
-                        Result:k,
+                        Result:k.toLocaleString('en-IN'),
                         Rates: result.data,
-                        isLoaded: true
+                        isLoaded: true,
+                        time:"1W"
                     });
                 },
                 (error) => {
@@ -233,7 +287,7 @@ class Calculater extends Component {
                 (result) => {
                     console.log(result.data)
                     var k = result.data.map((item)=>{return {x:item.updatedOn,y:item.newValue}})
-                    this.setState({graphData:k,calLoaded:true});
+                    this.setState({graphData:k,graphLoaded:true});
                 },
                 (error) => {
                     this.setState({
@@ -247,13 +301,13 @@ class Calculater extends Component {
         var k = this.state.Rates.find((data)=>
         {return ((data.currency===id)&&(data.type===this.state.toggle))}).rate;
         this.setState(()=>{return {coin:id,CurrRate:k,Result:k}});
-        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=1W&currency=${id}`)
+        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${this.state.time}&currency=${id}`)
             .then(res => res.json())
             .then(
                 (result) => {
                     console.log(result.data)
                     var k = result.data.map((item,index)=>{return {x:item.updatedOn,y:item.newValue}})
-                    this.setState({graphData:k,calLoaded:true});
+                    this.setState({graphData:k,graphLoaded:true});
                 },
                 (error) => {
                     this.setState({
@@ -265,14 +319,34 @@ class Calculater extends Component {
     }
     handleChange(e){
         var res = Math.round(e.target.value*this.state.CurrRate);
-        this.setState({input: e.target.value,Result:res});
+        this.setState({input: e.target.value,Result:res.toLocaleString('en-IN')});
     }
     toggle(ev)
     {
         var key = ev.target.id;
         var k = this.state.Rates.find((data)=>
         {return ((data.currency===this.state.coin)&&(data.type===key))}).rate;
-        this.setState(()=>{return {CurrRate:k,Result:k,toggle:key}});
+        this.setState(()=>{return {CurrRate:k,Result:k.toLocaleString('en-IN'),toggle:key}});
+    }
+    toggleTime(ev)
+    {
+        var key = ev.target.id;
+        this.setState(()=>{return {time:key,graphLoaded:false}});
+        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${key}&currency=${this.state.coin}`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result.data)
+                    var k = result.data.map((item,index)=>{return {x:item.updatedOn,y:item.newValue}})
+                    this.setState({graphData:k,graphLoaded:true});
+                },
+                (error) => {
+                    this.setState({
+                        error
+                    });
+                }
+            )
+
     }
     render() {
         if (this.state.isLoaded)
@@ -296,8 +370,11 @@ class Calculater extends Component {
                             </NormalText>
                         </ResultBox>
                         <FormBox>
-                            <InputAmount placeholder={"Enter Amount"} onChange={this.handleChange} value={this.state.input}/>
-                            <Toggle >
+                            <Input>
+                                <InputAmount placeholder={"Enter Amount"} onChange={this.handleChange} value={this.state.input}/>
+                                <InputCard>{this.state.coin}</InputCard>
+                            </Input>
+                                <Toggle >
                                 <Buy id={"BUY_RATE"} color={this.state.toggle==="BUY_RATE"?"#3682CE":""} onClick={this.toggle}>Buy</Buy>
                                 <Sell id={"SELL_RATE"} color={this.state.toggle==="SELL_RATE"?"#3682CE":""} onClick={this.toggle}>Sell</Sell>
                             </Toggle>
@@ -308,7 +385,12 @@ class Calculater extends Component {
                     <CurrencyBox>
                         <CoinRateCard Rates={this.state.Rates} coin={this.state.coin} fun={this.handleClick} mode={this.state.toggle}/>
                         <ChartBox>
-                            {this.state.calLoaded? <LineChart
+                            <PeriodRow>
+                                <PeriodMode id={"1D"} onClick={this.toggleTime} color={this.state.time==="1D"?"white":""}>1D</PeriodMode>
+                                <PeriodMode id={"1W"} onClick={this.toggleTime} color={this.state.time==="1W"?"white":""}>1W</PeriodMode>
+                                <PeriodMode id={"1M"} onClick={this.toggleTime} color={this.state.time==="1M"?"white":""}>1M</PeriodMode>
+                            </PeriodRow>
+                            {this.state.graphLoaded? <LineChart
                                     width={300}
                                     interpolate={'cardinal'}
                                     height={150}
@@ -317,7 +399,6 @@ class Calculater extends Component {
                                         this.state.graphData
                                     ]}
                                 />:<div class="loader"></div>
-                            }
                             }
                         </ChartBox>
                     </CurrencyBox>

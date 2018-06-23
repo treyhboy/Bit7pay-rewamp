@@ -38,7 +38,7 @@ height: 15em;
 const HeadingText3 = styled.span` 
 font-size: 2rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
 color:white;
 letter-spacing: 2px; 
 `

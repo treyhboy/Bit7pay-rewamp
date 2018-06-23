@@ -92,7 +92,7 @@ const HeadText = styled.span`
   padding: 15px;
   letter-spacing: 2px;
   font-size: 4rem;
-  font-family: 'Raleway', sans-serif; 
+  font-family: 'Lato', sans-serif; 
   color: white;
   @media(max-width: 900px)
   {

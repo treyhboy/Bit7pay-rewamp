@@ -15,7 +15,8 @@ padding-top:10vh ;
 const HeadingText = styled.span`
 font-size: 4rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
+font-weight: 500;
 color:grey;
 letter-spacing: 2px; 
 @media(max-width: 800px){
@@ -60,7 +61,8 @@ height:12vh;
 const IconText = styled.span`
 font-size: 2rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
+font-weight: 300;
 color: grey;
 padding: 2rem;
 @media(max-width: 800px){
@@ -76,11 +78,12 @@ opacity: 1;
 }
 `
 const NormalText = styled.span`
-font-size: 1.6rem;
+font-size: 2rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
 color: grey;
 padding: 0px 10rem;
+font-weight: 300;
 @media(max-width: 800px){
 padding: 3rem;
 }
@@ -110,7 +113,7 @@ width: 25rem;
 `
 const ButtonText = styled.span`
 font-size: 2.5rem;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
 color: white;
 padding: 2px;
 @media(max-width: 800px){

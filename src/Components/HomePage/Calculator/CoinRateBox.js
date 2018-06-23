@@ -57,7 +57,7 @@ const CoinRateCard = (props)=> (<CoinRateContainer>
                         {item.currency}
                     </CoinNameBox>
                     <CoinRateBox id={item.currency}>
-                        Rs {item.rate}
+                        Rs {item.rate.toLocaleString('en-IN')}
                     </CoinRateBox>
                 </CoinRate>)
     })}
