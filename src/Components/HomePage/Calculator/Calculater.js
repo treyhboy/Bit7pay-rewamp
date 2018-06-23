@@ -153,14 +153,14 @@ box-shadow: none;
 margin:1rem 0px;
 }
 `;
-const Button = styled.div`
+const Toggle = styled.div`
 display: flex;
-justify-content: space-around;
+justify-content: center;
  align-items: center;
 height: 5rem;
-width: 15rem;
+width: 16rem;
 z-index: 2;
-background-color:#3682CE ;
+background-color:white;
 color: white;
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
@@ -168,15 +168,38 @@ border: solid #3682CE;
 border-radius: 1rem;
  @media(max-width: 800px){
 margin:1rem 0px;
-}
-`;
+}`;
+const Buy = styled.div`
+display: flex;
+justify-content: center;
+ align-items: center;
+height: 100%;
+width: 50%;
+color: ${props=>{return props.color?"white":"#3682CE"}};
+background-color:${props=>props.color};
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+transition: .3s;
+ `;
+const Sell = styled.div`
+display: flex;
+justify-content: center;
+ align-items: center;
+height: 100%;
+width: 50%;
+background-color:${props=>props.color};
+color: ${props=>{return props.color?"white":"#3682CE"}};
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+transition: .3s;
+ `;
 class Calculater extends Component {
     constructor(props) {
         super(props);
-        this.state = {Rates:{},coin: "BTC", FeaturedNews: {},isLoaded: false,Result:"5,53,429",input:1,CurrRate:""};
+        this.state = {Rates:{},coin: "",toggle:"BUY_RATE",isLoaded: false,Result:"",input:1,CurrRate:"",graphData:{},calLoaded:false};
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.calculate = this.calculate.bind(this);
+        this.toggle = this.toggle.bind(this);
 
     }
 
@@ -204,21 +227,52 @@ class Calculater extends Component {
                     });
                 }
             )
+        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=1W&currency=BTC`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result.data)
+                    var k = result.data.map((item)=>{return {x:item.updatedOn,y:item.newValue}})
+                    this.setState({graphData:k,calLoaded:true});
+                },
+                (error) => {
+                    this.setState({
+                        error
+                    });
+                }
+            )
     }
     handleClick(ev){
         var id = ev.target.id;
         var k = this.state.Rates.find((data)=>
-        {return ((data.currency===id)&&(data.type==="BUY_RATE"))}).rate;
+        {return ((data.currency===id)&&(data.type===this.state.toggle))}).rate;
         this.setState(()=>{return {coin:id,CurrRate:k,Result:k}});
+        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=1W&currency=${id}`)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result.data)
+                    var k = result.data.map((item,index)=>{return {x:item.updatedOn,y:item.newValue}})
+                    this.setState({graphData:k,calLoaded:true});
+                },
+                (error) => {
+                    this.setState({
+                        error
+                    });
+                }
+            )
         console.log(this.state);
     }
     handleChange(e){
-        this.setState({input: e.target.value});
+        var res = Math.round(e.target.value*this.state.CurrRate);
+        this.setState({input: e.target.value,Result:res});
     }
-    calculate()
+    toggle(ev)
     {
-        var res = this.state.input*this.state.CurrRate;
-        this.setState({Result:res})
+        var key = ev.target.id;
+        var k = this.state.Rates.find((data)=>
+        {return ((data.currency===this.state.coin)&&(data.type===key))}).rate;
+        this.setState(()=>{return {CurrRate:k,Result:k,toggle:key}});
     }
     render() {
         if (this.state.isLoaded)
@@ -243,44 +297,28 @@ class Calculater extends Component {
                         </ResultBox>
                         <FormBox>
                             <InputAmount placeholder={"Enter Amount"} onChange={this.handleChange} value={this.state.input}/>
-                            <Button onClick={this.calculate}>Exchange</Button>
+                            <Toggle >
+                                <Buy id={"BUY_RATE"} color={this.state.toggle==="BUY_RATE"?"#3682CE":""} onClick={this.toggle}>Buy</Buy>
+                                <Sell id={"SELL_RATE"} color={this.state.toggle==="SELL_RATE"?"#3682CE":""} onClick={this.toggle}>Sell</Sell>
+                            </Toggle>
                         </FormBox>
                     </ReciptBox>
                 </Fade>
                 <Fade right>
                     <CurrencyBox>
-                        <CoinRateCard Rates={this.state.Rates} coin={this.state.coin} fun={this.handleClick}/>
+                        <CoinRateCard Rates={this.state.Rates} coin={this.state.coin} fun={this.handleClick} mode={this.state.toggle}/>
                         <ChartBox>
-                            <LineChart
-                                width={320}
-                                interpolate={'cardinal'}
-                                height={150}
-                                lineColors={["white"]}
-                                data={[
-                                    [
-                                        {x: 1, y: 13},
-                                        {x: 2, y: 12},
-                                        {x: 3, y: 15},
-                                        {x: 4, y: 14},
-                                        {x: 5, y: 12},
-                                        {x: 6, y: 13},
-                                        {x: 7, y: 15},
-                                        {x: 8, y: 14},
-                                        {x: 9, y: 16},
-                                        {x: 10, y: 14},
-                                        {x: 11, y: 13},
-                                        {x: 12, y: 12},
-                                        {x: 13, y: 15},
-                                        {x: 14, y: 19},
-                                        {x: 15, y: 16},
-                                        {x: 16, y: 13},
-                                        {x: 17, y: 12},
-                                        {x: 18, y: 14},
-                                        {x: 19, y: 16},
-                                        {x: 20, y: 13},
-                                    ]
-                                ]}
-                            />
+                            {this.state.calLoaded? <LineChart
+                                    width={300}
+                                    interpolate={'cardinal'}
+                                    height={150}
+                                    lineColors={["white"]}
+                                    data={[
+                                        this.state.graphData
+                                    ]}
+                                />:<div class="loader"></div>
+                            }
+                            }
                         </ChartBox>
                     </CurrencyBox>
                 </Fade>

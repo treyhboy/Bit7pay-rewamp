@@ -50,13 +50,13 @@ const CoinRateCard = (props)=> (<CoinRateContainer>
         var co;
         if(item.currency===props.coin)
         {co = "#5F9BD9";}
-        if(item.type==="BUY_RATE")
+        if(item.type===props.mode)
             return(
                 <CoinRate color={co} id={item.currency} onClick={props.fun}>
-                    <CoinNameBox onClick={props.fun} id={item.currency}>
+                    <CoinNameBox  id={item.currency}>
                         {item.currency}
                     </CoinNameBox>
-                    <CoinRateBox onClick={props.fun} id={item.currency}>
+                    <CoinRateBox id={item.currency}>
                         Rs {item.rate}
                     </CoinRateBox>
                 </CoinRate>)
