@@ -129,10 +129,10 @@ display: flex;
 flex-flow: column;
 justify-content: space-around;
 align-items: center;
-height: 40rem;
+height: 20rem;
 width: 100%;
 padding:0px 7rem;
-margin-bottom: 5rem;
+margin: 3rem 0px;
 @media(max-width: 800px){
 padding:5rem;
 margin: 0px;
@@ -186,7 +186,7 @@ class Calculater extends Component {
     }
 
     componentDidMount() {
-        fetch("http://dev.bit7pay.com/bit7pay/public/api/getAllRates")
+        fetch("https://dev.bit7pay.com/bit7pay/public/api/getAllRates")
             .then(res => res.json())
             .then(
                 (result) => {
