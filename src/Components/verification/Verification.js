@@ -11,6 +11,9 @@ width: 100vw;
 background-color: white;  
 z-index: 2;
 padding-top:10vh ;
+@media(max-width: 800px){
+padding-top:0px ;
+}
 `;
 const HeadingText = styled.span`
 font-size: 4rem;

@@ -10,7 +10,9 @@ overflow: scroll;
 margin-top: 5rem;
 border-right: solid white 4px;
 @media(max-width: 800px){
-display: none;
+height:15.5rem;
+margin:0px;
+border:none;     
 }
 `;
 const CoinRate = styled.div`

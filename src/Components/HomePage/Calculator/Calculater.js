@@ -33,12 +33,11 @@ z-index: 10;
 @media(max-width: 800px){
 width: 100vw;
 padding: 0px;
-height:100%;
+height:70%;
 margin: 0px;
 z-index: 10;
-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, .3);
 border-radius:10px 10px 0px 0px;
-background-color: #3682CE;
 transform: translateY(1%);
 }
 `;
@@ -58,7 +57,7 @@ padding: 0px;
 height:100%;
 margin: 0px;
 z-index: 10;
-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
 border-radius:0px 0px 10px 10px;
 }
 `;
@@ -66,6 +65,7 @@ const Heading = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+
 `;
 const HeadingText = styled.span`
 font-size: 2.5em;
@@ -75,7 +75,6 @@ color:#38393D;
 letter-spacing: 2px; 
 padding-top: 2rem;
 @media(max-width: 800px){
-color:white;
 }
 `;
 const ResultBox = styled.div`
@@ -83,6 +82,7 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
+overflow: scroll;
 padding: 10rem 0px;
 @media(max-width: 800px){
 padding:0px;
@@ -96,7 +96,7 @@ color:#BDCCDB;
 letter-spacing: 2px; 
 margin:  2.2rem  0px 3rem 0px;
 @media(max-width: 800px){
-color:white;
+font-size: 4em;
 }
 `;
 const NormalText = styled.span`
@@ -133,8 +133,8 @@ height: 30rem;
 width: 100%;
 margin-bottom: 6rem;
 @media(max-width: 800px){
-padding:5rem;
 margin: 0px;
+height: 15rem;
 }
 `;
 const Input = styled.div`
@@ -202,6 +202,7 @@ font-size: 2rem;
 font-family: 'Lato', sans-serif;
 transition: .5s;
 cursor: pointer;
+
  `;
 const Sell = styled.div`
 display: flex;
