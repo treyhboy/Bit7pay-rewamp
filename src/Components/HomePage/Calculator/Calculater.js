@@ -70,7 +70,7 @@ align-items: center;
 const HeadingText = styled.span`
 font-size: 2.5em;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
 color:#38393D;
 letter-spacing: 2px; 
 padding-top: 2rem;
@@ -83,7 +83,7 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
-padding: 10em 0px;
+padding: 10rem 0px;
 @media(max-width: 800px){
 padding:0px;
 }
@@ -91,7 +91,7 @@ padding:0px;
 const ResultText = styled.span`
 font-size: 5em;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif;
 color:#BDCCDB;
 letter-spacing: 2px; 
 margin:  2.2rem  0px 3rem 0px;
@@ -102,7 +102,7 @@ color:white;
 const NormalText = styled.span`
 font-size: 1em;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif;
 color:gray;
 letter-spacing: 2px; 
 @media(max-width: 800px){
@@ -118,7 +118,7 @@ justify-content: center;
 align-items: center;
 height:100%;
 width: 100%;
-padding-bottom: 8em;
+padding-bottom: 3em;
 @media(max-width: 800px){
 display: none;
 }
@@ -129,35 +129,26 @@ display: flex;
 flex-flow: column;
 justify-content: space-around;
 align-items: center;
-height: 20rem;
+height: 30rem;
 width: 100%;
 padding:0px 7rem;
-margin: 3rem 0px;
+margin-bottom: 6rem;
 @media(max-width: 800px){
 padding:5rem;
 margin: 0px;
 }
 `;
-const InputCurrency = styled.select`
- 
-  color: grey;
-  font-size: 2rem;
-  font-family: 'Raleway', sans-serif; 
-  border-radius: 10px;
-  height: 4rem;
-  width: 100%;
-  @media(max-width: 800px){
-margin:1rem 0px;
-}
-`;
 const InputAmount = styled.input`
 padding: 0px 1rem ;
-color: grey;
+color: #BDCCDB;
 font-size: 2rem;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif;
 border-radius: 6px;
-height: 4rem;
+height: 5rem;
 width: 100%;
+box-shadow: none;
+  border: solid #BDCCDB;
+  outline: none;
 @media(max-width: 800px){
 margin:1rem 0px;
 }
@@ -169,10 +160,11 @@ justify-content: space-around;
 height: 5rem;
 width: 15rem;
 z-index: 2;
-color: #3682CE;
+background-color:#3682CE ;
+color: white;
 font-size: 2rem;
-font-family: 'Raleway', sans-serif; 
-background-color: white;
+font-family: 'Lato', sans-serif;
+border: solid #3682CE;
 border-radius: 1rem;
  @media(max-width: 800px){
 margin:1rem 0px;
@@ -181,7 +173,10 @@ margin:1rem 0px;
 class Calculater extends Component {
     constructor(props) {
         super(props);
-        this.state = {Rates:{}, id: "", FeaturedNews: {},isLoaded: false};
+        this.state = {Rates:{},coin: "BTC", FeaturedNews: {},isLoaded: false,Result:"5,53,429",input:1,CurrRate:""};
+        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.calculate = this.calculate.bind(this);
 
     }
 
@@ -191,7 +186,14 @@ class Calculater extends Component {
             .then(
                 (result) => {
                     console.log(result.data)
+
+                    var k = result.data.find((data)=>
+                    {return ((data.currency==="BTC")&&(data.type==="BUY_RATE"))}).rate;
+                    console.log(k);
                     this.setState({
+                        coin:"BTC",
+                        CurrRate:k,
+                        Result:k,
                         Rates: result.data,
                         isLoaded: true
                     });
@@ -203,9 +205,25 @@ class Calculater extends Component {
                 }
             )
     }
+    handleClick(ev){
+        var id = ev.target.id;
+        var k = this.state.Rates.find((data)=>
+        {return ((data.currency===id)&&(data.type==="BUY_RATE"))}).rate;
+        this.setState(()=>{return {coin:id,CurrRate:k,Result:k}});
+        console.log(this.state);
+    }
+    handleChange(e){
+        this.setState({input: e.target.value});
+    }
+    calculate()
+    {
+        var res = this.state.input*this.state.CurrRate;
+        this.setState({Result:res})
+    }
     render() {
         if (this.state.isLoaded)
             return (<Container>
+                <Fade left>
                     <ReciptBox>
                         <Heading>
                             <HeadingText>
@@ -217,18 +235,27 @@ class Calculater extends Component {
                                 you give
                             </NormalText>
                             <ResultText>
-                                Rs 5,53,429
+                                Rs {this.state.Result}
                             </ResultText>
                             <NormalText>
                                 from your pocket
                             </NormalText>
                         </ResultBox>
+                        <FormBox>
+                            <InputAmount placeholder={"Enter Amount"} onChange={this.handleChange} value={this.state.input}/>
+                            <Button onClick={this.calculate}>Exchange</Button>
+                        </FormBox>
+                    </ReciptBox>
+                </Fade>
+                <Fade right>
+                    <CurrencyBox>
+                        <CoinRateCard Rates={this.state.Rates} coin={this.state.coin} fun={this.handleClick}/>
                         <ChartBox>
                             <LineChart
                                 width={320}
                                 interpolate={'cardinal'}
                                 height={150}
-                                lineColors={["#3682CE"]}
+                                lineColors={["white"]}
                                 data={[
                                     [
                                         {x: 1, y: 13},
@@ -255,22 +282,8 @@ class Calculater extends Component {
                                 ]}
                             />
                         </ChartBox>
-                    </ReciptBox>
-                    <CurrencyBox>
-                        <CoinRateCard Rates={this.state.Rates}/>
-                        <FormBox>
-                            <InputAmount placeholder={"Enter Amount"}/>
-                            <InputCurrency placeholder={"Select Currency"}>
-                                <option value="BTC">BTC</option>
-                                <option value="ETH">ETC</option>
-                                <option value="LTC">LTC</option>
-                                <option value="XRP">XRP</option>
-                                <option value="BCH">BCH</option>
-                                <option value="BCG">BCG</option>
-                            </InputCurrency>
-                            <Button>Exchange</Button>
-                        </FormBox>
                     </CurrencyBox>
+                </Fade>
             </Container>)
         else {
             return(<Container><div class="loader"></div></Container>)

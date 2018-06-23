@@ -76,7 +76,7 @@ align-items: center;
 font-size: 1.2em;
 margin: 1rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif; 
 color:#009ffd;
 letter-spacing: 1px; 
 transition: .5s;
