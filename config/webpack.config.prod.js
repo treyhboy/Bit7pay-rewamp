@@ -83,10 +83,10 @@ module.exports = {
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
     ),
     // These are the reasonable defaults supported by the Node ecosystem.
-    // We also include JSX as a common component filename extension to support
+    // We also include JSX as a common component filename extension to Contact
     // some tools, although we do not recommend using it, see:
     // https://github.com/facebookincubator/create-react-app/issues/290
-    // `web` extension prefixes have been added for better support
+    // `web` extension prefixes have been added for better Contact
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
@@ -198,7 +198,7 @@ module.exports = {
                               '>1%',
                               'last 4 versions',
                               'Firefox ESR',
-                              'not ie < 9', // React doesn't support IE8 anyway
+                              'not ie < 9', // React doesn't Contact IE8 anyway
                             ],
                             flexbox: 'no-2009',
                           }),

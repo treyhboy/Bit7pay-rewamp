@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Footer from '../Footer/footer';
-import Header from '../Header/header';
 import Features from "../Features/Features";
 import About from "../about/about";
+import contact from "../Contact/contact";
 import charts from "../charts/chart";
-import support from "../support/support"
 import news from '../news/news';
 import whatIs from "../FAQs/WhatIs";
 import Faqs from "../FAQs/Faqs";
@@ -13,7 +12,6 @@ import styled from "styled-components";
 import { injectGlobal } from 'styled-components';
 import Menu from "../Menu/Menu";
 import HomePage from "../HomePage/HomePage";
-import RateBar from "../Helper Components/Rate Bar";
 import "animate.css/animate.min.css";
 import 'antd/dist/antd.css';
 
@@ -45,11 +43,11 @@ class Home extends Component
                     <Route exact strict path="/" component={HomePage}/>
                     <Route path="/about" component={About}/>
                     <Route path="/charts" component={charts}/>
-                    <Route path='/help' component={support}/>
                     <Route path='/features' component={Features}/>
                     <Route path='/news' component={news}/>
-                    <Route path='/whatis' component={whatIs}/>
+                    <Route path='/coins' component={whatIs}/>
                     <Route path='/Faqs' component={Faqs}/>
+                    <Route path='/contact' component={contact}/>
                 </Switch>
 
             </Main>);

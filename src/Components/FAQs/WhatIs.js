@@ -129,14 +129,14 @@ const whatIs = ({match}) => (<Container>
         <Heading>
             <HeadingText1>
                 <Light>What is</Light>
-                <Route exact strict path="/whatis" component={Bitcoin}/>
-                <Route path="/whatis/Eth" component={Ether}/>?
+                <Route exact strict path="/coins" component={Bitcoin}/>
+                <Route path="/coins/Eth" component={Ether}/>?
             </HeadingText1>
         </Heading>
     </HeadingContainer>
 
-        <Route exact strict path="/whatis" component={Btc}/>
-    <Route path="/whatis/Eth" component={Eth}/>
+        <Route exact strict path="/coins" component={Btc}/>
+    <Route path="/coins/Eth" component={Eth}/>
     <Verification/>
     <Footer/>
 
