@@ -36,6 +36,10 @@ height:100%;
 width:100%;  
 background-color: white;
 z-index: 12;
+@media(max-width: 800px)
+{
+flex-flow: column;
+}
 `
 const ImageContainer = styled.div`
 position: fixed;
@@ -52,6 +56,15 @@ background-size: 50vw 100%;
 z-index: 9;
 justify-content: center;
 align-items: center;
+@media(max-width: 800px)
+{
+top:7rem;
+position:relative;
+width: 100%;
+background-size:cover;
+background-position: center;
+height: 50rem;
+}
 `
 const NewsContainer = styled.div`
 position: absolute;
@@ -65,6 +78,15 @@ top: 21rem;
 z-index: 9;
 justify-content: center;
 align-items: center;
+@media(max-width: 800px)
+{
+position:relative;
+width: 100%;
+background-size:cover;
+height: 50rem;
+left: 0px;
+top: 38rem;
+}
 `
 const CloseBox = styled.div`
 display: flex;
@@ -84,9 +106,15 @@ animation-delay: 1s;
 color:gray; 
 `;
 const TextCard = styled.div`
+position: relative;
 width: 100%;
 height: 108rem;
 padding:20px;
+@media(max-width: 800px)
+{
+width: 100vw;
+padding:0px;
+}
 `
 const CardHeadingContainer =styled.div`
 display: flex;
@@ -95,13 +123,21 @@ align-items: center;
 width: 100%;
 height:13rem;
 padding: 5px 20px ;
-
+@media(max-width: 800px)
+{
+width: 100vw;
+padding: 5px 10px ;
+}
 `
 const CardTextContainer = styled.div`
 width: 100%;
 height: auto;
 padding: 2em 6em ;
-
+@media(max-width: 800px)
+{
+width: 100vw;
+padding: 2em 4em ;
+}
 `
 const PostedOn = styled.div`
 display: flex;
@@ -121,6 +157,10 @@ font-weight: bolder;
 letter-spacing: 2px;
 font-family: 'Lato', sans-serif;
 color:#101419;
+@media(max-width: 800px)
+{
+font-size: 3rem;
+}
 `
 const CardText = styled.span`
 font-size: 2rem;
@@ -162,7 +202,6 @@ export default class SingleNews extends Component {
         {return (<Container>
 
                 <ImageContainer image={this.state.News.coverImage}>
-                    {/*{console.log(props.data)}*/}
                 </ImageContainer>
                 <NewsContainer>
                     <Link to={"/news"} >
@@ -171,7 +210,7 @@ export default class SingleNews extends Component {
                         </CloseBox>
                     </Link>
                     <TextCard>
-                        <Fade bottom cascade duration={1500}>
+                        {/*<Fade bottom cascade duration={1500}>*/}
                         <CardHeadingContainer>
                             <CardHeading>
                                 {this.state.News.title}
@@ -185,7 +224,7 @@ export default class SingleNews extends Component {
                                 {this.state.News.body}
                             </CardText>
                         </CardTextContainer>
-                        </Fade>
+                        {/*</Fade>*/}
                     </TextCard>
                 </NewsContainer>
             </Container>);}

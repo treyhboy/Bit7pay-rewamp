@@ -3,45 +3,9 @@ import styled,{keyframes} from "styled-components";
 import "./style.css";
 import Header from "../Header/header"
 import News from "./NewsCards";
-import {Route,Switch,Link} from 'react-router-dom';
+import {Route,Link} from 'react-router-dom';
 import SingleNews from "./SingleNews";
-import { spring, AnimatedSwitch } from 'react-router-transition';
-
-// we need to map the `scale` prop we define below
-// to the transform style property
-function mapStyles(styles) {
-    return {
-        opacity: styles.opacity,
-        transform: `scale(${styles.scale})`,
-    };
-}
-
-// wrap the `spring` helper to use a bouncy config
-function bounce(val) {
-    return spring(val, {
-        stiffness: 330,
-        damping: 22,
-    });
-}
-
-// child matches will...
-const bounceTransition = {
-    // start in a transparent, upscaled state
-    atEnter: {
-        opacity: 0,
-        scale: 1.2,
-    },
-    // leave in a transparent, downscaled state
-    atLeave: {
-        opacity: bounce(0),
-        scale: bounce(0.8),
-    },
-    // and rest at an opaque, normally-scaled state
-    atActive: {
-        opacity: bounce(1),
-        scale: bounce(1),
-    },
-};
+import {AnimatedSwitch} from 'react-router-transition';
 
 const SliderLeft = keyframes`
   0% {
@@ -65,12 +29,17 @@ flex-flow: row;
 height:100%;
 width:100%;  
 background-color: white;
+@media(max-width: 800px)
+{
+flex-flow: column;
+}
+
 `
 const FeaturedNewsContainer = styled.div`
 position:fixed;
 display: flex;
 flex-flow: column;
-height:75rem;
+height:95vh;
 top: 8rem;
 width:50vw;  
 justify-content: flex-end;
@@ -78,16 +47,32 @@ align-items: center;
 background: url(${props=>props.image}) no-repeat;
 background-size: 50vw 100%;
 // animation: 1s ${SliderRight} ease-out;
+@media(max-width: 800px)
+{
+top:7rem;
+position:relative;
+width: 100%;
+background-size:cover;
+background-position: center;
+height: 50rem;
+}
 `
 const ShadowBox = styled.div`
 background-color: #0F0F0F;
 opacity: .2;
-height:75rem;
+height:95vh;
 width:50vw;
-z-index: 9;
+z-index: 2;
 position: fixed;
 &:hover{
 opacity: 0;
+}
+@media(max-width: 800px)
+{
+position:absolute;
+width: 100%;
+background-size:cover;
+height: 50rem;
 }
 `
 
@@ -98,19 +83,27 @@ height:40%;
 width:100%;  
 justify-content: center;
 align-items: center;
-
+@media(max-width: 800px)
+{
+height:40%;
+}
 `
 const Heading = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 2rem;
+padding: 0px 2rem;
 font-size: 3.5em;
 text-align: center;
 font-family: 'Lato', sans-serif;
 color:#fff;
 letter-spacing: 2px;
 z-index: 10;
+@media(max-width: 800px)
+{
+font-size: 2.5em;
+z-index: 3;
+}
 `
 const PostedOn = styled.div`
 display: flex;
@@ -123,7 +116,10 @@ font-family: 'Lato', sans-serif;
 color:#009ffd;
 letter-spacing: 2px;
 z-index: 10;
-
+@media(max-width: 800px)
+{
+z-index: 3;
+}
 `
 const Featured = styled.div`
 display: flex;
@@ -140,6 +136,11 @@ font-family: 'Raleway', sans-serif;
 color:white;
 letter-spacing: 3px; 
 z-index: 10;
+@media(max-width: 800px)
+{
+margin: 0px;
+z-index: 3;
+}
 `;
 
 const NormalNewsContainer = styled.div`
@@ -154,6 +155,14 @@ justify-content: center;
 align-items: center;
 font-weight:bolder;
 // animation: 1s ${SliderLeft} ease-out;
+@media(max-width: 800px)
+{
+position:relative;
+width: 100%;
+background-size:cover;
+height: 50rem;
+left: 0px;
+}
 `
 
 

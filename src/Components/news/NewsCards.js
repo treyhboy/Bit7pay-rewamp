@@ -12,6 +12,12 @@ height:100%;
 width:100%; 
 top:.6rem;
 align-items: center;
+@media(max-width: 800px)
+{
+height:100%;
+width:100vw;
+top:0px; 
+}
 `
 const NewsBox =styled.div`
 position: relative;
@@ -22,6 +28,11 @@ width:48vw;
 padding-left: 1.5rem;
 border-bottom:solid 1px lightgray; 
 align-items: center;
+@media(max-width: 800px)
+{
+padding-left: 0px;
+width:100vw; 
+}
 `
 const Heading = styled.div`
 display: flex;
@@ -30,6 +41,10 @@ text-align: left;
 padding: 2rem 3rem 2rem 0px;
 font-family: 'Lato', sans-serif;
 color:black;
+@media(max-width: 800px)
+{
+padding:2rem 0px;
+}
 `
 const PostedOn = styled.div`
 display: flex;
@@ -42,6 +57,11 @@ const NewsCard = styled.img`
 height: 12rem;
 width: 20rem;
 box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
+@media(max-width: 800px)
+{
+height: 12rem;
+width: 18rem;
+}
 `
 const ImageDiv = styled.div` 
 display: flex;
@@ -56,6 +76,11 @@ align-items: flex-start;
 flex-flow: column;
 padding: 0px 1.5rem;  
 height: 100%;
+@media(max-width: 800px)
+{
+padding: 0px .5rem;
+width: 100%; 
+}
 `
 const ViewsRow = styled.div`
 display: flex;
@@ -64,6 +89,10 @@ align-items: center;
 flex-flow: row;
 padding: 1rem 0px;
 width: 30vw;
+@media(max-width: 800px)
+{
+width: 100%;
+}
 `
 const ReadMore = styled.div`
 display: flex;
@@ -76,7 +105,7 @@ align-items: center;
 font-size: 1.2em;
 margin: 1rem;
 text-align: center;
-font-family: 'Lato', sans-serif; 
+font-family: 'Raleway', sans-serif; 
 color:#009ffd;
 letter-spacing: 1px; 
 transition: .5s;
@@ -84,6 +113,11 @@ transition: .5s;
 background-color: #009ffd;
 color: white;
 border: solid #009ffd;
+}
+@media(max-width: 800px)
+{
+width: 9rem;
+font-size: 1em;
 }
 `;
 const Views = styled.div`
