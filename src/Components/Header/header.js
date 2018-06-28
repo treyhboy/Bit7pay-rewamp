@@ -5,11 +5,15 @@ import googleimg from "../../img/Header/play-store.svg";
 import appleimg from "../../img/Header/app-store.svg";
 
 const Logo = styled.img`
+ 
   position: relative;
   z-index: 2;
-  padding: 15px;
-  height: 8em;
-  width: 25rem;
+  padding-top: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  
+  height: 7em;
+  width: 22rem;
   @media(max-width: 600px)
   {
   height: 5em;
@@ -18,8 +22,16 @@ const Logo = styled.img`
   
 `;
 const Space = styled.div`
+display: flex;
 flex-grow: 1;
+justify-content: flex-start;
+align-items: center;
 min-width: 1px;
+font-size:3.5rem;
+font-style: italic;
+font-weight: lighter;
+font-family: 'lato', sans-serif; 
+color: white;
 @media(max-width: 600px)
   {
   display: none;
@@ -34,6 +46,27 @@ margin: 1vw;
 background-color: #282D31;
 border-radius: 1.4rem;
 cursor: pointer;
+backface-visibility: hidden;
+transform: rotateY(${props=>props.rotate}deg);
+transition: transform 1s;
+@media(max-width: 600px)
+  {
+  display: none;
+  }
+`;
+const ButtonBack = styled.div`
+display: flex;
+position: absolute;
+height: 6rem;
+width: 15rem;
+margin-top: 2rem;
+z-index: 2;
+background-color: green;
+border-radius: 1.4rem;
+cursor: pointer;
+backface-visibility: hidden;
+transform:rotateY(${props=>props.rotate}deg);
+transition: transform 1s;
 @media(max-width: 600px)
   {
   display: none;
@@ -82,15 +115,39 @@ background: ${props=>props.back};
   padding: 0px;
   }
 `;
-
-const Header=(props)=> (
-                <Row back={props.back} pos={props.pos}>
-                    <Link to={"/"}>
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {back:props.back,pos:props.pos,text:props.text,applefront:"0",playfront:"0",appleback:"-180",playback:"-180"};
+        this.toggle = this.toggle.bind(this);
+    }
+    toggle(ev) {
+        var k = ev.target.id;
+        console.log(k);
+        if(k==="a1")
+        {this.setState(() => {return {applefront:"-180",appleback:"0"}
+        })}
+        else if(k==="a2")
+        {this.setState(() => {return {applefront:"0",appleback:"-180"}
+        })}
+        else if(k==="p1")
+        {this.setState(() => {return {playfront:"-180",playback:"0"}
+        })}
+        else if(k==="p2")
+        {this.setState(() => {return {playfront:"0",playback:"-180"}
+        })}
+    }
+    render() {
+        return (
+            <Row back={this.state.back} pos={this.state.pos}>
+                <Link to={"/"}>
                     <Logo src={require("../../img/Header/logo.svg")}/>
-                    </Link>
-                <Space/>
-                    <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
-                    <Button>
+                </Link>
+                <Space>
+                    {this.state.text}
+                </Space>
+                <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
+                    <Button rotate={this.state.applefront} id={"a1"} onClick={this.toggle}>
                         <ButtonIconBox>
                             <ButtonIcon src={appleimg}/>
                         </ButtonIconBox>
@@ -99,17 +156,19 @@ const Header=(props)=> (
                             <ButtonText size={"1.4rem"}>APP STORE</ButtonText>
                         </ButtonTextBox>
                     </Button>
-                    </a>
-                    <Button>
-                        <ButtonIconBox>
-                            <ButtonIcon src={googleimg}/>
-                        </ButtonIconBox>
-                        <ButtonTextBox>
-                            <ButtonText size={"1rem"}>Available on</ButtonText>
-                            <ButtonText size={"1.5rem"}>PLAY STORE</ButtonText>
-                        </ButtonTextBox>
-                    </Button>
-                </Row>
+                </a>
+                <Button id={"p1"} rotate={this.state.playfront} onClick={this.toggle}>
+                    <ButtonIconBox >
+                        <ButtonIcon src={googleimg}/>
+                    </ButtonIconBox>
+                    <ButtonTextBox >
+                        <ButtonText size={"1rem"} >Available on</ButtonText>
+                        <ButtonText size={"1.5rem"} >PLAY STORE</ButtonText>
+                    </ButtonTextBox>
+                </Button>
+            </Row>
         );
+    }
+}
 
 export default Header;

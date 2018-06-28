@@ -24,7 +24,7 @@ justify-content: center;
 align-items:center ;
 height: 10rem;
 width:100%;   
-padding: 2rem 0px;
+padding-top: 2rem;
 `
 const MainContent =styled.div`
 display: flex;
@@ -132,6 +132,7 @@ text-decoration: none;
 font-weight: 200;
 font-family: 'Lato', sans-serif;
 color:white;
+cursor: pointer; 
 &:hover{
 color:#009ffd;
 }
@@ -229,11 +230,13 @@ class Footer extends Component
                 </LinkRow>
                 <ContactCol>
                     <SubscribeBox>
-                    <InputEmail/>
+                    <InputEmail mailto href/>
                         <SubscribeButton>Subscribe Now</SubscribeButton>
                     </SubscribeBox>
                     <ContactText>
+                        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
                         <LinkText>Email - contact@bit7pay.com</LinkText>
+                        </a>
                     </ContactText>
                 </ContactCol>
             </MainContent>

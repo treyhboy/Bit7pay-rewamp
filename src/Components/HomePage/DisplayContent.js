@@ -7,11 +7,11 @@ const ImageBox = styled.div`
 position: relative;
 display: flex;
 flex-flow: row;
-height: 120vh;
+margin-top: 5rem;
+height: 85rem;
 width: 55%;
 background: url(${img1}) no-repeat;
-background-size:120%;
-margin-top: 100px;
+background-size:auto 85rem;
 @media(max-width: 1024px){
 display: none;
 }
@@ -22,11 +22,11 @@ display: flex;
 flex-flow: column ;
 justify-content: center;
 align-items: center;
-height: 100%;
+height: 90rem;
 width: 45%;
 @media(max-width: 1024px){
 width: 100%;
-height: 100vh;
+height: 80rem;
 }
 `;
 const TextBox = styled.div`
@@ -37,17 +37,18 @@ flex-shrink: 1;
 justify-content: center;
 align-items: center;
 align-content: space-between;
-padding: 3vh ${props=>props.left||"5vh"} 3vh  ${props=>props.right||"0px"} ;
-height: 30vh;
-width: 40vw;
+padding: 2rem ${props=>props.left||"5rem"} 2rem  ${props=>props.right||"0px"} ;
+height: 28rem;
+width: 60rem;
 @media(max-width: 1024px){
 width: 100%;
+height: 25rem;
 padding: 0px;
 }
 `;
 const ContentContainer1 = styled.div`
 display: flex;
-height:120vh;
+height:90rem;
 width: 100%;
 background-color: white;  
 z-index: 2;
@@ -61,11 +62,12 @@ letter-spacing: 2px;
 `;
 const NormalText = styled.span`
 font-size: 2rem;
-text-align: center;
+
 font-weight: lighter;
+text-align: left;
 font-family: 'Lato', sans-serif; 
 color: grey;
-padding: 2vh 5vw;
+padding: 2rem 2rem 2rem 10rem;
 `;
 const Heading = styled.div`
 display: flex;
@@ -74,9 +76,9 @@ justify-content: center;
 align-items: center;
 `;
 const HeadingIcon = styled.img`
-height: 4.8rem;
-width: 3.8rem;
-padding:3px;
+height: 9rem;
+width: 9rem;
+padding:1rem;
 `;
 const PhoneVer = styled.img`
 position: relative;
@@ -87,8 +89,8 @@ top:${props=>props.top};
 `;
 const DisplayContent = (props) =>(<ContentContainer1>
     <ImageBox>
-        <PhoneVer src={require("../../img/Header/iphone_x_1.png")} height={"45vh"}  top={"40%"} left={"10%"}/>
-        <PhoneVer src={require("../../img/Header/iphone_x_2.png")} height={"62vh"}  top={"70px"}/>
+        <PhoneVer src={require("../../img/Header/iphone_x_1.png")} height={"40rem"}  top={"42%"} left={"5%"}/>
+        <PhoneVer src={require("../../img/Header/iphone_x_2.png")} height={"55rem"}  top={"60px"}/>
     </ImageBox>
     <TextBoxContainer>
         <TextBox>
@@ -97,7 +99,7 @@ const DisplayContent = (props) =>(<ContentContainer1>
             </NormalText>
         </TextBox>
         <Roll right cascade fraction={1} >
-            <TextBox left={"0px"} right={"5vh"}>
+            <TextBox left={"0px"} right={"8rem"}>
                 <Heading><HeadingIcon src={require("../../img/Header/pt-02.svg")}/><HeadingText>Encrypted Wallet</HeadingText></Heading>
                 <NormalText>To ensure the safety of your crypto funds and confidential data, we have implemented the hightest standards of Security Protocol.
                 </NormalText>

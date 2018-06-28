@@ -6,9 +6,26 @@ flex-flow: column;
 height:35.5rem;             
 width: 100%;
 z-index: 10;
-overflow: scroll;
+overflow-y: scroll;
 margin-top: 5rem;
-border-right: solid white 4px;
+&::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 @media(max-width: 800px){
 height:15.5rem;
 margin:0px;
@@ -22,6 +39,7 @@ justify-content: center;
 align-items: center;
 height:5rem;
 width: 100%;
+cursor: pointer;
 background-color: ${props=>props.color};
 `;
 const CoinNameBox = styled.div`

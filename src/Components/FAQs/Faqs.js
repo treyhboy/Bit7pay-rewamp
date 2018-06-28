@@ -22,7 +22,7 @@ width:100%;
 height:100%;
 flex-flow: column;
 justify-content: center;
-background:linear-gradient(to right,#000428,#004e92)
+background:linear-gradient(#101419, #3A506B)
 `;
 const HeadingText1 = styled.span`
 font-size: 7rem;

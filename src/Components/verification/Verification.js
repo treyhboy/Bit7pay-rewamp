@@ -20,8 +20,7 @@ font-size: 4rem;
 text-align: center;
 font-family: 'Lato', sans-serif; 
 font-weight: 500;
-color:grey;
-letter-spacing: 2px; 
+color:grey; 
 @media(max-width: 800px){
 font-size: 3.5rem;
 }
@@ -86,8 +85,10 @@ font-size: 2rem;
 text-align: center;
 font-family: 'Lato', sans-serif; 
 color: grey;
-padding: 0px 10rem;
+padding: 0px 15rem;
 font-weight: 300;
+height: 4rem;
+line-height: 2.5rem;
 @media(max-width: 800px){
 padding: 3rem;
 }
@@ -105,10 +106,10 @@ padding: 4vh;
 const Button =styled.div`
 display: flex;
 height: 10vh;
-width: 40%;
+width: 35%;
 justify-content: center;
 align-items: center;
-background: linear-gradient(to right,#00EFD1,#00ACEA);
+background: linear-gradient(to right,#2AF598,#009EFD);
 border-radius: 10rem;
 cursor: pointer;
 @media(max-width: 800px){
@@ -117,7 +118,7 @@ width: 25rem;
 }
 `
 const ButtonText = styled.span`
-font-size: 2.5rem;
+font-size: 2.8rem;
 font-family: 'Lato', sans-serif; 
 color: white;
 padding: 2px;
@@ -216,7 +217,7 @@ class Verification extends Component
                 <Row>
                     <Button>
                         <ButtonText>
-                            Join Bit7Pay Now
+                            Join Bit7Pay Now !
                         </ButtonText>
                     </Button>
                 </Row>

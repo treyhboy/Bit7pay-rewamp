@@ -44,8 +44,8 @@ top: 8rem;
 width:50vw;  
 justify-content: flex-end;
 align-items: center;
-background: url(${props=>props.image}) no-repeat;
-background-size: 50vw 100%;
+background: url(${props=>props.image}) no-repeat center;
+background-size:cover;
 // animation: 1s ${SliderRight} ease-out;
 @media(max-width: 800px)
 {
@@ -93,11 +93,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 0px 2rem;
-font-size: 3.5em;
+font-size: 4em;
+line-height: 1.2em;
 text-align: center;
 font-family: 'Lato', sans-serif;
 color:#fff;
-letter-spacing: 2px;
 z-index: 10;
 @media(max-width: 800px)
 {
@@ -114,7 +114,6 @@ padding: 2rem;
 text-align: center;
 font-family: 'Lato', sans-serif;
 color:#009ffd;
-letter-spacing: 2px;
 z-index: 10;
 @media(max-width: 800px)
 {
@@ -124,7 +123,7 @@ z-index: 3;
 const Featured = styled.div`
 display: flex;
 height: 3.5rem;
-width: 12rem;
+width: 14rem;
 background-color: #009ffd;
 border-radius: 2rem;
 justify-content: center;
@@ -133,6 +132,7 @@ font-size: 1.5em;
 margin: 1rem;
 text-align: center;
 font-family: 'Raleway', sans-serif; 
+font-weight: 600;
 color:white;
 letter-spacing: 3px; 
 z-index: 10;
@@ -210,7 +210,7 @@ class news extends Component
     render() {
     if(this.state.isLoaded)
         return(<div>
-                <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"fixed"}/>
+                <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"fixed"} text={"News"}/>
                 <AnimatedSwitch
                     atEnter={{ offset: 0 }}
                     atLeave={{ offset: 0 }}

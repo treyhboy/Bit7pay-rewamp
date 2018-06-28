@@ -70,6 +70,7 @@ align-items: center;
 const HeadingText = styled.span`
 font-size: 2.5em;
 text-align: center;
+font-weight: 300;
 font-family: 'Lato', sans-serif; 
 color:#38393D;
 letter-spacing: 2px; 
@@ -118,7 +119,7 @@ flex-flow: column;
 align-items: center;
 height:100%;
 width: 100%;
-padding-bottom: 3em;
+padding: 2em 0px;
 @media(max-width: 800px){
 display: none;
 }
@@ -258,7 +259,7 @@ class Calculater extends Component {
     }
 
     componentDidMount() {
-        fetch("https://dev.bit7pay.com/bit7pay/public/api/getAllRates")
+        fetch("https://api.bit7pay.com/bit7pay/public/api/getAllRates")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -282,11 +283,11 @@ class Calculater extends Component {
                     });
                 }
             )
-        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=1W&currency=BTC`)
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=1W&currency=BTC`)
             .then(res => res.json())
             .then(
                 (result) => {
-                    console.log(result.data)
+                    console.log(result)
                     var k = result.data.map((item)=>{return {x:item.updatedOn,y:item.newValue}})
                     this.setState({graphData:k,graphLoaded:true});
                 },
@@ -302,7 +303,7 @@ class Calculater extends Component {
         var k = this.state.Rates.find((data)=>
         {return ((data.currency===id)&&(data.type===this.state.toggle))}).rate;
         this.setState(()=>{return {coin:id,CurrRate:k,Result:k.toLocaleString('en-IN')}});
-        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${this.state.time}&currency=${id}`)
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${this.state.time}&currency=${id}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -333,7 +334,7 @@ class Calculater extends Component {
     {
         var key = ev.target.id;
         this.setState(()=>{return {time:key,graphLoaded:false}});
-        fetch(`https://dev.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${key}&currency=${this.state.coin}`)
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/getBuyRateHistoryInDesc?period=${key}&currency=${this.state.coin}`)
             .then(res => res.json())
             .then(
                 (result) => {

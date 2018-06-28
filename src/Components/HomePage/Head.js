@@ -36,25 +36,29 @@ const IconEffect3 = keyframes`
      opacity: 1;
   }
 `;
-
+const Bold = styled.span`
+font-weight: bolder;
+`
 const Head = styled.header`
 display: flex;
 justify-content: flex-end;
-height: 50rem;
+height: 40rem;
 width:100%;   
 position: relative;
-background: linear-gradient(#000000,#001C4C);
+overflow: hidden;
+font-weight: lighter;
+background:linear-gradient(#101419, #3A506B);
 @media(max-width:1000px){
 justify-content: center;
 background-color: white;
-height: 40rem;
+height: 35rem;
 }
 `;
 const Row = styled.div`
 display: flex;
 flex-flow: row;
 justify-content: space-around;
-padding: 2vw;
+padding: 2.5rem;
 @media(max-width: 600px)
 {
 flex-flow: column;
@@ -64,21 +68,25 @@ const IconRow = styled.div`
 display: flex;
 flex-flow: row;
 justify-content: space-around;
-padding: 2vw;
-width: 50%;
+padding-left: 4rem;
+transform: translateX(13%);
+height: 100%;
+width: 60%;
 @media(max-width: 600px)
 {
+transform: translateX(0%);
+padding-left: 0px;
 width: 100%;
 }
 `;
 const TextCol = styled.div`
 display: flex;
 flex-flow: column;
-flex-grow: 1;
-flex-shrink: 1;
+height: 100%;
+width: 40%;
 @media(max-width: 900px)
 {
-padding: 3rem 0px;
+width: 100%;
 }
 `;
 const Container = styled.div`
@@ -90,8 +98,8 @@ flex-shrink: 1;
 const HeadText = styled.span`
   position: relative;
   padding: 15px;
-  letter-spacing: 2px;
-  font-size: 4rem;
+  font-size: 3.8rem;
+  line-height: 3.5rem;
   font-family: 'Lato', sans-serif; 
   color: white;
   @media(max-width: 900px)
@@ -102,8 +110,10 @@ const HeadText = styled.span`
   }
 `;
 const NormalIcon = styled.img`
-height: 13rem;
+height: 12rem;
 width: auto;
+animation: ${props=>props.anima} ${props=>props.time};
+
 @media(max-width: 900px)
 {
 height: 8rem;
@@ -127,7 +137,7 @@ class HomeHeader extends Component {
                 <Header/>
                 <Row>
                     <TextCol>
-                            <HeadText><b>Safest</b> and Most <b>Reliable</b></HeadText>
+                            <HeadText><Bold>Safest</Bold> and Most <Bold>Reliable</Bold></HeadText>
                             <HeadText>Cryptocurrency Wallet in India</HeadText>
                     </TextCol>
                     <IconRow>
@@ -135,18 +145,10 @@ class HomeHeader extends Component {
                         <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"1.5s"} anima={IconEffect1} />
                         <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"1.5s"} anima={IconEffect2} />
                         <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
+                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
                     </IconRow>
                 </Row>
                 </Container>
-                <div className="container">
-                    <div className="sky">
-                        <div className="stars"></div>
-                        <div className="stars1"></div>
-                        <div className="stars2"></div>
-                        <div className="shooting-stars"></div>
-                    </div>
-                </div>
-
             </Head>
 
         );

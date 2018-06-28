@@ -57,6 +57,8 @@ const NewsCard = styled.img`
 height: 12rem;
 width: 20rem;
 box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
+object-fit: cover; 
+object-position: center center;
 @media(max-width: 800px)
 {
 height: 12rem;
@@ -98,7 +100,7 @@ const ReadMore = styled.div`
 display: flex;
 height: 3.5rem;
 width: 12rem;
-border: solid #009ffd;
+border: solid #009ffd 2px;
 border-radius: 2rem;
 justify-content: center;
 align-items: center;

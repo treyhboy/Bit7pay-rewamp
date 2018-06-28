@@ -51,8 +51,8 @@ left:0%;
 width: 50vw;
 top: 10vh;
 font-weight:bolder;
-background: url(${props=>props.image}) no-repeat ;
-background-size: 50vw 100%;
+background: url(${props=>props.image}) no-repeat center;
+background-size:cover;
 // animation: 1s ${SliderLeft} ease-out;
 z-index: 9;
 justify-content: center;
@@ -75,6 +75,7 @@ height:100%;
 right:0%;
 width: 50vw;
 top: 21rem;
+padding-top:3rem;
 // animation: 1s ${SliderRight} ease-out;
 z-index: 9;
 justify-content: center;
@@ -149,7 +150,6 @@ padding: 1em 4em;
 text-align: center;
 font-family: 'Lato', sans-serif;
 color:#009ffd;
-letter-spacing: 2px;
 `
 const CardHeading = styled.span`
 font-size: 3.5rem;

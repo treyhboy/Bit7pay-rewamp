@@ -258,7 +258,7 @@ display: none;
 
 const Features = (props)=>(<ScrollContext >
     <Container>
-    <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"0px"}/>
+    <Header back={"linear-gradient(to right,#101419, #3A506B)"} pos={"0px"} />
     <Section1>
         <Fade right>
         <TextContainer>
