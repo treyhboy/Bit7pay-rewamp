@@ -219,8 +219,8 @@ class news extends Component
                         opacity:`${styles.offset}`
                     })}
                 >
-                    <Route path="/news/:newsid" component={SingleNews}/>
-                    <Route exact strict path='/news' render={()=><Container>
+                    <Route path="/news/:newsid" component={SingleNews} onUpdate={() => window.scrollTo(0, 0)} />
+                    <Route exact strict path='/news' onUpdate={() => window.scrollTo(0, 0)} render={()=><Container>
                         <Link to={`/news/${this.state.FeaturedNews.id}`}>
                             <FeaturedNewsContainer image={this.state.FeaturedNews.coverImage}>
                                 <ShadowBox/>

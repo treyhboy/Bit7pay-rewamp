@@ -2,7 +2,7 @@
     display: none; }
 
 .navigation__button {
-    background-color: #fff;
+    background-color: #333;
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -87,7 +87,7 @@
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
-    background-color: #333;
+    background-color: #fff;
     display: inline-block; }
 .navigation__icon::before, .navigation__icon::after {
     content: "";

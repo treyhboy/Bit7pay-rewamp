@@ -76,6 +76,7 @@ const Icon = styled.img`
 height: 70%;
 width: auto;
 opacity: .3;
+cursor: pointer;
 &:hover{
 opacity: 1;
 }
@@ -109,6 +110,7 @@ justify-content: center;
 align-items: center;
 background: linear-gradient(to right,#00EFD1,#00ACEA);
 border-radius: 10rem;
+cursor: pointer;
 @media(max-width: 800px){
 height: 8rem;
 width: 25rem;

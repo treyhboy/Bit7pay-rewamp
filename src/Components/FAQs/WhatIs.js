@@ -7,6 +7,7 @@ import "./style.css"
 import Header from "../Header/header";
 import Verification from "../verification/Verification";
 import Footer from '../Footer/footer';
+import { ScrollContext } from 'react-router-scroll-4';
 
 
 const Container = styled.div`
@@ -98,7 +99,8 @@ const Bitcoin = ({ match }) => (<Bold> BitCoin</Bold>
 );
 const Ether = ({ match }) => (<Bold> Ethereum</Bold>
 );
-const whatIs = ({match}) => (<Container>
+const whatIs = ({match}) => (<ScrollContext >
+    <Container>
     <HeadingContainer>
         <Header/>
         <CoinScrollContainer>
@@ -139,8 +141,8 @@ const whatIs = ({match}) => (<Container>
     <Route path="/coins/Eth" component={Eth}/>
     <Verification/>
     <Footer/>
-
-</Container>)
+    </Container>
+</ScrollContext>)
 
 
 export default whatIs;

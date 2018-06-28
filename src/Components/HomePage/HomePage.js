@@ -5,6 +5,8 @@ import Footer from '../Footer/footer';
 import Calculater from "./Calculator/Calculater";
 import DisplayContent from "./DisplayContent";
 import Verification from "../verification/Verification";
+import { ScrollContext } from 'react-router-scroll-4';
+
 
 const Container = styled.div`
 display: flex;
@@ -17,7 +19,9 @@ z-index: 2;
 `;
 
 
-const HomePage = (props) =>(<div>
+const HomePage = (props) =>(
+    <ScrollContext>
+    <div>
         <HomeHeader/>
         <Container>
             <DisplayContent/>
@@ -26,6 +30,7 @@ const HomePage = (props) =>(<div>
             <Footer/>
     </Container>
 </div>
+    </ScrollContext>
     );
 
 export default HomePage;

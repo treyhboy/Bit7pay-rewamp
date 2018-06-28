@@ -5,6 +5,7 @@ import img from "../../img/features/bg-1.jpg";
 import Verification from "../verification/Verification";
 import Footer from "../Footer/footer";
 import Fade from "react-reveal";
+import { ScrollContext } from 'react-router-scroll-4';
 
 const Container = styled.div`
 display: flex;
@@ -255,7 +256,8 @@ display: none;
 `
 
 
-const Features = (props)=>(<Container>
+const Features = (props)=>(<ScrollContext >
+    <Container>
     <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"0px"}/>
     <Section1>
         <Fade right>
@@ -335,5 +337,6 @@ const Features = (props)=>(<Container>
     <Verification/>
     </Secend>
     <Footer/>
-    </Container>)
+    </Container>
+</ScrollContext>)
 export default Features;

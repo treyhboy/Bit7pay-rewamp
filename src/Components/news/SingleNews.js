@@ -4,6 +4,7 @@ import {Route,Switch,Link} from 'react-router-dom';
 import { Redirect } from 'react-router';
 import Header from "../Header/header"
 import Fade from 'react-reveal/Fade';
+import { ScrollContext } from 'react-router-scroll-4';
 
 const SliderLeft = keyframes`
   0% {
@@ -199,7 +200,8 @@ export default class SingleNews extends Component {
 
     render() {
         if(this.state.isLoaded)
-        {return (<Container>
+        {return (<ScrollContext>
+            <Container>
 
                 <ImageContainer image={this.state.News.coverImage}>
                 </ImageContainer>
@@ -210,7 +212,7 @@ export default class SingleNews extends Component {
                         </CloseBox>
                     </Link>
                     <TextCard>
-                        {/*<Fade bottom cascade duration={1500}>*/}
+                        <Fade bottom cascade duration={1500}>
                         <CardHeadingContainer>
                             <CardHeading>
                                 {this.state.News.title}
@@ -224,10 +226,11 @@ export default class SingleNews extends Component {
                                 {this.state.News.body}
                             </CardText>
                         </CardTextContainer>
-                        {/*</Fade>*/}
+                        </Fade>
                     </TextCard>
                 </NewsContainer>
-            </Container>);}
+            </Container>
+        </ScrollContext>);}
         else {
             return (<Container><div class="loader"></div></Container>)
         }

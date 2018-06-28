@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { FlexyFlipCard } from 'flexy-flipcards';
+import { ScrollContext } from 'react-router-scroll-4';
+
 const Container = styled.div`
 display: flex;
 width:100%;
@@ -316,7 +318,9 @@ toggle(ev) {
         })}
 }
     render(){
-        return(<Container>
+        return(
+            <ScrollContext>
+            <Container>
             <FormContainer rotate={this.state.card1}>
                 <Header>
                     Create Ticket
@@ -382,7 +386,8 @@ toggle(ev) {
                     </Home>
                 </ButtonRow>
             </Container2>
-        </Container>);
+        </Container>
+            </ScrollContext>);
     }
 }
 

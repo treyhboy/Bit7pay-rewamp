@@ -9,6 +9,7 @@ const Logo = styled.img`
   z-index: 2;
   padding: 15px;
   height: 8em;
+  width: 25rem;
   @media(max-width: 600px)
   {
   height: 5em;
@@ -32,6 +33,7 @@ z-index: 2;
 margin: 1vw;
 background-color: #282D31;
 border-radius: 1.4rem;
+cursor: pointer;
 @media(max-width: 600px)
   {
   display: none;
@@ -83,8 +85,11 @@ background: ${props=>props.back};
 
 const Header=(props)=> (
                 <Row back={props.back} pos={props.pos}>
+                    <Link to={"/"}>
                     <Logo src={require("../../img/Header/logo.svg")}/>
+                    </Link>
                 <Space/>
+                    <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
                     <Button>
                         <ButtonIconBox>
                             <ButtonIcon src={appleimg}/>
@@ -94,6 +99,7 @@ const Header=(props)=> (
                             <ButtonText size={"1.4rem"}>APP STORE</ButtonText>
                         </ButtonTextBox>
                     </Button>
+                    </a>
                     <Button>
                         <ButtonIconBox>
                             <ButtonIcon src={googleimg}/>
