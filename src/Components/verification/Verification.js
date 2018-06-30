@@ -116,6 +116,11 @@ align-items: center;
 background: linear-gradient(to right,#2AF598,#009EFD);
 border-radius: 10rem;
 cursor: pointer;
+box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+&:active{
+box-shadow: 0 0rem 0rem rgba(0, 0, 0, .3);
+transform: translateY(4px);
+}
 @media(max-width: 800px){
 height: 8rem;
 width: 25rem;

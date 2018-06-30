@@ -9,7 +9,7 @@ width:100%;
 height:100vh;
 padding: 20rem;
 align-items: center;
-background: linear-gradient(to right,#141E30,#243B55);//#F4F7FA
+background:linear-gradient(to right,#101419, #3A506B)
 
 `
 const FormContainer = styled.div`
@@ -118,7 +118,7 @@ justify-content: center;
 align-items: center;
 font-size: 1.5em;
 text-align: center;
-font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif;
 letter-spacing: 3px;
 &:hover{
 background-color: #3682CE;
@@ -224,7 +224,7 @@ justify-content: center;
 align-items: center;
 font-size: 1.5em;
 text-align: center;
-font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif;
 letter-spacing: 3px;
 &:hover{
 background-color: #3682CE;
@@ -297,7 +297,7 @@ justify-content: center;
 align-items: center;
 font-size: 1.5em;
 text-align: center;
-font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif;
 letter-spacing: 3px;
 `;
 class contact extends Component

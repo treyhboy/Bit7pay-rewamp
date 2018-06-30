@@ -4,6 +4,16 @@ import styled ,{ keyframes } from 'styled-components';
 import googleimg from "../../img/Header/play-store.svg";
 import appleimg from "../../img/Header/app-store.svg";
 
+const ButtonEffect = keyframes`
+  0% {
+  
+    opacity: 0;
+  }
+  100% {
+  transform: translateY(180deg);
+      opacity: 1;
+  }
+`;
 const Logo = styled.img`
  
   position: relative;
@@ -49,6 +59,12 @@ cursor: pointer;
 backface-visibility: hidden;
 transform: rotateY(${props=>props.rotate}deg);
 transition: transform 1s;
+box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+&:active{
+animation: ${props=>props.anima} 2s;
+box-shadow: 0 0rem 0rem rgba(0, 0, 0, .3);
+transform: translateY(4px);
+}
 @media(max-width: 600px)
   {
   display: none;
@@ -146,8 +162,7 @@ class Header extends Component {
                 <Space>
                     {this.state.text}
                 </Space>
-                <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
-                    <Button rotate={this.state.applefront} id={"a1"} onClick={this.toggle}>
+                    <Button rotate={this.state.applefront} id={"a1"} onClick={this.toggle} anim={ButtonEffect}>
                         <ButtonIconBox>
                             <ButtonIcon src={appleimg}/>
                         </ButtonIconBox>
@@ -156,7 +171,7 @@ class Header extends Component {
                             <ButtonText size={"1.4rem"}>APP STORE</ButtonText>
                         </ButtonTextBox>
                     </Button>
-                </a>
+            <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
                 <Button id={"p1"} rotate={this.state.playfront} onClick={this.toggle}>
                     <ButtonIconBox >
                         <ButtonIcon src={googleimg}/>
@@ -166,6 +181,7 @@ class Header extends Component {
                         <ButtonText size={"1.5rem"} >PLAY STORE</ButtonText>
                     </ButtonTextBox>
                 </Button>
+            </a>
             </Row>
         );
     }

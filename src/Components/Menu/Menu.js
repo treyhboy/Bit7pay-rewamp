@@ -37,6 +37,8 @@ class Menu extends Component{
                             <li className="navigation__item"><Link to='/contact' className="navigation__link" onClick={this.uncheck}>Contact Us</Link></li>
                         </ul>
                     </nav>
+                {/*<div className="social">*/}
+                {/*</div>*/}
             </div>
 
     )

@@ -21,10 +21,11 @@ background-color: white;
 z-index: 2;
 `;
 const HeadingContainer = styled.div`
-width:100%;
+width:100vw;
 height:100%;
 flex-flow: column;
 justify-content: center;
+overflow: hidden;
 background:linear-gradient(#101419, #3A506B)
 `;
 const CoinScrollContainer = styled.div`
@@ -79,7 +80,17 @@ display: flex;
 height: 100%;
 width: 100%;
 position: relative;
-
+`
+const PageIcon =styled.img`
+display: flex;
+position: absolute;
+height: 32rem;
+width: 32rem;
+top:13rem;
+left:-7rem;
+@media(max-width: 800px){
+display: none;
+}
 `
 const HeadingText1 = styled.span`
 font-size: 7rem;
@@ -105,7 +116,7 @@ display: flex;
 flex-flow: row;
 justify-content: center;
 align-items:center ;
-padding-top: 2rem;
+padding-top: 4rem;
 padding-bottom: 6rem;
 @media(max-width: 500px){
 padding: 0px 10px 30px 10px;
@@ -149,6 +160,12 @@ const whatIs = ({match}) => (<ScrollContext >
                 </NavLink>
             </IconRow>
         </CoinScrollContainer>
+        <Route exact strict path="/coins" render={()=>(<PageIcon src={require("../../img/Coins/btc.svg")}/>)}/>
+        <Route path="/coins/ltc" render={()=>(<PageIcon src={require("../../img/Coins/ltc.svg")}/>)}/>
+        <Route path="/coins/xrp" render={()=>(<PageIcon src={require("../../img/Coins/xrp.svg")}/>)}/>
+        <Route path="/coins/btg" render={()=>(<PageIcon src={require("../../img/Coins/btg.svg")}/>)}/>
+        <Route path="/coins/Eth" render={()=>(<PageIcon src={require("../../img/Coins/eth.svg")}/>)}/>
+
         <Heading>
             <HeadingText1>
                 <Light>What is</Light>
