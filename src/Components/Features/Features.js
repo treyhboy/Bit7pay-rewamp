@@ -70,8 +70,8 @@ display: flex;
 flex-flow: row;
 justify-content: center;
 align-items: center;
-height: 30rem;
-width: 56rem;
+height: 34rem;
+width: 60rem;
 margin-left: ${props=>props.left};
 margin-right: ${props=>props.right};
 margin-top: ${props=>props.top};
@@ -85,8 +85,8 @@ const IconBox = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: 30rem;
-width: 22%;
+height: 34rem;
+width: 24%;
 padding: 2rem;
 @media(max-width: 600px)
   {
@@ -105,8 +105,8 @@ flex-flow: column;
 justify-content: center;
 align-items: center;
 align-content: space-between;
-height: 30rem;
-width: 78%;
+height: 34rem;
+width: 76%;
 padding-left:3rem;
 @media(max-width: 500px){
 width: 70%;
@@ -117,7 +117,7 @@ const Text = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 2rem;
+font-size: 2.5rem;
 font-weight: 100;
 color: ${props=>props.color||"#fff"};
 text-align: left;
@@ -130,7 +130,7 @@ font-family: 'Lato', sans-serif;
 const Heading = styled.div`
 display: flex;
 color: ${props=>props.color};
-font-size: 4.8rem;
+font-size: 5rem;
 text-align: left;
 font-weight:300;
 font-family: 'Lato', sans-serif;
@@ -258,7 +258,7 @@ display: none;
 
 const Features = (props)=>(<ScrollContext >
     <Container>
-    <Header back={"linear-gradient(to right,#101419, #3A506B)"} pos={"0px"} />
+    <Header back={"linear-gradient(to right,#101419, #3A506B)"} pos={"0px"} text={"Features"}/>
     <Section1>
         <Fade right>
         <TextContainer>

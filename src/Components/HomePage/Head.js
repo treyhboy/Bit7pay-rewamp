@@ -36,6 +36,16 @@ const IconEffect3 = keyframes`
      opacity: 1;
   }
 `;
+const IconEffect4 = keyframes`
+  0% {
+    transform: translateX(-400%);
+    opacity: 0;
+  }
+  100% {
+     transform: translateX(0%);
+     opacity: 1;
+  }
+`;
 const Bold = styled.span`
 font-weight: bolder;
 `
@@ -67,11 +77,11 @@ flex-flow: column;
 const IconRow = styled.div`
 display: flex;
 flex-flow: row;
-justify-content: space-around;
+justify-content: center;
 padding-left: 4rem;
 transform: translateX(13%);
 height: 100%;
-width: 60%;
+width: 50%;
 @media(max-width: 600px)
 {
 transform: translateX(0%);
@@ -83,10 +93,12 @@ const TextCol = styled.div`
 display: flex;
 flex-flow: column;
 height: 100%;
-width: 40%;
+width: 50%;
+padding-left: 4rem;
 @media(max-width: 900px)
 {
 width: 100%;
+padding-left: 0px;
 }
 `;
 const Container = styled.div`
@@ -141,11 +153,11 @@ class HomeHeader extends Component {
                             <HeadText>Cryptocurrency Wallet in India</HeadText>
                     </TextCol>
                     <IconRow>
-                        <NormalIcon src={require("../../img/Header/btc-full.svg")} time={"0s"} anima={IconEffect1} />
-                        <NormalIcon src={require("../../img/Header/eth-full.svg")} time={"1.5s"} anima={IconEffect1} />
-                        <NormalIcon src={require("../../img/Header/ltc-full.svg")} time={"1.5s"} anima={IconEffect2} />
-                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
-                        <NormalIcon src={require("../../img/Header/omisego-full.svg")} time={"1.5s"} anima={IconEffect3} />
+                        <NormalIcon src={require("../../img/Home/btc-full.svg")} time={"0s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Home/eth-full.svg")} time={"2s"} anima={IconEffect1} />
+                        <NormalIcon src={require("../../img/Home/ltc-full.svg")} time={"2s"} anima={IconEffect2} />
+                        <NormalIcon src={require("../../img/Home/xrp-full.svg")} time={"2s"} anima={IconEffect3} />
+                        <NormalIcon src={require("../../img/Home/btg-full.svg")} time={"2s"} anima={IconEffect4} />
                     </IconRow>
                 </Row>
                 </Container>

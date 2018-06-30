@@ -57,16 +57,16 @@ const HeadingText = styled.span`
 font-size: 3rem;
 text-align: center;
 font-weight: 500;
+color: #353538;
 font-family: 'Lato', sans-serif; 
 letter-spacing: 2px; 
 `;
 const NormalText = styled.span`
 font-size: 2rem;
-
 font-weight: lighter;
 text-align: left;
 font-family: 'Lato', sans-serif; 
-color: grey;
+color: #9F9FA3;
 padding: 2rem 2rem 2rem 10rem;
 `;
 const Heading = styled.div`
