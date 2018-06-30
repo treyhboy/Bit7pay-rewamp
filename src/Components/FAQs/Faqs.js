@@ -27,7 +27,7 @@ background:linear-gradient(#101419, #3A506B)
 const HeadingText1 = styled.span`
 font-size: 7rem;
 text-align: center;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Lato', sans-serif;
 color:white;
 letter-spacing: 2px; 
 @media(max-width: 500px){

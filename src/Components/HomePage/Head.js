@@ -85,7 +85,7 @@ width: 50%;
 @media(max-width: 600px)
 {
 transform: translateX(0%);
-padding-left: 0px;
+padding:2rem 0px;
 width: 100%;
 }
 `;
@@ -98,7 +98,7 @@ padding-left: 4rem;
 @media(max-width: 900px)
 {
 width: 100%;
-padding-left: 0px;
+padding: 1rem 0px;
 }
 `;
 const Container = styled.div`
@@ -128,7 +128,7 @@ animation: ${props=>props.anima} ${props=>props.time};
 
 @media(max-width: 900px)
 {
-height: 8rem;
+height: 7rem;
 }
 `;
 // animation: ${props=>props.time} ${props=>props.anima} ease-out;

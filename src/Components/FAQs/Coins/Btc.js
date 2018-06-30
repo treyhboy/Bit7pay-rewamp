@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import img from "../../../img/Coins/btc-bg.svg"
 
 const Container = styled.div`
 position: relative;
 width:100%;
 height:100%;
-background-color: white;
+background: url(${img}) no-repeat right bottom;
+background-size: 90rem 90rem;
 z-index: 2;
 padding: 50px;
 @media(max-width: 800px){
 padding: 5px;
+background-color: white;
+background-size: 0 0;
 }
 `
 const TextCard = styled.div`

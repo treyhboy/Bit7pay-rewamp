@@ -68,6 +68,11 @@ text-align: left;
 font-family: 'Lato', sans-serif; 
 color: #9F9FA3;
 padding: 2rem 2rem 2rem 10rem;
+
+@media(max-width: 1024px){
+padding:2rem;
+text-align: center;
+}
 `;
 const Heading = styled.div`
 display: flex;
@@ -79,6 +84,11 @@ const HeadingIcon = styled.img`
 height: 9rem;
 width: 9rem;
 padding:1rem;
+@media(max-width: 1024px){
+height: 6rem;
+width: 6rem;
+padding:1rem;
+}
 `;
 const PhoneVer = styled.img`
 position: relative;

@@ -12,7 +12,7 @@ height: 35rem;
 width:100%;   
 position: relative;
 //background-color: #F6F6F6;
-background: linear-gradient(to right,#141E30,#243B55);
+background:linear-gradient(#101419, #3A506B);
 @media(max-width:600px){
 height: 27rem;
 }
@@ -134,7 +134,7 @@ font-family: 'Lato', sans-serif;
 color:white;
 cursor: pointer; 
 &:hover{
-color:#009ffd;
+color:#3682CE;
 }
 @media(max-width: 800px){
 padding: 2rem;
@@ -175,7 +175,7 @@ const SubscribeButton = styled.div`
 display: flex;
 height: 3.5rem;
 width: 12rem;
-border: solid #009ffd;
+border: solid #3682CE;
 border-radius: 2rem;
 justify-content: center;
 align-items: center;
@@ -183,13 +183,13 @@ font-size: 1.2em;
 margin: 1rem;
 text-align: center;
 font-family: 'Lato', sans-serif;
-color:#009ffd;
+color:#3682CE;
 letter-spacing: 1px; 
 transition: .5s;
 &:hover{
-background-color: #009ffd;
+background-color: #3682CE;
 color: white;
-border: solid #009ffd;
+border: solid #3682CE;
 }
 @media(max-width: 600px){
 padding: 0px;
@@ -234,8 +234,8 @@ class Footer extends Component
                         <SubscribeButton>Subscribe Now</SubscribeButton>
                     </SubscribeBox>
                     <ContactText>
-                        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
-                        <LinkText>Email - contact@bit7pay.com</LinkText>
+                        <a href="mailto:support@bit7pay.com" target="_top">
+                        <LinkText>Email - support@bit7pay.com</LinkText>
                         </a>
                     </ContactText>
                 </ContactCol>

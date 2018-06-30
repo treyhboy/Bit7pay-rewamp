@@ -24,7 +24,6 @@ color:grey;
 @media(max-width: 800px){
 font-size: 3.5rem;
 }
-
 `;
 const Heading = styled.div`
 display: flex;
@@ -32,6 +31,10 @@ flex-flow: row;
 height: 9vh;
 justify-content: center;
 align-items: center;
+padding-bottom: 2rem;
+@media(max-width: 800px){
+padding-bottom: 0px;
+}
 `;
 const IconBoxRow = styled.div`
  display: flex;
@@ -90,7 +93,8 @@ font-weight: 300;
 height: 4rem;
 line-height: 2.5rem;
 @media(max-width: 800px){
-padding: 3rem;
+height: 100%;
+padding: 2rem;
 }
 `;
 const Row = styled.div`

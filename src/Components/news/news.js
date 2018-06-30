@@ -150,7 +150,7 @@ flex-flow: row;
 height:100%;
 left: 50vw;
 width:50vw;  
-top: 10vh;
+top: 12vh;
 justify-content: center;
 align-items: center;
 font-weight:bolder;
@@ -165,12 +165,12 @@ left: 0px;
 }
 `
 
-
 class news extends Component
 {
     constructor(props) {
         super(props);
-        this.state = {NormalNews:{} ,id:"",FeaturedNews:{},isLoaded:false,CurrNews:{}};
+        this.state = {NormalNews:{} ,id:"",FeaturedNews:{},isLoaded:false,CurrNews:{},count:0};
+        this.action = this.action.bind(this);
 
     }
     componentDidMount() {
@@ -180,7 +180,8 @@ class news extends Component
                 (result) => {
                     this.setState({
                         NormalNews: result.data.dataList,
-                        isLoaded:true
+                        isLoaded:true,
+                        count:result.data.count
                     });
                 },
                 (error) => {
@@ -205,6 +206,28 @@ class news extends Component
                 }
             )
 
+    }
+    action()
+    {
+        this.setState({
+            isLoaded:false
+        });
+
+        fetch("https://api.bit7pay.com/bit7pay/public/api/getBlogEntries?pageNumber=0&pageSize=10")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        NormalNews: result.data.dataList,
+                        isLoaded:true
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        error
+                    });
+                }
+            )
     }
 
     render() {
@@ -247,7 +270,7 @@ class news extends Component
                  </div>
     )
         else {
-        return(<Container><div class="loader"></div></Container>)
+        return(<Container><div className="loader"></div></Container>)
     }
     }
 }
