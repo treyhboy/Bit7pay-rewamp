@@ -12,19 +12,27 @@ margin-top: 5rem;
     width: 10px;
 }
 
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
-
+ 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: white; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
 }
 @media(max-width: 800px){
 height:15.5rem;
@@ -38,7 +46,7 @@ position: relative;
 justify-content: center;
 align-items: center;
 height:5rem;
-width: 100%;
+width: 99%;
 cursor: pointer;
 background-color: ${props=>props.color};
 `;
