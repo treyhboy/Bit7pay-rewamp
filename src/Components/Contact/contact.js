@@ -2,40 +2,77 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { FlexyFlipCard } from 'flexy-flipcards';
 import { ScrollContext } from 'react-router-scroll-4';
+import Header from "../Header/header"
 
 const Container = styled.div`
 display: flex;
+flex-flow: column;
 width:100%;
-height:100vh;
-padding: 20rem;
-align-items: center;
-background:linear-gradient(to right,#101419, #3A506B)
-
+height:100%;
+`
+const MainContent = styled.div`
+display: flex;
+width:100vw;
+height:100%;
+background-color: red;
+`
+const TextContainer = styled.div`
+display: flex;
+flex-flow: column;
+width:50%;
+height:90vh;
+background-color: red;
 `
 const FormContainer = styled.div`
 display: flex;
 flex-flow: column;
-width:50rem;
-height:70rem;
-border-radius: 3rem;
-background-color: white;
-z-index: 8;
-backface-visibility: hidden;
-transform: rotateY(${props=>props.rotate}deg);
-transition: transform 1s;
-box-shadow:0 1rem 3rem rgba(0, 0, 0, .3);
+width:50%;
+height:90vh;
+background-color: green;
 `
-const Header = styled.div`
+const TextHeading = styled.div`
 display: flex;
 align-items: center;
+justify-content: center;
+font-weight: 900;
 width:100%;
-height:8rem;
-padding: 3rem;
+height:28rem;
+font-size: 9rem;
+font-family: 'Lato', sans-serif;
+background-color: yellow;
+color: #282D31;
+`
+const TextNormal = styled.div`
+display: flex;
+align-items: flex-start;
+justify-content: center;
+width:100%;
+height:3rem;
 font-size: 3rem;
 font-family: 'Lato', sans-serif;
-//font-weight: lighter;
-color: #3682CE;
+background-color: orange;
+color: #282D31;
 `
+const LocationBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width:100%;
+height:16rem;
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+background-color: blueviolet;
+color: gray;
+`
+const CoinImageBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width:100%;
+height:16rem;
+background-color: blue;
+`
+
 const InputContainer = styled.div`
 display: flex;
 flex-flow: column;
@@ -321,71 +358,22 @@ toggle(ev) {
         return(
             <ScrollContext>
             <Container>
-            <FormContainer rotate={this.state.card1}>
-                <Header>
-                    Create Ticket
-                </Header>
-                <InputContainer>
-                    <InputHeading>
-                        Email
-                    </InputHeading>
-                    <InputEmail placeholder={"Enter Email"}/>
-                </InputContainer>
-                <OptionContainer>
-                    <OptionHeading>
-                        Choose a category
-                    </OptionHeading>
-                    <OptionBox>
-                        <Option>
-                            Bank Transfer
-                        </Option>
-                        <Option>
-                            Transaction
-                        </Option>
-                    </OptionBox>
-                    <OptionBox>
-                        <Option>
-                            Verification
-                        </Option>
-                        <Option>
-                            Other
-                        </Option>
-                    </OptionBox>
-                </OptionContainer>
-                <IssueContainer>
-                    <IssueHeading>
-                        Issue Details
-                    </IssueHeading>
-                    <InputIssue />
-                </IssueContainer>
-                <UploadContainer>
-                    <UploadHeading>
-                        Attach a file
-                    </UploadHeading>
-                    <InputFile type={"file"}/>
-                </UploadContainer>
-                <ButtonRow>
-                    <SendText>
-                        SEND
-                    </SendText>
-                    <Send onClick={this.toggle} id={"1"}>
-                        <SendIcon src={require("../../img/Header/paper-plane.svg")} onClick={this.toggle} id={"1"}/>
-                    </Send>
-                </ButtonRow>
-            </FormContainer>
-            <Container2 rotate={this.state.card2}>
-                <ThankYou>
-                    Thank You.
-                </ThankYou>
-                <NormalText>
-                    We'll be in touch.<br/> Shortly !
-                </NormalText>
-                <ButtonRow>
-                    <Home onClick={this.toggle} id={"2"}>
-                        <SendIcon src={require("../../img/Header/home-icon-silhouette.svg")} onClick={this.toggle} id={"2"}/>
-                    </Home>
-                </ButtonRow>
-            </Container2>
+                <Header back={"linear-gradient(to right,#101419,#3A506B)"} text={"Contact"} pos={"relative"}/>
+                <MainContent>
+                    <TextContainer>
+                        <TextHeading>
+                            GET IN<br/> TOUCH
+                        </TextHeading>
+                        <TextNormal>
+                            WHAT ARE YOU WAITING FOR ?
+                        </TextNormal>
+                        <LocationBox>
+                        </LocationBox>
+                        <CoinImageBox/>
+                    </TextContainer>
+                    <FormContainer>
+                    </FormContainer>
+                </MainContent>
         </Container>
             </ScrollContext>);
     }
