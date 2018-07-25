@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ltc</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-14.8%" y="-9.3%" width="127.8%" height="127.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ltc" filter="url(#filter-1)" transform="translate(4.000000, 2.000000)">
+            <circle id="XMLID_108_" stroke="#FFFFFF" stroke-width="2" cx="26.9" cy="27.2" r="20.4"></circle>
+            <circle id="XMLID_105_" stroke-opacity="0.5" stroke="#FFFFFF" cx="26.9" cy="27.2" r="23.6"></circle>
+            <circle id="XMLID_102_" stroke-opacity="0.2" stroke="#FFFFFF" cx="26.9" cy="27.2" r="26.5"></circle>
+            <polyline id="XMLID_50_" fill="#0082D1" fill-rule="nonzero" points="25.6 33.6 27 28.5 30.2 27.3 31 24.3 31 24.2 27.8 25.4 30.1 16.8 23.6 16.8 20.6 28 18.1 28.9 17.3 32 19.8 31.1 18 37.7 35.2 37.7 36.3 33.6 25.6 33.6"></polyline>
+        </g>
+    </g>
+</svg>

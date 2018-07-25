@@ -45,7 +45,6 @@ align-items: center;
 width:100%;
 height:10rem;
 padding: 0px 8rem;
-
 `
 const InputHeading = styled.div`
 display: flex;

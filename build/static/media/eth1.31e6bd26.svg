@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="77px" viewBox="0 0 77 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>eth</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-10.1%" y="-8.8%" width="121.7%" height="123.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="eth" filter="url(#filter-1)" transform="translate(4.000000, 2.000000)">
+            <circle id="XMLID_93_" stroke="#FFFFFF" stroke-width="2" cx="34.7" cy="34.2" r="26"></circle>
+            <circle id="XMLID_90_" stroke-opacity="0.5" stroke="#FFFFFF" cx="34.7" cy="34.2" r="30.1"></circle>
+            <circle id="XMLID_37_" stroke-opacity="0.2" stroke="#FFFFFF" cx="34.7" cy="34.2" r="33.8"></circle>
+            <g id="XMLID_86_" transform="translate(35.000000, 36.000000)" fill="#0082D1" fill-rule="nonzero">
+                <polygon id="XMLID_87_" points="0.5 6.7 0.5 14.7 10.4 0.8"></polygon>
+            </g>
+            <g id="XMLID_83_" transform="translate(35.000000, 18.000000)" fill="#0082D1" fill-rule="nonzero">
+                <polygon id="XMLID_85_" points="10 16.3 0.5 0.6 0.5 12"></polygon>
+                <polygon id="XMLID_84_" points="0.5 12.9 0.5 22.6 9.9 17.2"></polygon>
+            </g>
+            <g id="XMLID_79_" transform="translate(25.000000, 18.000000)" fill="#0082D1" fill-rule="nonzero">
+                <polygon id="XMLID_81_" points="0.3 16.3 9.7 0.6 9.7 12"></polygon>
+                <polygon id="XMLID_80_" points="9.7 12.9 9.7 22.6 0.3 17.2"></polygon>
+            </g>
+            <g id="XMLID_48_" transform="translate(24.000000, 36.000000)" fill="#0082D1" fill-rule="nonzero">
+                <polygon id="XMLID_49_" points="10.7 6.7 10.7 14.7 0.9 0.8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

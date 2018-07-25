@@ -14,21 +14,14 @@ const MainContent = styled.div`
 display: flex;
 width:100vw;
 height:100%;
-background-color: red;
+
 `
 const TextContainer = styled.div`
 display: flex;
 flex-flow: column;
 width:50%;
 height:90vh;
-background-color: red;
-`
-const FormContainer = styled.div`
-display: flex;
-flex-flow: column;
-width:50%;
-height:90vh;
-background-color: green;
+
 `
 const TextHeading = styled.div`
 display: flex;
@@ -39,7 +32,6 @@ width:100%;
 height:28rem;
 font-size: 9rem;
 font-family: 'Lato', sans-serif;
-background-color: yellow;
 color: #282D31;
 `
 const TextNormal = styled.div`
@@ -50,19 +42,51 @@ width:100%;
 height:3rem;
 font-size: 3rem;
 font-family: 'Lato', sans-serif;
-background-color: orange;
 color: #282D31;
 `
 const LocationBox = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+flex-flow: column;
 width:100%;
-height:16rem;
+height:20rem;
+padding: 2rem 0px;
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
-background-color: blueviolet;
-color: gray;
+color: #AEAEAF;
+`
+const LocationBoxRow = styled.div`
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-flow: row;
+width:50%;
+padding: 1rem 0px;
+`
+const LocationBoxImage = styled.img` 
+display: flex;
+align-items: center;
+justify-content: center;
+width:2.5rem;
+height:2.5rem;
+`
+const LocationBoxText = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+padding-left: 2rem;
+font-size: 2rem;
+font-family: 'Lato', sans-serif;
+`
+const CoinImageRow = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-flow: row;
+width:100%;
+padding: 0px 3rem;
+height:16rem;
 `
 const CoinImageBox = styled.div`
 display: flex;
@@ -70,97 +94,60 @@ align-items: center;
 justify-content: center;
 width:100%;
 height:16rem;
-background-color: blue;
 `
-
+const CoinImage = styled.img`
+display: flex;
+align-items: center;
+justify-content: center;
+width:auto;
+height:12rem;
+`
+const FormContainer = styled.div`
+display: flex;
+flex-flow: column;
+padding: 5rem 0px;
+width:50%;
+height:90vh;
+`
 const InputContainer = styled.div`
 display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
 width:100%;
-height:10rem;
-padding: 0px 8rem;
-
+height:11rem;
+padding: 1rem 15rem;
 `
 const InputHeading = styled.div`
 display: flex;
 align-items: center;
 width:100%;
 height:3rem;
-font-size: 2rem;
+font-size: 1.6rem;
 font-family: 'Lato', sans-serif;
 //font-weight: lighter;
-color: #BDCCDB;
+color: #AEAEAF;
 `
 const InputEmail = styled.input`
 padding: 0px 2rem ;
 font-size: 2rem;
-color: #BDCCDB;
+color: #282D31;
 font-family: 'Lato', sans-serif;
 height: 5rem;
 width: 100%;
 box-shadow: none;
 border: none;
-border-bottom: solid #BDCCDB;
+border-bottom: solid #AEAEAF 2px;
 outline: none;
 ::placeholder{
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
 color: #BDCCDB;
+font-weight: lighter;
 }
 
 @media(max-width: 800px){
 margin:1rem 0px;
-}
-`;
-const OptionContainer = styled.div`
-display: flex;
-flex-flow: column;
-justify-content: center;
-align-items: center;
-width:100%;
-height:18rem;
-padding: 0px 8rem;
-color: #BDCCDB;
-`
-const OptionHeading = styled.div`
-display: flex;
-align-items: center;
-width:100%;
-height:4rem;
-font-size: 2rem;
-padding: 1rem 0px;
-font-family: 'Lato', sans-serif;
-//font-weight: lighter;
-
-`
-const OptionBox = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-width:100%;
-height:6rem;
-padding: 2px;
-//font-weight: lighter;
-`
-const Option = styled.div`
-display: flex;
-height: 3.5rem;
-width: 15rem;
-border: solid 1px #3682CE;
-color: #3682CE;
-border-radius: 2rem;
-justify-content: center;
-align-items: center;
-font-size: 1.5em;
-text-align: center;
-font-family: 'Lato', sans-serif;
-letter-spacing: 3px;
-&:hover{
-background-color: #3682CE;
-border: solid 1px #3682CE;
-color: white;
 }
 `;
 const IssueContainer = styled.div`
@@ -170,29 +157,29 @@ justify-content: center;
 align-items: center;
 width:100%;
 height:15rem;
-padding: 0px 8rem;
-color: #BDCCDB;
+padding: 0px 15rem;
+color: #AEAEAF;
 `
 const IssueHeading = styled.div`
 display: flex;
 align-items: center;
 width:100%;
 height:4rem;
-font-size: 2rem;
+font-size: 1.6rem;
 padding: 1rem 0px;
 font-family: 'Lato', sans-serif;
 //font-weight: lighter;
 
 `
 const InputIssue = styled.textarea`
-padding: 0px 2rem ;
+padding:2rem ;
 font-size: 2rem;
-color: #BDCCDB;
+color: #282D31;
 font-family: 'Lato', sans-serif;
 height: 10rem;
 width: 100%;
 box-shadow: none;
-border: solid #BDCCDB 1px;
+border: solid #AEAEAF 2px;
 outline: none;
 ::placeholder{
 font-size: 2rem;
@@ -200,143 +187,43 @@ font-family: 'Lato', sans-serif;
 color: #BDCCDB;
 }
 `;
-const UploadContainer = styled.div`
+const ButtonContainer = styled.div`
 display: flex;
-flex-flow: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 width:100%;
-height:11rem;
-padding: 0px 8rem;
+height:15rem;
+padding: 0px 15rem;
 color: #BDCCDB;
 `
-const UploadHeading = styled.div`
+const Button =styled.div`
 display: flex;
-align-items: center;
-width:100%;
-height:4rem;
-font-size: 2rem;
-padding: 1rem 0px;
-font-family: 'Lato', sans-serif;
-//font-weight: lighter;
-`
-const InputFile = styled.input`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 2rem;
-color: #BDCCDB;
-font-family: 'Lato', sans-serif;
 height: 5rem;
-width: 100%;
-padding: 2rem;
-background-color: white;
-box-shadow: none;
-border: none;
-outline: none;
-opacity:1;
-&::placeholder{
+width: 20rem;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to right,#2AF598,#009EFD);
+border-radius: 10rem;
+cursor: pointer;
+box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+&:active{
+box-shadow: 0 0rem 0rem rgba(0, 0, 0, .3);
+transform: translateY(4px);
+}
+@media(max-width: 800px){
+height: 8rem;
+width: 25rem;
+}
+`
+const ButtonText = styled.span`
 font-size: 2rem;
-font-family: 'Lato', sans-serif;
-color: #BDCCDB;
-}
-`
-const ButtonRow = styled.div`
-display: flex;
-align-items: center;
-justify-content: flex-end;
-width:100%;
-height:10rem;
-padding: 0px 2rem;
-`
-const Send = styled.div`
-display: flex;
-height:7rem;
-width:7rem;
-margin-right: 10px;
-background-color: #3682CE;
-color: #3682CE;
-border-radius: 100%;
-justify-content: center;
-align-items: center;
-font-size: 1.5em;
-text-align: center;
-font-family: 'Lato', sans-serif;
-letter-spacing: 3px;
-&:hover{
-background-color: #3682CE;
-border: solid 1px #3682CE;
+font-family: 'Lato', sans-serif; 
 color: white;
-}
-`;
-const SendIcon = styled.img`
-height: 60%;
-width: auto;
-`
-const SendText = styled.div`
-display: flex;
-align-items: center;
-width:7rem;
-height:4rem;
-font-size: 2.4rem;
-padding: 1rem 0px;
-font-family: 'Lato', sans-serif;
-color: #3682CE;
 font-weight: lighter;
+@media(max-width: 800px){
+font-size: 2rem;
+}
 `
-const Container2 = styled.div`
-display: flex;
-flex-flow: column;
-position: absolute;
-width:50rem;
-height:70rem;
-border-radius: 3rem;
-z-index: 10;
-background:linear-gradient(#021B79,#0575E6);
-backface-visibility: hidden;
-transform: rotateY(${props=>props.rotate}deg);
-transition: transform 1s;
-box-shadow:0 1rem 3rem rgba(0, 0, 0, .3);
-`
-const ThankYou = styled.div`
-display: flex;
-align-items: flex-end;
-width:100%;
-height:60%;
-font-size: 10rem;
-padding: 3rem ;
-color: white;
-border-bottom: solid gray 1px;
-font-family: 'Lato', sans-serif;
-//font-weight: lighter;
-`
-const NormalText = styled.div`
-display: flex;
-align-items: center;
-
-width:100%;
-height:25%;
-font-size: 3rem;
-text-align: left;
-padding: 3rem;
-color: white;
-font-family: 'Lato', sans-serif;
-font-weight: normal;
-`
-const Home = styled.div`
-display: flex;
-height:7rem;
-width:7rem;
-margin-right: 10px;
-background-color: white;
-border-radius: 100%;
-justify-content: center;
-align-items: center;
-font-size: 1.5em;
-text-align: center;
-font-family: 'Lato', sans-serif;
-letter-spacing: 3px;
-`;
 class contact extends Component
 {
     constructor(props) {
@@ -368,10 +255,69 @@ toggle(ev) {
                             WHAT ARE YOU WAITING FOR ?
                         </TextNormal>
                         <LocationBox>
+                            <LocationBoxRow>
+                                <LocationBoxImage src={require("../../img/contact/black-back-closed-envelope-shape.svg")}/>
+                                <LocationBoxText>
+                                    Support@gmail.com
+                                </LocationBoxText>
+                            </LocationBoxRow>
+                            <LocationBoxRow>
+                                <LocationBoxImage src={require("../../img/contact/maps-and-flags.svg")}/>
+                                <LocationBoxText>
+                                    3m/1 Tagore Town,Allahabad - 211002 ,Uttar Pradesh,India
+                                </LocationBoxText>
+                            </LocationBoxRow>
                         </LocationBox>
-                        <CoinImageBox/>
+                        <CoinImageRow>
+                            <CoinImageBox>
+                                <CoinImage src={require("../../img/contact/btc1.svg")}/>
+                            </CoinImageBox>
+                            <CoinImageBox>
+                                <CoinImage src={require("../../img/contact/xrp1.svg")}/>
+                            </CoinImageBox>
+                            <CoinImageBox>
+                                <CoinImage src={require("../../img/contact/ltc2.svg")}/>
+                            </CoinImageBox>
+                            <CoinImageBox>
+                                <CoinImage src={require("../../img/contact/btg2.svg")}/>
+                            </CoinImageBox>
+                            <CoinImageBox>
+                                <CoinImage src={require("../../img/contact/eth1.svg")}/>
+                            </CoinImageBox>
+                        </CoinImageRow>
                     </TextContainer>
                     <FormContainer>
+                        <InputContainer>
+                            <InputHeading>
+                                NAME
+                            </InputHeading>
+                            <InputEmail placeholder={"Enter Name"}/>
+                        </InputContainer>
+                        <InputContainer>
+                            <InputHeading>
+                                EMAIL
+                            </InputHeading>
+                            <InputEmail placeholder={"Enter Email"}/>
+                        </InputContainer>
+                        <InputContainer>
+                            <InputHeading>
+                                CATEGORY
+                            </InputHeading>
+                            <InputEmail placeholder={"Enter Category"}/>
+                        </InputContainer>
+                        <IssueContainer>
+                            <IssueHeading>
+                                DETAILS
+                            </IssueHeading>
+                            <InputIssue />
+                        </IssueContainer>
+                        <ButtonContainer>
+                        <Button>
+                            <ButtonText>
+                                SUBMIT
+                            </ButtonText>
+                        </Button>
+                        </ButtonContainer>
                     </FormContainer>
                 </MainContent>
         </Container>
