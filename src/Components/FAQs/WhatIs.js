@@ -3,6 +3,9 @@ import styled from "styled-components";
 import {Route,Switch,NavLink} from 'react-router-dom';
 import Btc from "./Coins/Btc";
 import Eth from "./Coins/Eth";
+import Btg from "./Coins/btg";
+import Xrp from "./Coins/xrp";
+import Ltc from "./Coins/ltc";
 import "./style.css"
 import Header from "../Header/header";
 import Verification from "../verification/Verification";
@@ -127,7 +130,7 @@ const Bitcoin = ({ match }) => (<Bold> BitCoin</Bold>
 );
 const Ether = ({ match }) => (<Bold> Ethereum</Bold>
 );
-const Ltc = ({ match }) => (<Bold> Lite Coin</Bold>
+const ltc = ({ match }) => (<Bold> Lite Coin</Bold>
 );
 const btg = ({ match }) => (<Bold> Bitcoin Gold</Bold>
 );
@@ -170,7 +173,7 @@ const whatIs = ({match}) => (<ScrollContext >
             <HeadingText1>
                 <Light>What is</Light>
                 <Route exact strict path="/coins" component={Bitcoin}/>
-                <Route path="/coins/ltc" component={Ltc}/>
+                <Route path="/coins/ltc" component={ltc}/>
                 <Route path="/coins/xrp" component={xrp}/>
                 <Route path="/coins/btg" component={btg}/>
                 <Route path="/coins/Eth" component={Ether}/>?
@@ -179,7 +182,10 @@ const whatIs = ({match}) => (<ScrollContext >
     </HeadingContainer>
 
         <Route exact strict path="/coins" component={Btc}/>
-    <Route path="/coins/Eth" component={Eth}/>
+        <Route path="/coins/Eth" component={Eth}/>
+        <Route path="/coins/ltc" component={Ltc}/>
+        <Route path="/coins/btg" component={Btg}/>
+        <Route path="/coins/xrp" component={Xrp}/>
     <Verification/>
     <Footer/>
     </Container>

@@ -63,72 +63,76 @@ const Btc =  ()=>(<Container>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Decentralized Digital Currency
+                What is Bitcoin?
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                Bitcoin is the world’s first digital currency which is completely decentralized i.e. the system works without a central bank or single administrator. It was created in 2009 by an unknown person using the alias Satoshi Nakamoto
+                • Bitcoin was designed to let you store, send, and receive money without any banks or credit
+                card companies.<br/><br/>
+                • Until Bitcoin came around, you needed banks, credit cards, or companies like PayPal and
+                Venmo to send and receive money.<br/><br/>
+                • These companies were necessary to do something only they could do: verify that the person
+                spending money actually has money to spend. Banks can do this because they hold
+                everyone’s money, so they know all account balances.
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Peer-to-peer System
+                Who controls Bitcoin?
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                All bitcoin transactions take place directly between bitcoin users, without an intermediary. These transactions are verified by network nodes using cryptography and are recorded in a public ledger called blockchain.
+                Incredibly, Bitcoin is not controlled by any person, company, or government. It’s run by the
+                community of its users. Read that twice, because it’s important!<br/><br/>
+                • Bitcoin users are located all around the world and use the internet to help send and receive
+                payments. But unlike traditional payments that pass through banks, bitcoin is sent directly
+                from person to person, instead of from person to company to person.<br/><br/>
+                • This is known as a peer-to-peer system (P2P). It means there is no central control.
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Buy Bitcoins
+                What are the benefits of using Bitcoin?
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                Bit7Pay provides an easy way for you to buy bitcoins. Just download Bit7Pay app on your mobile and get your account verified within hours to buy your first bitcoin. It’s never too late to invest!
+                • Decentralized - Traditional money is controlled by banks and governments – which makes it
+                a “centralized” currency. Bitcoin is not controlled or regulated by any single entity like a bank
+                – which makes it a “decentralized” currency. Having no banks in control makes sending and
+                receiving money cheaper, faster, and easier.<br/><br/>
+                • No Counterfeit Money - Paper currencies, credit cards, and checks can be counterfeit. If
+                you’ve ever been a victim of fraud, you know how much this sucks. Bitcoin solves the Double
+                Spend Problem which means criminals cannot create fake bitcoins. Counterfeiting is
+                impossible.<br/><br/>
+                • Limited Supply - Traditional money is created by governments in unlimited quantities. They
+                print more constantly, which decreases the value over time. Bitcoin’s supply is limited to 21
+                million coins. There can never be more! Why? It’s designed to be scarce so that it increases
+                in value over time.<br/><br/>
+                • Security - There is a lot of money stored in Bitcoin, so it needs to be very secure. Bitcoin
+                uses cryptography to securely send payments. That’s why Bitcoin is called a cryptocurrency.
+                The code is so strong that tampering is virtually impossible. There is A LOT of money held in
+                Bitcoin, but it has never been hacked!
             </CardText>
         </CardTextContainer>
     </TextCard>
     <TextCard>
         <CardHeadingContainer>
             <CardHeading>
-                Store Bitcoins
+                How is Bitcoin Sent and Received?
             </CardHeading>
         </CardHeadingContainer>
         <CardTextContainer>
             <CardText>
-                After you purchase bitcoins, you can safely store them in your Bit7Pay digital wallet. Our cloud based servers are secured with double encryption mechanisms to prevent unauthorized access of your digital assets.
-            </CardText>
-        </CardTextContainer>
-    </TextCard>
-    <TextCard>
-        <CardHeadingContainer>
-            <CardHeading>
-                Secure Transactions
-            </CardHeading>
-        </CardHeadingContainer>
-        <CardTextContainer>
-            <CardText>
-                Bitcoin transactions are virtually tamper-proof because of hash linking between two blocks of a blockchain. Using private keys to sign a transaction also ensures authenticity of a transaction’s origin.
-            </CardText>
-        </CardTextContainer>
-    </TextCard>
-    <TextCard>
-        <CardHeadingContainer>
-            <CardHeading>
-                Bitcoin Mining
-            </CardHeading>
-        </CardHeadingContainer>
-        <CardTextContainer>
-            <CardText>
-                With Bitcoin, miners use special software to solve math problems and are issued a certain number of bitcoins in exchange. This provides a smart way to issue the currency and also creates an incentive for more people to mine.
+                Just like real money, bitcoin is stored in wallets. But Bitcoin’s wallets are digital. Your Bitcoin
+                wallet is like a bank account. It’s how you access your money. Each Bitcoin wallet has a unique
+                address so you can send money to and from it.
             </CardText>
         </CardTextContainer>
     </TextCard>
