@@ -32,7 +32,7 @@ width:100%;
 height:28rem;
 font-size: 9rem;
 font-family: 'Lato', sans-serif;
-color: #282D31;
+color: #101419;
 `
 const TextNormal = styled.div`
 display: flex;
@@ -42,7 +42,7 @@ width:100%;
 height:3rem;
 font-size: 3rem;
 font-family: 'Lato', sans-serif;
-color: #282D31;
+color: #101419;
 `
 const LocationBox = styled.div`
 display: flex;
@@ -54,7 +54,7 @@ height:20rem;
 padding: 2rem 0px;
 font-size: 2rem;
 font-family: 'Lato', sans-serif;
-color: #AEAEAF;
+color: #9f9fa3;
 `
 const LocationBoxRow = styled.div`
 display: flex;
@@ -126,10 +126,9 @@ height:3rem;
 font-size: 1.6rem;
 font-family: 'Lato', sans-serif;
 //font-weight: lighter;
-color: #AEAEAF;
+color: #9f9fa3;
 `
 const InputEmail = styled.input`
-padding: 0px 2rem ;
 font-size: 2rem;
 color: #282D31;
 font-family: 'Lato', sans-serif;
@@ -137,7 +136,7 @@ height: 5rem;
 width: 100%;
 box-shadow: none;
 border: none;
-border-bottom: solid #AEAEAF 2px;
+border-bottom: solid #9f9fa3 2px;
 outline: none;
 ::placeholder{
 font-size: 2rem;
@@ -158,7 +157,7 @@ align-items: center;
 width:100%;
 height:15rem;
 padding: 0px 15rem;
-color: #AEAEAF;
+color: #9f9fa3;
 `
 const IssueHeading = styled.div`
 display: flex;
@@ -172,14 +171,13 @@ font-family: 'Lato', sans-serif;
 
 `
 const InputIssue = styled.textarea`
-padding:2rem ;
 font-size: 2rem;
 color: #282D31;
 font-family: 'Lato', sans-serif;
 height: 10rem;
 width: 100%;
 box-shadow: none;
-border: solid #AEAEAF 2px;
+border: solid #9f9fa3 2px;
 outline: none;
 ::placeholder{
 font-size: 2rem;
@@ -256,13 +254,13 @@ toggle(ev) {
                         </TextNormal>
                         <LocationBox>
                             <LocationBoxRow>
-                                <LocationBoxImage src={require("../../img/contact/black-back-closed-envelope-shape.svg")}/>
+                                <LocationBoxImage src={require("../../img/contact/email.svg")}/>
                                 <LocationBoxText>
-                                    Support@gmail.com
+                                    Support@bit7pay.com
                                 </LocationBoxText>
                             </LocationBoxRow>
                             <LocationBoxRow>
-                                <LocationBoxImage src={require("../../img/contact/maps-and-flags.svg")}/>
+                                <LocationBoxImage src={require("../../img/contact/location.svg")}/>
                                 <LocationBoxText>
                                     3m/1 Tagore Town,Allahabad - 211002 ,Uttar Pradesh,India
                                 </LocationBoxText>
@@ -270,19 +268,7 @@ toggle(ev) {
                         </LocationBox>
                         <CoinImageRow>
                             <CoinImageBox>
-                                <CoinImage src={require("../../img/contact/btc1.svg")}/>
-                            </CoinImageBox>
-                            <CoinImageBox>
-                                <CoinImage src={require("../../img/contact/xrp1.svg")}/>
-                            </CoinImageBox>
-                            <CoinImageBox>
-                                <CoinImage src={require("../../img/contact/ltc2.svg")}/>
-                            </CoinImageBox>
-                            <CoinImageBox>
-                                <CoinImage src={require("../../img/contact/btg2.svg")}/>
-                            </CoinImageBox>
-                            <CoinImageBox>
-                                <CoinImage src={require("../../img/contact/eth1.svg")}/>
+                                <CoinImage src={require("../../img/contact/coin-chain.png")}/>
                             </CoinImageBox>
                         </CoinImageRow>
                     </TextContainer>
