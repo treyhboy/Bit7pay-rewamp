@@ -4,6 +4,7 @@ import {Route,Switch,NavLink} from 'react-router-dom';
 import Btc from "./Coins/Btc";
 import Eth from "./Coins/Eth";
 import Btg from "./Coins/btg";
+import Bch from "./Coins/Bch";
 import Xrp from "./Coins/xrp";
 import Ltc from "./Coins/ltc";
 import "./style.css"
@@ -134,6 +135,8 @@ const ltc = ({ match }) => (<Bold> Lite Coin</Bold>
 );
 const btg = ({ match }) => (<Bold> Bitcoin Gold</Bold>
 );
+const bch = ({ match }) => (<Bold> Bitcoin Cash</Bold>
+);
 const xrp = ({ match }) => (<Bold> Ripple</Bold>
 );
 
@@ -161,12 +164,16 @@ const whatIs = ({match}) => (<ScrollContext >
                 <NavLink to={`${match.url}/btg`} activeClassName="selected">
                     <IconBox><Icon src={require("../../img/Coins/btg.svg")} /></IconBox>
                 </NavLink>
+                <NavLink to={`${match.url}/bch`} activeClassName="selected">
+                    <IconBox><Icon src={require("../../img/Coins/btg.svg")} /></IconBox>
+                </NavLink>
             </IconRow>
         </CoinScrollContainer>
         <Route exact strict path="/coins" render={()=>(<PageIcon src={require("../../img/Coins/btc.svg")}/>)}/>
         <Route path="/coins/ltc" render={()=>(<PageIcon src={require("../../img/Coins/ltc.svg")}/>)}/>
         <Route path="/coins/xrp" render={()=>(<PageIcon src={require("../../img/Coins/xrp.svg")}/>)}/>
         <Route path="/coins/btg" render={()=>(<PageIcon src={require("../../img/Coins/btg.svg")}/>)}/>
+        <Route path="/coins/bch" render={()=>(<PageIcon src={require("../../img/Coins/btg.svg")}/>)}/>
         <Route path="/coins/Eth" render={()=>(<PageIcon src={require("../../img/Coins/eth.svg")}/>)}/>
 
         <Heading>
@@ -176,6 +183,7 @@ const whatIs = ({match}) => (<ScrollContext >
                 <Route path="/coins/ltc" component={ltc}/>
                 <Route path="/coins/xrp" component={xrp}/>
                 <Route path="/coins/btg" component={btg}/>
+                <Route path="/coins/bch" component={bch}/>
                 <Route path="/coins/Eth" component={Ether}/>?
             </HeadingText1>
         </Heading>
@@ -185,6 +193,7 @@ const whatIs = ({match}) => (<ScrollContext >
         <Route path="/coins/Eth" component={Eth}/>
         <Route path="/coins/ltc" component={Ltc}/>
         <Route path="/coins/btg" component={Btg}/>
+        <Route path="/coins/bch" component={Bch}/>
         <Route path="/coins/xrp" component={Xrp}/>
     <Verification/>
     <Footer/>
