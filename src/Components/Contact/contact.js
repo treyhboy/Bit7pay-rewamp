@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import { FlexyFlipCard } from 'flexy-flipcards';
 import { ScrollContext } from 'react-router-scroll-4';
 import Header from "../Header/header"
 
@@ -261,7 +260,7 @@ toggle(ev) {
         return(
             <ScrollContext>
             <Container>
-                <Header back={"linear-gradient(to right,#101419,#3A506B)"} text={"Contact"} pos={"relative"}/>
+                <Header back={"linear-gradient(to right,#101419,#3A506B)"} text={"Contact Us"} pos={"relative"}/>
                 <MainContent>
                     <TextContainer>
                         <TextHeading>

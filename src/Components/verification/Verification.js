@@ -57,6 +57,7 @@ justify-content: center;
 align-items: center;
 height:12vh;
 width: auto;
+transition: 1s;
  @media(max-width: 800px){
 flex-flow: wrap;
 padding: 10px;
@@ -92,6 +93,7 @@ padding: 0px 15rem;
 font-weight: 300;
 height: 4rem;
 line-height: 2.5rem;
+transition: 1s;
 @media(max-width: 800px){
 height: 100%;
 padding: 2rem;
@@ -224,11 +226,15 @@ class Verification extends Component
                     {this.state.Content}
                 </NormalText>
                 <Row>
+
                     <Button>
+                        <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
                         <ButtonText>
                             Join Bit7Pay Now !
                         </ButtonText>
+                        </a>
                     </Button>
+
                 </Row>
             </VerificationContainer>
 

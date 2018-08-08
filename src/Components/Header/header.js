@@ -3,6 +3,7 @@ import {Link,NavLink} from 'react-router-dom';
 import styled ,{ keyframes } from 'styled-components';
 import googleimg from "../../img/Header/play-store.svg";
 import appleimg from "../../img/Header/app-store.svg";
+import {  toast } from 'react-toastify';
 
 const ButtonEffect = keyframes`
   0% {
@@ -41,7 +42,7 @@ font-size:3.5rem;
 font-style: italic;
 font-weight: lighter;
 font-family: 'lato', sans-serif; 
-color: white;
+color:  #3682ce;
 @media(max-width: 600px)
   {
   display: none;
@@ -137,21 +138,13 @@ class Header extends Component {
         this.state = {back:props.back,pos:props.pos,text:props.text,applefront:"0",playfront:"0",appleback:"-180",playback:"-180"};
         this.toggle = this.toggle.bind(this);
     }
-    toggle(ev) {
-        var k = ev.target.id;
-        console.log(k);
-        if(k==="a1")
-        {this.setState(() => {return {applefront:"-180",appleback:"0"}
-        })}
-        else if(k==="a2")
-        {this.setState(() => {return {applefront:"0",appleback:"-180"}
-        })}
-        else if(k==="p1")
-        {this.setState(() => {return {playfront:"-180",playback:"0"}
-        })}
-        else if(k==="p2")
-        {this.setState(() => {return {playfront:"0",playback:"-180"}
-        })}
+    toggle() {
+        toast.success(" Launching Soon",
+            {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 2000,
+                closeButton: false // Remove the closeButton
+            });
     }
     render() {
         return (
@@ -172,7 +165,7 @@ class Header extends Component {
                         </ButtonTextBox>
                     </Button>
             <a href={"https://play.google.com/store/apps/details?id=bit7pay.com.bit7pay&hl=en"}>
-                <Button id={"p1"} rotate={this.state.playfront} onClick={this.toggle}>
+                <Button id={"p1"} rotate={this.state.playfront} >
                     <ButtonIconBox >
                         <ButtonIcon src={googleimg}/>
                     </ButtonIconBox>

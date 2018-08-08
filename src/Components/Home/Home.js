@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../Footer/footer';
 import Features from "../Features/Features";
 import About from "../about/about";
 import contact from "../Contact/contact";
@@ -12,8 +11,9 @@ import styled from "styled-components";
 import { injectGlobal } from 'styled-components';
 import Menu from "../Menu/Menu";
 import HomePage from "../HomePage/HomePage";
-import "animate.css/animate.min.css";
 import 'antd/dist/antd.css';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 injectGlobal`
   
@@ -38,6 +38,7 @@ class Home extends Component
     render(){
         return(
             <Main>
+                <ToastContainer/>
                 <Menu/>
                 <Switch>
                     <Route exact strict path="/" component={HomePage}/>
