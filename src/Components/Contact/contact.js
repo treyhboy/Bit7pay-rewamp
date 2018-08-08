@@ -76,7 +76,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 padding-left: 2rem;
-font-size: 2rem;
+font-size: 1.6rem;
 font-family: 'Lato', sans-serif;
 `
 const CoinImageRow = styled.div`
@@ -149,6 +149,24 @@ font-weight: lighter;
 margin:1rem 0px;
 }
 `;
+const InputCatagory = styled.select`
+font-size: 2rem;
+color: #BDCCDB;
+font-family: 'Lato', sans-serif;
+height: 5rem;
+width: 100%;
+box-shadow: none;
+border: none;
+border-bottom: solid #9f9fa3 2px;
+background-color: transparent;
+outline: none;
+font-weight: lighter;
+
+@media(max-width: 800px){
+margin:1rem 0px;
+}
+`;
+
 const IssueContainer = styled.div`
 display: flex;
 flex-flow: column;
@@ -256,7 +274,7 @@ toggle(ev) {
                             <LocationBoxRow>
                                 <LocationBoxImage src={require("../../img/contact/email.svg")}/>
                                 <LocationBoxText>
-                                    Support@bit7pay.com
+                                    support@bit7pay.com
                                 </LocationBoxText>
                             </LocationBoxRow>
                             <LocationBoxRow>
@@ -289,7 +307,12 @@ toggle(ev) {
                             <InputHeading>
                                 CATEGORY
                             </InputHeading>
-                            <InputEmail placeholder={"Enter Category"}/>
+                            <InputCatagory placeholder={"Enter Category"}>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                                <option value="Transaction">Transaction</option>
+                                <option value="Verification">Verification</option>
+                                <option value="Other">Other</option>
+                            </InputCatagory>
                         </InputContainer>
                         <IssueContainer>
                             <IssueHeading>

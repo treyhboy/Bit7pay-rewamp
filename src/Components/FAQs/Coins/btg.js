@@ -103,7 +103,7 @@ const Btg =  ()=>(<Container>
                     With a few minor differences, Bitcoin Gold is exactly the same as Bitcoin. The “hard fork”
                     means that the developers copied all the original code and every transaction from the original
                     blockchain, made changes to the code, and reactivated the blockchain as a new
-                    cryptocurrency.<br/><br/>
+                    cryptocurrency.<br/>
                     The only major change is the mining algorithm, which changed from SHA-256 (uses processing
                     power) to Equihash (uses memory). Equihash is meant to be “ASICs-resistant,” meaning that
                     people with lots of money and huge computers can’t dominate and centralize the currency, as
