@@ -201,8 +201,6 @@ font-family: 'Lato', sans-serif;
 color: #BDCCDB;
 font-weight: lighter;
 }
-
-
 `;
 const InputCatagory = styled.select`
 font-size: 2rem;
@@ -307,8 +305,10 @@ class contact extends Component
 {
     constructor(props) {
         super(props);
-        this.state = {card1:"0",card2:"-180"};
+        this.state = {card1:"0",card2:"-180",email:"",category:"",issue:"",status:true};
         this.toggle = this.toggle.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 toggle(ev) {
         var k = ev.target.id;
@@ -320,6 +320,33 @@ toggle(ev) {
         {  this.setState(() => {return {card1:"0",card2:"-180"}
         })}
 }
+    handleChange(e){
+        var res = e.target.value;
+        var val = e.target.id;
+        console.log(val);
+        console.log(res);
+        if(val === "Email")
+            this.setState({email:res});
+        if(val === "Cat")
+            this.setState({category:res});
+        if(val === "Issue")
+            this.setState({issue:res});
+    }
+    handleClick(ev){
+        fetch(`https://api.bit7pay.com/bit7pay/public/api/createPublicTicket?email=${this.state.email}&issue=${this.state.issue}&category=${this.state.category}&secret=fdbkb485476dDGF45tfgi`,{method:'POST'})
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+
+                },
+                (error) => {
+                    this.setState({
+                        status:false
+                    });
+                }
+            )
+    }
     render(){
         return(
             <ScrollContext>
@@ -358,33 +385,33 @@ toggle(ev) {
                             <InputHeading>
                                 NAME
                             </InputHeading>
-                            <InputEmail placeholder={"Enter Name"}/>
+                            <InputEmail placeholder={"Enter Name"} id={"Name"}/>
                         </InputContainer>
                         <InputContainer>
                             <InputHeading>
                                 EMAIL
                             </InputHeading>
-                            <InputEmail placeholder={"Enter Email"}/>
+                            <InputEmail placeholder={"Enter Email"} value={this.state.email} id={"Email"} onChange={this.handleChange}/>
                         </InputContainer>
                         <InputContainer>
                             <InputHeading>
                                 CATEGORY
                             </InputHeading>
-                            <InputCatagory placeholder={"Enter Category"}>
-                                <option value="Bank Transfer">Bank Transfer</option>
-                                <option value="Transaction">Transaction</option>
-                                <option value="Verification">Verification</option>
-                                <option value="Other">Other</option>
+                            <InputCatagory placeholder={"Enter Category"} value={this.state.category} id={"Cat"} onChange={this.handleChange}>
+                                <option value={1}>Bank Transfer</option>
+                                <option value={2}>Transaction</option>
+                                <option value={3}>Verification</option>
+                                <option value={4}>Other</option>
                             </InputCatagory>
                         </InputContainer>
                         <IssueContainer>
                             <IssueHeading>
                                 DETAILS
                             </IssueHeading>
-                            <InputIssue />
+                            <InputIssue  id={"Issue"} value={this.state.issue} onChange={this.handleChange}/>
                         </IssueContainer>
                         <ButtonContainer>
-                        <Button>
+                        <Button onClick={this.handleClick}>
                             <ButtonText>
                                 SUBMIT
                             </ButtonText>
