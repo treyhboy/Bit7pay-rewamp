@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { ScrollContext } from 'react-router-scroll-4';
-import Header from "../Header/header"
+import Header from "../Header/header";
+import {toast} from 'react-toastify';
 
 const Container = styled.div`
 display: flex;
@@ -309,6 +310,7 @@ class contact extends Component
         this.toggle = this.toggle.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
+
     }
 toggle(ev) {
         var k = ev.target.id;
@@ -338,6 +340,20 @@ toggle(ev) {
             .then(
                 (result) => {
                     console.log(result);
+                    if(result.status==="success")
+                        toast.success(" Ticket Created",
+                        {
+                            position: toast.POSITION.TOP_RIGHT,
+                            autoClose: 2000,
+                            closeButton: false // Remove the closeButton
+                        });
+                    else
+                        toast.error(result.message,
+                            {
+                                position: toast.POSITION.TOP_RIGHT,
+                                autoClose: 2000,
+                                closeButton: false // Remove the closeButton
+                            });
 
                 },
                 (error) => {

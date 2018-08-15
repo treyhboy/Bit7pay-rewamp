@@ -224,7 +224,7 @@ class Footer extends Component
                 </LinkCol>
                 <LinkCol>
                     <Link to='/Faqs' ><LinkText>FAQs</LinkText></Link>
-                    <Link to='/whatis' ><LinkText>Coins</LinkText></Link>
+                    <Link to='/coins' ><LinkText>Coins</LinkText></Link>
                     <Link to='/contact' ><LinkText>Contact Us</LinkText></Link>
                 </LinkCol>
                 </LinkRow>
@@ -241,11 +241,11 @@ class Footer extends Component
                 </ContactCol>
             </MainContent>
             <IconRow>
-                <Icon src={require("../../img/footer/social/Facebook.png")}/>
-                <Icon src={require("../../img/footer/social/Google+.png")}/>
-                <Icon src={require("../../img/footer/social/Instagram.png")}/>
-                <Icon src={require("../../img/footer/social/Twitter.png")}/>
-                <Icon src={require("../../img/footer/social/Youtube.png")}/>
+                <Icon src={require("../../img/footer/social/fb1.svg")}/>
+                <Icon src={require("../../img/footer/social/googleplus.svg")}/>
+                <Icon src={require("../../img/footer/social/instagram1.svg")}/>
+                <Icon src={require("../../img/footer/social/tw.svg")}/>
+                <Icon src={require("../../img/footer/social/ld.svg")}/>
             </IconRow>
             <EndText>@Bit7Pay.All rights reserved</EndText>
 

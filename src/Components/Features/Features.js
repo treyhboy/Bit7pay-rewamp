@@ -24,7 +24,7 @@ width:100%;
 padding: 3rem 10rem;
 background-color: white;
 z-index: 12;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 padding:0px;
 height:30rem;
 }
@@ -36,7 +36,7 @@ height:120rem;
 width:100%;  
 background-color: #ECECF4;
 z-index: 12;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height:90rem;
 }
 `
@@ -49,7 +49,7 @@ width:100%;
 background:url(${img}) no-repeat center;
 background-size: cover;
 z-index: 12;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height:110rem;
 justify-content: space-between;
 }
@@ -60,7 +60,7 @@ height:90rem;
 width:100%;  
 background-color: #ECECF4;
 z-index: 12;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 45rem;
 
 }
@@ -75,7 +75,7 @@ width: 60rem;
 margin-left: ${props=>props.left};
 margin-right: ${props=>props.right};
 margin-top: ${props=>props.top};
-@media(max-width: 800px){
+@media(max-width: 1025px){
 width: 100%;
 margin: 0px;
 padding: 2rem;
@@ -88,8 +88,9 @@ align-items: center;
 height: 34rem;
 width: 24%;
 padding: 2rem;
-@media(max-width: 600px)
+@media(max-width: 1025px)
   {
+  height: 24rem;
 width: 30%;  
   }
 `
@@ -97,6 +98,7 @@ const Icon = styled.img`
 height: 100%;
 width: 100%;
 margin-bottom: 2rem;
+
 `
 const TextBox = styled.div`
 display: flex;
@@ -135,7 +137,7 @@ text-align: left;
 font-weight:300;
 font-family: 'Lato', sans-serif;
 letter-spacing: 3px; 
-@media(max-width: 800px){
+@media(max-width: 1025px){
 font-size: 4rem;
 }
 `;
@@ -144,7 +146,7 @@ display: flex;
 flex-flow: row;
 width: 100%;
 height: 80rem;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 60rem;
 justify-content: center;
 align-items: center;
@@ -155,7 +157,7 @@ const IphoneSection2 = styled.img`
 height: 100rem;
 width: auto;
 transform:translateY(-25%);
-@media(max-width: 800px){
+@media(max-width: 1025px){
 display: none;
 }
 `
@@ -164,7 +166,7 @@ height: 80rem;
 width: auto;
 padding: 5rem 0px;
 transform:translateX(10%);
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 55rem;
 transform:translateY(0);
 padding: 0px;
@@ -175,7 +177,7 @@ display: flex;
 flex-flow: row;
 width: 100%;
 height: 110rem;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 60rem;
 justify-content: center;
 align-items: center;
@@ -185,7 +187,7 @@ const IphoneSection3 = styled.img`
 height: 115rem;
 width: auto;
 transform:translateY(-40%) translateX(17%);
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 58rem;
 transform:translateY(0%) translateX(-10%);
 }
@@ -193,7 +195,7 @@ transform:translateY(0%) translateX(-10%);
 const Iphone2Section3 = styled.img`
 height: 100rem;
 width: auto;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 display: none;
 }
 `
@@ -202,7 +204,7 @@ display: flex;
 flex-flow: row;
 width: 100%;
 height: 110rem;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 45rem;
 justify-content: center;
 align-content: center;
@@ -213,7 +215,7 @@ height: 100rem;
 width: auto;
 transform:translateY(-25%) translateX(-10%);
 z-index: 10;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 40rem;
 transform:translateY(0%) translateX(0%) ;
 }
@@ -223,7 +225,7 @@ height: 80rem;
 width: auto;
 transform:translateY(-8%) translateX(-65%) ;
 z-index: 10;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 height: 35rem;
 transform:translateY(15%) translateX(-50%) ;
 }
@@ -233,7 +235,7 @@ height: 95rem;
 width: auto;
 transform:translateY(-10%) translateX(-85%) ;
 z-index: 1;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 display: none;
 }
 `
@@ -242,7 +244,7 @@ height: 28rem;
 width: auto;
 transform:translateY(-40%) translateX(-102rem) ;
 z-index: 4;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 display: none;
 }
 `
@@ -250,7 +252,7 @@ const Secend =styled.div`
 height: 100%;
 width: 100%;
 display: flex;
-@media(max-width: 800px){
+@media(max-width: 1025px){
 display: none;
 }
 `
