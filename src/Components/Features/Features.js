@@ -14,6 +14,7 @@ height:100%;
 width:100%;  
 background-color: gray;
 z-index: 12;
+overflow: hidden;
 `
 const Section1 = styled.div`
 display: flex;

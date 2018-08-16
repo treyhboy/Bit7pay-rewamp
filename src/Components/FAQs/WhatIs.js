@@ -57,6 +57,7 @@ align-items: center;
 flex-flow: row;
 height: 16em;
 width: 100vw;
+overflow-x: scroll;
 @media(max-width: 500px){
 height: 10em;
 }

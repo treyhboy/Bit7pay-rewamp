@@ -83,7 +83,6 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: center;
-
 padding: 10rem 0px;
 @media(max-width: 800px){
 padding:0px;

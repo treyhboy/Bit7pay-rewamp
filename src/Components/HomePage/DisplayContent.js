@@ -59,7 +59,7 @@ text-align: center;
 font-weight: 500;
 color: #353538;
 font-family: 'Lato', sans-serif; 
-letter-spacing: 2px; 
+
 `;
 const NormalText = styled.span`
 font-size: 2rem;
