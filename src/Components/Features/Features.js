@@ -93,6 +93,11 @@ padding: 2rem;
   height: 24rem;
 width: 30%;  
   }
+  @media(max-width: 360px)
+  {
+  height: 25rem;
+width: 32%;  
+  }
 `
 const Icon = styled.img`
 height: 100%;
@@ -127,7 +132,12 @@ opacity:${props=>props.op} ;
 letter-spacing: 1px;
 padding: 3rem 0rem;
 font-family: 'Lato', sans-serif;
-
+@media(max-width: 500px){
+font-size: 2.2rem;
+}
+@media(max-width: 360px){
+font-size: 2rem;
+}
 `;
 const Heading = styled.div`
 display: flex;
@@ -139,6 +149,9 @@ font-family: 'Lato', sans-serif;
 letter-spacing: 3px; 
 @media(max-width: 1025px){
 font-size: 4rem;
+}
+@media(max-width: 500px){
+font-size: 3.5rem;
 }
 `;
 const ImageRow = styled.div`
@@ -246,6 +259,8 @@ transform:translateY(-40%) translateX(-102rem) ;
 z-index: 4;
 @media(max-width: 1025px){
 display: none;
+
+
 }
 `
 const Secend =styled.div`
