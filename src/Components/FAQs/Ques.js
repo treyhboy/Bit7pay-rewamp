@@ -75,31 +75,7 @@ const Ques =  ()=>(<Container>
             </CardHeadingContainer>
             <CardTextContainer>
                 <CardText>
-                    Bit7Pay currently supports two of the most popular cryptocurrencies in the world i.e. Bitcoin (BTC) and Ethereum (ETH). We have already planned to include other emerging cryptocurrencies like Ripple and Litecoin in our portfolio.
-                </CardText>
-            </CardTextContainer>
-        </TextCard>
-        <TextCard>
-            <CardHeadingContainer>
-                <CardHeading>
-                    What is Bitcoin?
-                </CardHeading>
-            </CardHeadingContainer>
-            <CardTextContainer>
-                <CardText>
-                    Bitcoin is a new currency that was created in 2009 by an unknown person using the alias Satoshi Nakamoto. Transactions are made with no middle men – meaning, no banks! Bitcoin can be used to book hotels on Expedia, shop for furniture on Overstock and buy Xbox games. But much of the hype is about getting rich by trading it. The price of bitcoin skyrocketed into the thousands in 2017.
-                </CardText>
-            </CardTextContainer>
-        </TextCard>
-        <TextCard>
-            <CardHeadingContainer>
-                <CardHeading>
-                    What is Ethereum?
-                </CardHeading>
-            </CardHeadingContainer>
-            <CardTextContainer>
-                <CardText>
-                    Ethereum (ETH) is the world's second largest currency after Bitcoin. Launched in 2015, the value of ether (Ethereum's currency) has increased rapidly. Put very simply, Ethereum aims to allow users to make anonymous digital payments across international borders without the need of a traditional bank or third party.
+                    Bit7Pay currently supports 6 of the most popular cryptocurrencies in the world i.e. Bitcoin (BTC), Ethereum (ETH), Ripple (XRP), Litecoin (LTC), Bitcoin Gold (BTG) and Bitcoin Cash (BCH). We have already planned to include other emerging coins and tokens in our portfolio.
                 </CardText>
             </CardTextContainer>
         </TextCard>
@@ -118,7 +94,7 @@ const Ques =  ()=>(<Container>
         <TextCard>
             <CardHeadingContainer>
                 <CardHeading>
-                    Why should I buy Bitcoin/Ethereum?
+                    Why should I buy Cryptocurrency?
                 </CardHeading>
             </CardHeadingContainer>
             <CardTextContainer>
@@ -130,7 +106,7 @@ const Ques =  ()=>(<Container>
         <TextCard>
             <CardHeadingContainer>
                 <CardHeading>
-                    Can I buy Bitcoin/Ethereum without registration and verification?
+                    Can I buy Cryptocurrency without registration and verification?
                 </CardHeading>
             </CardHeadingContainer>
             <CardTextContainer>
@@ -154,12 +130,12 @@ const Ques =  ()=>(<Container>
         <TextCard>
             <CardHeadingContainer>
                 <CardHeading>
-                    Is Bitcoin/Ethereum legal in India??
+                    Is Cryptocurrency legal in India??
                 </CardHeading>
             </CardHeadingContainer>
             <CardTextContainer>
                 <CardText>
-                    The concept of cryptocurrency and Bitcoin is still in its nascent stage in India and does not have regulatory clarity. According to Nishith Desai, Founder of law firm Nishith Desai Associates, Bitcoin are not illegal in India and this is in consonance with an international approach.
+                    The concept of cryptocurrency is still in its nascent stage in India and does not have regulatory clarity. According to Nishith Desai, Founder of law firm Nishith Desai Associates, Bitcoin are not illegal in India and this is in consonance with an international approach.
                 </CardText>
             </CardTextContainer>
         </TextCard>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import img from "../../../img/Coins/btg-bg.svg"
+import img from "../../../img/Coins/bch-bg.svg"
 
 const Container = styled.div`
 position: relative;
 width:100%;
 height:100%;
-background: url(${img}) no-repeat right bottom;
+background: url(${img}) no-repeat center bottom;
 background-size: 90rem 90rem;
 z-index: 2;
 padding: 50px;

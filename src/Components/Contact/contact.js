@@ -155,7 +155,10 @@ height:7.5rem;
 const FormContainer = styled.div`
 display: flex;
 flex-flow: column;
-padding: 5rem 0px;
+align-items: center;
+justify-content: center;
+padding-top: 6rem;
+padding-bottom: 4rem;
 width:50%;
 height:90vh;
 @media(max-width: 1025px){
@@ -167,11 +170,9 @@ text-align: center;
 const InputContainer = styled.div`
 display: flex;
 flex-flow: column;
-justify-content: center;
-align-items: center;
 width:100%;
-height:11rem;
-padding: 1rem 15rem;
+height:10rem;
+padding: 0rem 15rem;
 @media(max-width: 1025px){
 padding: 1rem 8rem;
 }
@@ -227,7 +228,7 @@ flex-flow: column;
 justify-content: center;
 align-items: center;
 width:100%;
-height:15rem;
+height:14rem;
 padding: 0px 15rem;
 color: #9f9fa3;
 @media(max-width: 1025px){
@@ -298,15 +299,24 @@ font-size: 2rem;
 font-family: 'Lato', sans-serif; 
 color: white;
 font-weight: lighter;
-@media(max-width: 800px){
-font-size: 2rem;
+`
+const Text = styled.div`
+height: 2rem;
+width: 100%;
+font-size: 1.3rem;
+font-family: 'Lato', sans-serif; 
+color: red;
+font-weight: lighter;
+padding: 0rem 15rem;
+@media(max-width: 1025px){
+padding: 1rem 8rem;
 }
 `
 class contact extends Component
 {
     constructor(props) {
         super(props);
-        this.state = {card1:"0",card2:"-180",email:"",category:"",issue:"",status:true};
+        this.state = {card1:"0",card2:"-180",email:"",category:"",issue:"",status:true,emailmessage:"",catmessege:""};
         this.toggle = this.toggle.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -327,41 +337,79 @@ toggle(ev) {
         var val = e.target.id;
         console.log(val);
         console.log(res);
-        if(val === "Email")
-            this.setState({email:res});
-        if(val === "Cat")
-            this.setState({category:res});
-        if(val === "Issue")
-            this.setState({issue:res});
+        if(val === "Email") {
+            this.setState({email: res});
+        }
+        if(val === "Cat") {
+            this.setState({category: res});
+        }
+        if(val === "Issue") {
+            this.setState({issue: res});
+        }
+    }
+    validate(email)
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
     }
     handleClick(ev){
-        fetch(`https://api.bit7pay.com/bit7pay/public/api/createPublicTicket?email=${this.state.email}&issue=${this.state.issue}&category=${this.state.category}&secret=fdbkb485476dDGF45tfgi`,{method:'POST'})
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    console.log(result);
-                    if(result.status==="success")
-                        toast.success(" Ticket Created",
-                        {
-                            position: toast.POSITION.TOP_RIGHT,
-                            autoClose: 2000,
-                            closeButton: false // Remove the closeButton
-                        });
-                    else
-                        toast.error(result.message,
-                            {
-                                position: toast.POSITION.TOP_RIGHT,
-                                autoClose: 2000,
-                                closeButton: false // Remove the closeButton
-                            });
+        if(this.state.email===""||this.state.category===""||this.state.category==="0")
+        {
+            if(this.state.category===""||this.state.category==="0")
+            {
+                this.setState({catmessege:"Please select a category"});
+            }
+            else
+            {
+                this.setState({catmessege:""});
+            }
+            if(this.state.email==="")
+            {
+                this.setState({emailmessage:"Email could not be empty"});
+            }
+            else
+            {
+                this.setState({emailmessage:""});
+            }
+            if(!this.validate(this.state.email))
+            {
+                this.setState({emailmessage:"Please enter a valid Email"});
+            }
+            else
+            {
+                this.setState({emailmessage:""});
+            }
+        }
+        else {
+            this.setState({emailmessage:"",catmessege:""});
+            fetch(`https://api.bit7pay.com/bit7pay/public/api/createPublicTicket?email=${this.state.email}&issue=${this.state.issue}&category=${this.state.category}&secret=fdbkb485476dDGF45tfgi`, {method: 'POST'})
+                .then(res => res.json())
+                .then(
+                    (result) => {
+                        console.log(result);
+                        if (result.status === "success")
+                            toast.success(" Ticket Created",
+                                {
+                                    position: toast.POSITION.TOP_RIGHT,
+                                    autoClose: 2000,
+                                    closeButton: false // Remove the closeButton
+                                });
+                        else
+                            toast.error(result.message,
+                                {
+                                    position: toast.POSITION.TOP_RIGHT,
+                                    autoClose: 2000,
+                                    closeButton: false // Remove the closeButton
+                                });
 
-                },
-                (error) => {
-                    this.setState({
-                        status:false
-                    });
-                }
-            )
+                    },
+                    (error) => {
+                        this.setState({
+                            status: false
+                        });
+                    }
+                )
+        }
     }
     render(){
         return(
@@ -403,26 +451,31 @@ toggle(ev) {
                             </InputHeading>
                             <InputEmail placeholder={"Enter Name"} id={"Name"}/>
                         </InputContainer>
+                        <Text>{this.state.emailmessage}</Text>
                         <InputContainer>
                             <InputHeading>
                                 EMAIL
                             </InputHeading>
                             <InputEmail placeholder={"Enter Email"} value={this.state.email} id={"Email"} onChange={this.handleChange}/>
                         </InputContainer>
+                        <Text>{this.state.emailmessage}</Text>
                         <InputContainer>
                             <InputHeading>
                                 CATEGORY
                             </InputHeading>
                             <InputCatagory placeholder={"Enter Category"} value={this.state.category} id={"Cat"} onChange={this.handleChange}>
+                                <option value={0}>Select Category</option>
                                 <option value={1}>Bank Transfer</option>
                                 <option value={2}>Transaction</option>
                                 <option value={3}>Verification</option>
                                 <option value={4}>Other</option>
                             </InputCatagory>
+
                         </InputContainer>
+                        <Text>{this.state.catmessege}</Text>
                         <IssueContainer>
                             <IssueHeading>
-                                DETAILS
+                                DETAILS     (optional)
                             </IssueHeading>
                             <InputIssue  id={"Issue"} value={this.state.issue} onChange={this.handleChange}/>
                         </IssueContainer>

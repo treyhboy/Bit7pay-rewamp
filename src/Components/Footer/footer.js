@@ -241,11 +241,11 @@ class Footer extends Component
                 </ContactCol>
             </MainContent>
             <IconRow>
-                <Icon src={require("../../img/footer/social/fb1.svg")}/>
-                <Icon src={require("../../img/footer/social/googleplus.svg")}/>
-                <Icon src={require("../../img/footer/social/instagram1.svg")}/>
-                <Icon src={require("../../img/footer/social/tw.svg")}/>
-                <Icon src={require("../../img/footer/social/ld.svg")}/>
+                <a href={"https://www.facebook.com/ibinito/?ref=br_rs"}><Icon src={require("../../img/footer/social/fb1.svg")}/></a>
+                <a href={"https://plus.google.com/113405388937551995707"}><Icon src={require("../../img/footer/social/googleplus.svg")}/></a>
+                <a href={"https://www.instagram.com/ibinito/?hl=en"}><Icon src={require("../../img/footer/social/instagram1.svg")}/></a>
+                <a href={"https://twitter.com/ContactIbinito"}><Icon src={require("../../img/footer/social/tw.svg")}/></a>
+                <a href={" https://www.linkedin.com/company/ibinito/"}><Icon src={require("../../img/footer/social/ld.svg")}/></a>
             </IconRow>
             <EndText>@Bit7Pay.All rights reserved</EndText>
 

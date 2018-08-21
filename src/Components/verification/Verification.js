@@ -71,6 +71,7 @@ font-family: 'Lato', sans-serif;
 font-weight: 300;
 color: grey;
 padding: 2rem;
+cursor: pointer;
 @media(max-width: 800px){
 padding: 1rem;
 }
@@ -150,24 +151,21 @@ class Verification extends Component
         this.state = { Step: "Account",Content:Account,loc:"" };
         this.handleClick = this.handleClick.bind(this);
     }
-    componentDidMount(){
-        if (this.state.loc==="")
-            document.getElementById('Account').style.opacity = 1;
-        else
-            this.state.loc.style.opacity = 1;
-
-
-    }
-
     handleClick(ev)
     {
+
         ev.target.style.opacity = 1;
         var k ;
         let t = ev.target;
-        let i = ev.target.id;
+        let i = ev.target.className.split(" ")[0];
+        let l = ev.target.className.split(" ")[1];
+        if(l==="1")
+        {
+            document.getElementsByClassName(i)[0].style.opacity = 1;
+        }
         switch(i)
         {
-           case "Account":k = Account;
+            case "Account":k = Account;
                 break;
             case "Aadhar":k = Aadhar;
                 break;
@@ -179,19 +177,27 @@ class Verification extends Component
                 break;
 
         }
-        let g = document.getElementById('Account');
+        let g = document.getElementsByClassName('Account')[0];
 
         this.setState(prev =>{
-            console.log(prev);
             if(prev.Step==="Account")
             {g.style.opacity = .3}
             else
-            prev.loc.style.opacity = .3;
+            {let q = document.getElementsByClassName(prev.Step)[0];
+            q.style.opacity = .3;}
             return {
                 Step:i,Content:k,loc:t
             }
 
         });
+    }
+
+    componentDidMount(){
+        console.log("in mount");
+        var p = document.getElementsByClassName(this.state.Step)[0];
+        console.log(p);
+        p.style.opacity = 1;
+
     }
 
     render() {
@@ -201,25 +207,25 @@ class Verification extends Component
                 </Heading>
                 <IconBoxRow>
                     <IconBox >
-                        <Icon src={require("../../img/Header/verification-01.svg")} id={"Account"} onClick={this.handleClick}/>
-                        <IconText>Bank Account</IconText>
+                        <Icon src={require("../../img/Header/verification-01.svg")} className={"Account"} onClick={this.handleClick}/>
+                        <IconText className={"Account 1"} onClick={this.handleClick}>Bank Account</IconText>
                     </IconBox>
                     <IconBox time={"1s"} >
-                        <Icon src={require("../../img/Header/verification-02.svg")} id={"Aadhar"} onClick={this.handleClick}/>
-                        <IconText>Aadhar</IconText>
+                        <Icon src={require("../../img/Header/verification-02.svg")} className={"Aadhar"} onClick={this.handleClick}/>
+                        <IconText className={"Aadhar 1"} onClick={this.handleClick}>Aadhar</IconText>
                     </IconBox>
                     <IconBox time={"2s"} >
-                        <Icon src={require("../../img/Header/verification-03.svg")} id={"Pan"} onClick={this.handleClick}/>
-                        <IconText>PAN</IconText>
+                        <Icon src={require("../../img/Header/verification-03.svg")} className={"Pan"} onClick={this.handleClick}/>
+                        <IconText className={"Pan 1"} onClick={this.handleClick}>PAN</IconText>
                     </IconBox>
 
                     <IconBox time={"3s"} >
-                        <Icon src={require("../../img/Header/verification-04.svg")} id={"Email"} onClick={this.handleClick}/>
-                        <IconText>Email</IconText>
+                        <Icon src={require("../../img/Header/verification-04.svg")} className={"Email"} onClick={this.handleClick}/>
+                        <IconText className={"Email 1"} onClick={this.handleClick}>Email</IconText>
                     </IconBox>
                     <IconBox time={"4s"} >
-                        <Icon src={require("../../img/Header/verification-05.svg")} id={"Photo"} onClick={this.handleClick}/>
-                        <IconText>Photo</IconText>
+                        <Icon src={require("../../img/Header/verification-05.svg")} className={"Photo"} onClick={this.handleClick}/>
+                        <IconText className={"Photo 1"} onClick={this.handleClick}>Photo</IconText>
                     </IconBox>
                 </IconBoxRow>
                 <NormalText>

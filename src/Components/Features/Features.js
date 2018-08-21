@@ -130,7 +130,6 @@ font-weight: 100;
 color: ${props=>props.color||"#fff"};
 text-align: left;
 opacity:${props=>props.op} ;
-letter-spacing: 1px;
 padding: 3rem 0rem;
 font-family: 'Lato', sans-serif;
 @media(max-width: 500px){
@@ -147,7 +146,7 @@ font-size: 5rem;
 text-align: left;
 font-weight:300;
 font-family: 'Lato', sans-serif;
-letter-spacing: 3px; 
+
 @media(max-width: 1025px){
 font-size: 4rem;
 }
