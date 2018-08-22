@@ -231,6 +231,7 @@ width:100%;
 height:14rem;
 padding: 0px 15rem;
 color: #9f9fa3;
+margin-bottom: 1rem;
 @media(max-width: 1025px){
 padding: 1rem 8rem;
 }
@@ -316,7 +317,7 @@ class contact extends Component
 {
     constructor(props) {
         super(props);
-        this.state = {card1:"0",card2:"-180",email:"",category:"",issue:"",status:true,emailmessage:"",catmessege:""};
+        this.state = {card1:"0",card2:"-180",email:"",category:"",issue:"",status:true,emailmessage:"",catmessege:"",issuemessege:""};
         this.toggle = this.toggle.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -353,7 +354,7 @@ toggle(ev) {
         return re.test(email);
     }
     handleClick(ev){
-        if(this.state.email===""||this.state.category===""||this.state.category==="0")
+        if(this.state.email===""||this.state.category===""||this.state.category==="0"||this.state.issue==="")
         {
             if(this.state.category===""||this.state.category==="0")
             {
@@ -379,6 +380,15 @@ toggle(ev) {
             {
                 this.setState({emailmessage:""});
             }
+            if(this.state.issue==="")
+            {
+                this.setState({issuemessage:"Please enter details of your problem"});
+            }
+            else
+            {
+                this.setState({issuemessage:""});
+            }
+
         }
         else {
             this.setState({emailmessage:"",catmessege:""});
@@ -451,7 +461,6 @@ toggle(ev) {
                             </InputHeading>
                             <InputEmail placeholder={"Enter Name"} id={"Name"}/>
                         </InputContainer>
-                        <Text>{this.state.emailmessage}</Text>
                         <InputContainer>
                             <InputHeading>
                                 EMAIL
@@ -475,10 +484,11 @@ toggle(ev) {
                         <Text>{this.state.catmessege}</Text>
                         <IssueContainer>
                             <IssueHeading>
-                                DETAILS     (optional)
+                                DETAILS
                             </IssueHeading>
                             <InputIssue  id={"Issue"} value={this.state.issue} onChange={this.handleChange}/>
                         </IssueContainer>
+                        <Text>{this.state.issuemessage}</Text>
                         <ButtonContainer>
                         <Button onClick={this.handleClick}>
                             <ButtonText>

@@ -166,7 +166,7 @@ const whatIs = ({match}) => (<ScrollContext >
                     <IconBox><Icon src={require("../../img/Coins/btg.svg")} /></IconBox>
                 </NavLink>
                 <NavLink to={`${match.url}/bch`} activeClassName="selected">
-                    <IconBox><Icon src={require("../../img/Coins/btg.svg")} /></IconBox>
+                    <IconBox><Icon src={require("../../img/Coins/btch.svg")} /></IconBox>
                 </NavLink>
             </IconRow>
         </CoinScrollContainer>
@@ -174,7 +174,7 @@ const whatIs = ({match}) => (<ScrollContext >
         <Route path="/coins/ltc" render={()=>(<PageIcon src={require("../../img/Coins/ltc.svg")}/>)}/>
         <Route path="/coins/xrp" render={()=>(<PageIcon src={require("../../img/Coins/xrp.svg")}/>)}/>
         <Route path="/coins/btg" render={()=>(<PageIcon src={require("../../img/Coins/btg.svg")}/>)}/>
-        <Route path="/coins/bch" render={()=>(<PageIcon src={require("../../img/Coins/btg.svg")}/>)}/>
+        <Route path="/coins/bch" render={()=>(<PageIcon src={require("../../img/Coins/btch.svg")}/>)}/>
         <Route path="/coins/Eth" render={()=>(<PageIcon src={require("../../img/Coins/eth.svg")}/>)}/>
 
         <Heading>
