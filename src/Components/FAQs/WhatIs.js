@@ -13,6 +13,7 @@ import Verification from "../verification/Verification";
 import Footer from '../Footer/footer';
 import { ScrollContext } from 'react-router-scroll-4';
 import {AnimatedSwitch} from 'react-router-transition';
+import {Helmet} from "react-helmet";
 
 
 const Container = styled.div`
@@ -143,6 +144,11 @@ const xrp = ({ match }) => (<Bold> Ripple</Bold>
 
 const whatIs = ({match}) => (<ScrollContext >
     <Container>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Bit7Pay|Coins</title>
+            <meta name="description" content="Helmet application" />
+        </Helmet>
     <HeadingContainer>
         <Header/>
         <CoinScrollContainer>

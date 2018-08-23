@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ScrollContext } from 'react-router-scroll-4';
 import Header from "../Header/header";
 import {toast} from 'react-toastify';
+import {Helmet} from "react-helmet";
 
 const Container = styled.div`
 display: flex;
@@ -425,6 +426,11 @@ toggle(ev) {
         return(
             <ScrollContext>
             <Container>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Bit7Pay|Contact Us</title>
+                    <meta name="description" content="Helmet application" />
+                </Helmet>
                 <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"0px"} text={"Contact Us"} />
                 <MainContent>
                     <TextContainer>

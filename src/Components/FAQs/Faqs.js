@@ -6,7 +6,7 @@ import Header from "../Header/header";
 import Verification from "../verification/Verification";
 import Footer from '../Footer/footer';
 import { ScrollContext } from 'react-router-scroll-4';
-
+import {Helmet} from "react-helmet";
 
 const Container = styled.div`
 display: flex;
@@ -50,6 +50,11 @@ padding: 0px 10px 30px 10px;
 const Faqs = () => (
     <ScrollContext>
     <Container>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Bit7Pay|Faqs</title>
+            <meta name="description" content="Helmet application" />
+        </Helmet>
     <HeadingContainer>
         <Header/>
         <Heading>

@@ -6,6 +6,7 @@ import Verification from "../verification/Verification";
 import Footer from "../Footer/footer";
 import Fade from "react-reveal";
 import { ScrollContext } from 'react-router-scroll-4';
+import {Helmet} from "react-helmet";
 
 const Container = styled.div`
 display: flex;
@@ -275,6 +276,11 @@ display: none;
 
 const Features = (props)=>(<ScrollContext >
     <Container>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Bit7Pay|Features</title>
+            <meta name="description" content="Helmet application" />
+        </Helmet>
     <Header back={"linear-gradient(to right,#101419, #3A506B)"} pos={"0px"} text={"Features"}/>
     <Section1>
         <Fade right>

@@ -50,6 +50,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.0",
     "react-easy-chart": "^1.0.0",
+    "react-helmet": "^5.2.0",
     "react-motion": "^0.5.2",
     "react-reveal": "^1.2.2",
     "react-router": "^4.2.0",

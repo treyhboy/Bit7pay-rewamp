@@ -16,7 +16,6 @@ background:linear-gradient(#101419, #3A506B);
 @media(max-width:600px){
 height: 27rem;
 }
-
 `
 const HeadContainer = styled.div`
 display: flex;
@@ -90,7 +89,7 @@ flex-flow: column;
 justify-content: space-around;
 align-items:center ;
 height: 100%;
-width:35%;   
+width:21%;   
 padding: 2rem;
 @media(max-width:600px){
 padding: 0px;
@@ -218,15 +217,20 @@ class Footer extends Component
             <MainContent>
                 <LinkRow>
                 <LinkCol>
-                    <Link to='/'  ><LinkText>Home</LinkText></Link>
+                    <Link to='/contact' ><LinkText>Contact Us</LinkText></Link>
                     <Link to='/news' ><LinkText>News</LinkText></Link>
                     <Link to='/features' ><LinkText>Features</LinkText></Link>
                 </LinkCol>
                 <LinkCol>
                     <Link to='/Faqs' ><LinkText>FAQs</LinkText></Link>
                     <Link to='/coins' ><LinkText>Coins</LinkText></Link>
-                    <Link to='/contact' ><LinkText>Contact Us</LinkText></Link>
+                    <Link to='/Aml' ><LinkText>AML Policy</LinkText></Link>
                 </LinkCol>
+                    <LinkCol>
+                        <Link to='/Kyc' ><LinkText>KYC Standards</LinkText></Link>
+                        <Link to='/privacy' ><LinkText>Privacy</LinkText></Link>
+                        <Link to='/Terms' ><LinkText>Terms of use</LinkText></Link>
+                    </LinkCol>
                 </LinkRow>
                 <ContactCol>
                     <SubscribeBox>

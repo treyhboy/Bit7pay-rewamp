@@ -6,6 +6,7 @@ import News from "./NewsCards";
 import {Route,Link} from 'react-router-dom';
 import SingleNews from "./SingleNews";
 import {AnimatedSwitch} from 'react-router-transition';
+import {Helmet} from "react-helmet";
 
 const SliderLeft = keyframes`
   0% {
@@ -233,6 +234,11 @@ class news extends Component
     render() {
     if(this.state.isLoaded)
         return(<div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Bit7Pay|News</title>
+                    <meta name="description" content="Helmet application" />
+                </Helmet>
                 <Header back={"linear-gradient(to right,#101419,#3A506B)"} pos={"fixed"} text={"News"}/>
                 <AnimatedSwitch
                     atEnter={{ offset: 0 }}

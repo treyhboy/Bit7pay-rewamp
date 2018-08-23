@@ -4,6 +4,10 @@ import About from "../about/about";
 import contact from "../Contact/contact";
 import charts from "../charts/chart";
 import news from '../news/news';
+import Privacy from "../Privacy/Privacy";
+import Aml from "../Aml/Aml";
+import Terms from "../Terms/Terms";
+import Kyc from "../Kyc/Kyc";
 import whatIs from "../FAQs/WhatIs";
 import Faqs from "../FAQs/Faqs";
 import {Route,Switch,} from 'react-router-dom';
@@ -49,6 +53,10 @@ class Home extends Component
                     <Route path='/coins' component={whatIs}/>
                     <Route path='/Faqs' component={Faqs}/>
                     <Route path='/contact' component={contact}/>
+                    <Route path='/privacy' component={Privacy}/>
+                    <Route path='/Aml' component={Aml}/>
+                    <Route path='/Terms' component={Terms}/>
+                    <Route path='/Kyc' component={Kyc}/>
                 </Switch>
 
             </Main>);

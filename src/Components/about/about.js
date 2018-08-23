@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import img from "../../img/wallpaper2you_399423.jpg";
-
+import {Helmet} from "react-helmet";
 
 {/*
 COLORS REQUIRED
@@ -173,6 +173,11 @@ class About extends Component
 {
     render(){
         return(<Container>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About</title>
+                <meta name="description" content="Helmet application" />
+            </Helmet>
             <ClipCrop/>
             <BoxContainer>
                 <Box1>
