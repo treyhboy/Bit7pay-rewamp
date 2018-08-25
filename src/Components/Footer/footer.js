@@ -219,7 +219,7 @@ class Footer extends Component
                 <LinkCol>
                     <Link to='/contact' ><LinkText>Contact Us</LinkText></Link>
                     <Link to='/news' ><LinkText>News</LinkText></Link>
-                    <Link to='/features' ><LinkText>Features</LinkText></Link>
+                    <Link to='/Fees' ><LinkText>Fees</LinkText></Link>
                 </LinkCol>
                 <LinkCol>
                     <Link to='/Faqs' ><LinkText>FAQs</LinkText></Link>

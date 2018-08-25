@@ -10,6 +10,7 @@ import Terms from "../Terms/Terms";
 import Kyc from "../Kyc/Kyc";
 import whatIs from "../FAQs/WhatIs";
 import Faqs from "../FAQs/Faqs";
+import Fees from "../Fees/Fees";
 import {Route,Switch,} from 'react-router-dom';
 import styled from "styled-components";
 import { injectGlobal } from 'styled-components';
@@ -57,6 +58,7 @@ class Home extends Component
                     <Route path='/Aml' component={Aml}/>
                     <Route path='/Terms' component={Terms}/>
                     <Route path='/Kyc' component={Kyc}/>
+                    <Route path='/Fees' component={Fees}/>
                 </Switch>
 
             </Main>);

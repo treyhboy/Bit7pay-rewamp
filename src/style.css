@@ -380,6 +380,10 @@ table {
         margin: 2rem 3rem;
         font-size: 14px
     }
+    .fees {
+        margin: 2rem 3rem;
+        font-size: 14px
+    }
     .kyc .pe-wp-default .table-responsive {
         width: 100%;
         margin-bottom: 15px;
@@ -662,4 +666,96 @@ table {
         font-weight: 700;
         transition: color 0.3s linear
     }
+}
+
+.fees {
+    margin:4rem;
+    font-size: 14px
+}
+
+.fees h1 {
+    font-size: 38px;
+    margin: 0;
+    font-weight: 300
+}
+
+.fees h2 {
+    font-size: 38px;
+    line-height: 52px;
+    font-weight: 300;
+    color: #3e3e3e;
+    margin: 0 0 23px
+}
+
+.fees h1,
+.fees h2 {
+    margin: 8px 0
+}
+
+.fees b,
+.fees strong {
+    font-weight: 600
+}
+
+.fees .innerp span b {
+    font-size: 18px
+}
+
+.fees .please-note ul {
+    padding: 10px 0 5px 35px !important;
+    list-style: circle
+}
+
+.fees .fees-content {
+    color: #3A4551;
+    line-height: 26px;
+    font-size: 16px;
+    margin-top: 20px
+}
+
+.fees .fees-content .table-responsive {
+    border: 1px solid #9BA6B2;
+    margin: 10px 0
+}
+
+@media screen and (max-width: 767px) {
+    .fees .fees-content .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 1px solid #9BA6B2
+    }
+}
+
+.fees .fees-content table {
+    font-size: 14px;
+    line-height: 2;
+    width: 100%;
+    border-spacing: 0
+}
+
+.fees .fees-content th {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.18182;
+    text-transform: uppercase
+}
+
+.fees .fees-content td {
+    border: 1px solid;
+    padding: 6px 10px !important;
+    border-color: #9BA6B2 !important;
+    font-size: 14px !important
+}
+
+.fees .fees-content td,
+.fees .fees-content th {
+    font-size: 14px;
+    text-align: left
+}
+
+.fees .fees-content ol,
+.fees .fees-content ul {
+    padding-left: 20px
 }
