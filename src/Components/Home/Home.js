@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Features from "../Features/Features";
-import About from "../about/about";
 import contact from "../Contact/contact";
 import charts from "../charts/chart";
 import news from '../news/news';
@@ -47,7 +46,6 @@ class Home extends Component
                 <Menu/>
                 <Switch>
                     <Route exact strict path="/" component={HomePage}/>
-                    <Route path="/about" component={About}/>
                     <Route path="/charts" component={charts}/>
                     <Route path='/features' component={Features}/>
                     <Route path='/news' component={news}/>
