@@ -23,7 +23,7 @@ const Fees = (props)=>(<ScrollContext>
             <meta name="description" content="Helmet application" />
         </Helmet>
         <Header back={"linear-gradient(to right,#101419, #3A506B)"} pos={"0px"} />
-        <section className="fees">
+        <section className="fees ">
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
@@ -37,13 +37,15 @@ const Fees = (props)=>(<ScrollContext>
                         <div className="fees-content">
                             <div>
                                 <p></p>
-                                <p>You can pay to any of our following bank accounts for depositing funds via normal transfer option.</p>
+                                <p >You can pay to any of our following bank accounts for depositing funds via normal transfer option.</p>
                                 <div className="please-note">Please Note:
                                     <p></p>
                                     <ul>
-                                        <li>There are no fees for having a Bit7Pay wallet or for holding funds in your Bit7Pay wallet. You may hold assets as long as desired; your account will not be closed due to inactivity.
+                                        <li>There are no fees for having a Bit7Pay wallet or for holding funds in your Bit7Pay wallet. You may hold assets
+                                            as long as desired; your account will not be closed due to inactivity.
                                         </li>
-                                        <li>You need to make payment from your bank account to Bit7Pay’s bank account via RTGS / NEFT, IMPS and mentioned the transaction id while creating an INR deposit request from Bit7Pay app.
+                                        <li>You need to make payment from your bank account to Bit7Pay’s bank account via RTGS / NEFT, IMPS and mentioned
+                                            the transaction id while creating an INR deposit request from Bit7Pay app.
                                         </li>
                                     </ul>
                                 </div>
@@ -51,25 +53,52 @@ const Fees = (props)=>(<ScrollContext>
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td><strong>Bank Name</strong></td>
-                                            <td><strong>Bank Details</strong></td>
-                                            <td><strong>RTGS/NEFT or IMPS</strong></td>
+                                            <td>
+                                                <strong>Bank Name</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Bank Details</strong>
+                                            </td>
+                                            <td>
+                                                <strong>RTGS/NEFT or IMPS</strong>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>HDFC Bank</td>
-                                            <td>Beneficiary Name: <strong>Omshanti Infracreations LLP</strong><br/> Account number: <strong>50200028326788</strong><br/> IFSC: <strong>HDFC0001464</strong><br/> Account Type: <strong>Current Account</strong>
+                                            <td>Beneficiary Name:
+                                                <strong>Omshanti Infracreations LLP</strong>
+                                                <br/> Account number:
+                                                    <strong>50200028326788</strong>
+                                                    <br/> IFSC:
+                                                        <strong>HDFC0001464</strong>
+                                                        <br/> Account Type:
+                                                            <strong>Current Account</strong>
                                             </td>
                                             <td>Yes</td>
                                         </tr>
                                         <tr>
                                             <td>ICICI Bank</td>
-                                            <td>Beneficiary Name: <strong>Omshanti Infracreations LLP</strong><br/> Account number: <strong>628205025306</strong><br/> IFSC: <strong>ICIC0006282</strong><br/> Account Type: <strong>Current Account</strong>
+                                            <td>Beneficiary Name:
+                                                <strong>Omshanti Infracreations LLP</strong>
+                                                <br/> Account number:
+                                                    <strong>628205025306</strong>
+                                                    <br/> IFSC:
+                                                        <strong>ICIC0006282</strong>
+                                                        <br/> Account Type:
+                                                            <strong>Current Account</strong>
                                             </td>
                                             <td>Yes</td>
                                         </tr>
                                         <tr>
                                             <td>AXIS Bank</td>
-                                            <td>Beneficiary Name: <strong>Omshanti Infracreations LLP</strong><br/> Account number: <strong>916020020077257</strong><br/> IFSC: <strong>UTIB0000286</strong><br/> Account Type: <strong>Current Account</strong>
+                                            <td>Beneficiary Name:
+                                                <strong>Omshanti Infracreations LLP</strong>
+                                                <br/> Account number:
+                                                    <strong>916020020077257</strong>
+                                                    <br/> IFSC:
+                                                        <strong>UTIB0000286</strong>
+                                                        <br/> Account Type:
+                                                            <strong>Current Account</strong>
                                             </td>
                                             <td>Yes</td>
                                         </tr>
@@ -80,14 +109,21 @@ const Fees = (props)=>(<ScrollContext>
                             <div className="fees-content">
                                 <p></p>
                                 <h2 className="fees-title">Fees</h2>
-                                <p className="innerp"><span className=""><b>INR Deposit and Withdrawal Fees</b></span>
+                                <p className="innerp">
+              <span className="">
+                <b>INR Deposit and Withdrawal Fees</b>
+              </span>
                                 </p>
                                 <div className="table-responsive">
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td><strong>Normal Transfer Deposit (RTGS / NEFT / IMPS)</strong></td>
-                                            <td><strong>No Fees</strong></td>
+                                            <td>
+                                                <strong>Normal Transfer Deposit (RTGS / NEFT / IMPS)</strong>
+                                            </td>
+                                            <td>
+                                                <strong>No Fees</strong>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Withdrawal</td>
@@ -96,41 +132,79 @@ const Fees = (props)=>(<ScrollContext>
                                         </tbody>
                                     </table>
                                 </div>
-                                <p className="innerp"><span><b>Cryptocurrencies Deposit (Receive) and Withdrawal (Send) Fees</b></span>
+                                <p className="innerp">
+              <span>
+                <b>Cryptocurrencies Deposit (Receive) and Withdrawal (Send) Fees</b>
+              </span>
                                 </p>
                                 <div className="table-responsive">
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td><strong>Coin</strong></td>
-                                            <td><strong>Deposit</strong></td>
-                                            <td><strong>Withdrawal</strong></td>
+                                            <td>
+                                                <strong>Coin</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Deposit</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Withdrawal</strong>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Bitcoin</td>
                                             <td>No Fees</td>
-                                            <td>0.0002 BTC - 0.0005 BTC</td>
+                                            <td>0.0009 BTC - 0.005 BTC</td>
                                         </tr>
                                         <tr>
-                                            <td>Ether</td>
+                                            <td>Ethereum</td>
                                             <td>No Fees</td>
-                                            <td>0.001 ETH</td>
+                                            <td>0.01 ETH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ripple</td>
+                                            <td>No Fees</td>
+                                            <td>0.25 XRP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Litecoin</td>
+                                            <td>No Fees</td>
+                                            <td>0.01 LTC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitcoin Cash</td>
+                                            <td>No Fees</td>
+                                            <td>0.001 BCH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitcoin Gold</td>
+                                            <td>No Fees</td>
+                                            <td>0.01 BTG</td>
                                         </tr>
 
                                         </tbody>
                                     </table>
                                 </div>
-                                <p><span className=""></span>*Dynamic – Fee varies dynamically depending on the network traffic. Please check app for the exact fees.</p>
+                                <p>
+                                    <span className=""></span>*Dynamic – Fee varies dynamically depending on the network traffic. Please check app for the exact fees.</p>
                             </div>
                             <div className="fees-content">
                                 <h2 className="fees-title">Limits</h2>
-                                <p className="innerp"><span className=""><b>INR Deposit and Withdrawal Limits</b></span></p>
+                                <p className="innerp">
+              <span className="">
+                <b>INR Deposit and Withdrawal Limits</b>
+              </span>
+                                </p>
                                 <div className="table-responsive">
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td><strong>Limits</strong></td>
-                                            <td><strong>Per Transaction (Rs.)</strong></td>
+                                            <td>
+                                                <strong>Limits</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Per Transaction (Rs.)</strong>
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -140,21 +214,33 @@ const Fees = (props)=>(<ScrollContext>
 
                                         <tr>
                                             <td>Withdrawal</td>
-                                            <td>Min 1,000 <br/> Max 5 lacs</td>
+                                            <td>Min 1,000
+                                                <br/> Max 5 lacs</td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <p className="innerp">
-                                    <span><b>Cryptocurrencies Deposit and Withdrawal Limits</b></span></p>
+              <span>
+                <b>Cryptocurrencies Deposit and Withdrawal Limits</b>
+              </span>
+                                </p>
                                 <div className="table-responsive">
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td><strong>Coin</strong></td>
-                                            <td><strong>Limit</strong></td>
-                                            <td><strong>Per Transaction</strong></td>
-                                            <td><strong>Per Day</strong></td>
+                                            <td>
+                                                <strong>Coin</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Limit</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Per Transaction</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Per Day</strong>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Bitcoin</td>
@@ -163,10 +249,34 @@ const Fees = (props)=>(<ScrollContext>
                                             <td>Max 10 BTC</td>
                                         </tr>
                                         <tr>
-                                            <td>Ether</td>
+                                            <td>Ethereum</td>
                                             <td>Withdrawal</td>
-                                            <td>Max 5 ETH</td>
                                             <td>Max 25 ETH</td>
+                                            <td>Max 60 ETH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ripple</td>
+                                            <td>Withdrawal</td>
+                                            <td>Max 10,000 XRP</td>
+                                            <td>Max 40,000 XRP</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Litecoin</td>
+                                            <td>Withdrawal</td>
+                                            <td>Max 50 LTC</td>
+                                            <td>Max 250 LTC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitcoin Cash</td>
+                                            <td>Withdrawal</td>
+                                            <td>Max 15 BCH</td>
+                                            <td>Max 40 BCH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bitcoin Gold</td>
+                                            <td>Withdrawal</td>
+                                            <td>Max 200 BTG</td>
+                                            <td>Max 500 BTG</td>
                                         </tr>
                                         </tbody>
                                     </table>
