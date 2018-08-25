@@ -81,6 +81,7 @@ width:100%;
 padding: 0px 8rem;
 @media(max-width:800px){
 padding: 0px;
+margin-top: 2rem;
 }
 `
 const LinkCol = styled.div`
@@ -136,7 +137,7 @@ cursor: pointer;
 color:#3682CE;
 }
 @media(max-width: 800px){
-padding: 2rem;
+font-size: 1.5rem;
 }
 `
 const InputEmail = styled.input`
